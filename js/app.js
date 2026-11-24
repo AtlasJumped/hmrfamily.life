@@ -202,7 +202,7 @@
 
   /* ---------- design picker ---------- */
   var DESIGNS = ["Sunrise", "Meadow", "Citrus", "Sky"];
-  var LEVELS = [["strong dislike", "Strong dislike"], ["dislike", "Dislike"], ["like", "Like"], ["strong like", "Strong like"]];
+  var LEVELS = [["strong like", "Strong like"], ["like", "Like"], ["dislike", "Dislike"], ["strong dislike", "Strong dislike"]];
   var KEY = "hmrfamily.ratings.v1";
   var ratings = {};
   try { ratings = JSON.parse(store(true, KEY) || "{}") || {}; } catch (e) { ratings = {}; }
