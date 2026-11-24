@@ -1,87 +1,76 @@
 (function () {
   "use strict";
-  var SITES = [
-    {
-      host: "universemodel.ai", url: "https://universemodel.ai", status: "Flagship",
-      short: "The flagship: the Holistic Model of Reality.",
-      what: "The Holistic Model of Reality (HMR): one picture of reality joining Eastern and Western thought, the body as a tensegrity with fascia, values, and claims tied to tests.",
+  var IMG = "img/tour/";
+  // Captions use only what each site says about itself. HMR claims are labeled as HMR's.
+  var TOURS = {
+    universemodel: {
+      host: "universemodel.life", url: "https://universemodel.ai", title: "universemodel.life, the soul of HMR",
       slides: [
-        ["One picture of reality", "The Holistic Model of Reality, or HMR, is one picture of reality.", "orbs"],
-        ["East and West", "It joins Eastern and Western thought.", "rings"],
-        ["The body", "It sees the body as a tensegrity with fascia.", "bars"],
-        ["Values", "It includes a set of values.", "orbs"],
-        ["Tied to tests", "Its claims are tied to tests.", "rings"]
-      ],
-      faq: [
-        ["What is HMR?", "The Holistic Model of Reality: one picture of reality joining Eastern and Western thought."],
-        ["What does it say about the body?", "It describes the body as a tensegrity with fascia."],
-        ["How are its claims handled?", "Claims are tied to tests."]
+        ["One picture of reality", "universemodel-1", "Physics describes matter, biology describes life, medicine describes illness, psychology describes the mind, and religion describes meaning. Each sees its own part clearly. None describes the whole. The Holistic Model of Reality, or HMR, is our proposal for one picture that does."],
+        ["A partial model and a holistic one", "universemodel-1", "A street map shows the roads and nothing of the buildings or the people. A blueprint draws structure, rooms, wiring, and plumbing together, each part fitting the others. HMR tries to be the blueprint for all of reality: the origin of the universe, the laws of physics, life, the mind, health, and how to live."],
+        ["Three parts", "universemodel-2", "HMR rests on three parts. Mind: a Universal Intelligence exists. Body: fascia, the body's continuous web, is a tensegrity. The marriage: the physics between them, which is how one intelligence acts through a body. These are HMR's view, and the site says so."],
+        ["East and West", "universemodel-3", "HMR treats Eastern and Western thought as two languages describing one reality, and it aims at the whole, from the origin of physical reality to the human body, including consciousness and health."],
+        ["Tied to tests", "universemodel-3", "A model is only worth holding if you can test it. HMR comes with science and practices you can test, and it labels each claim as established science, HMR's view, or open."]
       ]
     },
-    {
-      host: "claudebomb.com", url: "https://claudebomb.com", status: "Available",
-      short: "A free AI dashboard that helps you set up and use your AI assistant.",
-      what: "A free AI dashboard: a text file you give your AI assistant that sets it up and helps you use AI well.",
+    claudebomb: {
+      host: "claudebomb.com", url: "https://claudebomb.com", title: "claudebomb.com, the flagship",
       slides: [
-        ["A free AI dashboard", "claudebomb.com is a free AI dashboard.", "orbs"],
-        ["A text file", "It is a text file you give your AI assistant.", "bars"],
-        ["Set up", "The file sets your assistant up.", "rings"],
-        ["Use AI well", "It also helps you use AI well.", "orbs"],
-        ["Personal now, work next", "A personal dashboard is ready now. A work dashboard is planned.", "bars"]
-      ],
-      faq: [
-        ["What is it?", "A text file you give your AI assistant. It sets the assistant up and helps you use AI well."],
-        ["Does it cost anything?", "No. It is free, like everything in the HMR family."],
-        ["Is there a work version?", "A personal dashboard is available now. A work dashboard is planned."]
+        ["Your helping hand into AI", "claudebomb-1", "Claude Bomb is a dashboard plus an AI introduction kit: a handshake, rules of engagement, and a planning document, all in one piece of text. Paste it into your AI assistant, and within five minutes it starts working for you."],
+        ["Two products", "claudebomb-2", "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for early 2027. It is not built yet, and the personal dashboard paves the way for it."],
+        ["It is a text file", "claudebomb-3", "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere."]
       ]
     },
-    {
-      host: "reactionapp.life", url: "https://reactionapp.life", status: "In progress",
-      short: "Record your face while you watch and get a highlight reel of your reactions.",
-      what: "The Reaction App: record your face while you watch, get a highlight reel of your reactions, share with friends.",
+    endgame: {
+      host: "endgame.life", url: "https://endgame.life", title: "endgame.life, the vision",
       slides: [
-        ["The Reaction App", "Watch something. The Reaction App records your face while you watch.", "rings"],
-        ["Your highlights", "You get a highlight reel of your reactions.", "orbs"],
-        ["Share the joy", "Share the reel with friends.", "bars"],
-        ["In progress", "We are still building it.", "rings"]
-      ],
-      faq: [
-        ["What does it do?", "It records your face while you watch, then gives you a highlight reel of your reactions."],
-        ["Can I share the result?", "Yes. You can share it with friends."],
-        ["Is it ready?", "Not yet. It is in progress."]
+        ["One dashboard", "endgame-1", "One dashboard. Your whole life in view. Imagine everyone has a calm page that runs the day: the plan, the inbox, the people, the trip, the fun."],
+        ["Life in 2036", "endgame-2", "Nine moments from invented people. Under each one, a line says what works today with the free dashboard file at claudebomb.com, and another says what we hope will be true in 2036."],
+        ["A vision, not a promise", "endgame-3", "This site says plainly that it is a vision, not a promise. It is the picture of where the flagship products are headed, after both are built."]
       ]
     },
-    {
-      host: "endgame.life", url: "https://endgame.life", status: "In progress",
-      short: "Our vision of life around 2036, with personal AI that works for you.",
-      what: "The vision of where this goes: a picture of life around 2036 with personal AI that works for you.",
+    physics: {
+      host: "hmrphysics.life", url: "https://hmrphysics.life", title: "hmrphysics.life",
       slides: [
-        ["The vision", "endgame.life shows where this all goes.", "rings"],
-        ["Around 2036", "It is a picture of life around 2036.", "bars"],
-        ["AI that works for you", "In that picture, personal AI works for you.", "orbs"],
-        ["In progress", "We are still building it.", "rings"]
-      ],
-      faq: [
-        ["What is it?", "The vision of where this goes: a picture of life around 2036 with personal AI that works for you."],
-        ["Is it ready?", "Not yet. It is in progress."]
+        ["HMR physics in plain words", "hmrphysics-1", "HMR keeps every equation physics has confirmed. What it changes is the framework the equations are read in: Universal Intelligence comes first, and space, time, and matter come after."],
+        ["What HMR claims", "hmrphysics-2", "In HMR, space, time, and matter are not the bottom layer of reality. Read that way, the open problems of physics change shape. Every label on the page says whose claim it is."],
+        ["Established and open", "hmrphysics-3", "Established science carries a source. HMR's view is HMR's. Open means nobody has the answer yet, and the page says so in those words."]
       ]
     },
-    {
-      host: "chronomath.ai", url: "https://chronomath.ai", status: "In progress",
-      short: "HMR's mathematics site.",
-      what: "HMR's mathematics site.",
+    math: {
+      host: "hmrmath.life", url: "https://hmrmath.life", title: "hmrmath.life",
       slides: [
-        ["Chronomath", "chronomath.ai is HMR's mathematics site.", "bars"],
-        ["In progress", "We are still building it.", "orbs"],
-        ["Free, like the rest", "Like every site in the family, it will be free.", "rings"]
-      ],
-      faq: [
-        ["What is it?", "HMR's mathematics site."],
-        ["Is it ready?", "Not yet. It is in progress."]
+        ["HMR mathematics", "hmrmath-1", "Why does the universe obey equations? In HMR's account, mathematics is the ordered pattern of thought within a Universal Intelligence, and nature is mathematical because it is made of that ordered thought."],
+        ["An old puzzle", "hmrmath-2", "The physicist Eugene Wigner called the usefulness of mathematics in physics unreasonable, and said there is no rational explanation for it. HMR offers one, and labels it as HMR's view."],
+        ["Where it stands", "hmrmath-3", "The page is marked work in progress, and it shows how far along each of its parts is."]
+      ]
+    },
+    science: {
+      host: "hmrscience.life", url: "https://hmrscience.life", title: "hmrscience.life",
+      slides: [
+        ["The science bridge", "hmrscience-1", "HMR does not say believe this. It lays out a chain you can inspect and labels every claim, so a skeptic only has to find the link that breaks."],
+        ["Every claim carries a label", "hmrscience-2", "Each claim is marked once, where it is made, as established science, HMR's view, or open. Established science carries a source link. Open means we do not know yet."],
+        ["What the chain shows, and what it does not", "hmrscience-3", "It tells one narrative that never breaks logic, from a non-physical intelligence to the physical universe. It does not prove that Universal Intelligence exists, replace established physics, or yet derive gravity."]
+      ]
+    },
+    reaction: {
+      host: "reactionapp.life", url: "https://reactionapp.life", title: "reactionapp.life",
+      slides: [
+        ["Watch anything", "reactionapp-1", "Watch anything. Keep your best reactions. Reaction videos, made by you and your people."],
+        ["React to yourself", "reactionapp-2", "Watch longer content and get a highlight reel of your strongest reactions. The camera records your face and the screen records what you watch. You choose the moments to keep, then post, save, or send them."],
+        ["The Reaction Wall", "reactionapp-3", "The heart of the app is a public board of reactions that people choose to share. Every one can be reacted to, and the thread grows. This site is still in progress."]
+      ]
+    },
+    funsies: {
+      host: "funsies.fun", url: "https://funsies.fun", title: "funsies.fun",
+      slides: [
+        ["Everything here is for fun", "funsies-1", "Everything here exists to have fun."],
+        ["Play", "funsies-2", "Each game opens right on the page, full screen. Fennsmash, the smash game. A Reaction App test of your reactions. A tensegrity physics sim where you pluck a living structure."],
+        ["Wreck this page", "funsies-3", "Press a button and watch the page misbehave. It always puts itself back."]
       ]
     }
-  ];
-  var SOON = ["universemodel.life", "hmrfascia.life", "hmrlanguage.life", "personaldash.life", "workdash.life"];
+  };
+  window.hmrTours = TOURS;
 
   function el(tag, attrs, kids) {
     var e = document.createElement(tag), k;
@@ -100,102 +89,82 @@
     return null;
   }
 
-  /* ---------- page content ---------- */
-  var map = document.getElementById("sitemap"), sites = document.getElementById("sites"),
-      foot = document.getElementById("footlinks");
-  SITES.forEach(function (s, i) {
+  /* ---------- tour window ---------- */
+  var modal = document.getElementById("modal"), win = modal.querySelector(".tour"),
+      track = document.getElementById("m-track"), title = document.getElementById("m-title"),
+      dots = document.getElementById("m-dots"), bPrev = document.getElementById("m-prev"),
+      bNext = document.getElementById("m-next"), bPlay = document.getElementById("m-play"),
+      bClose = document.getElementById("m-close"), bGo = document.getElementById("m-go");
+  var cur = null, idx = 0, playing = false, opener = null, timer = null, token = 0;
+  var synth = window.speechSynthesis, canSpeak = !!(synth && window.SpeechSynthesisUtterance);
 
-    var sec = el("section", { "class": "wrap", "aria-labelledby": "h-" + i, id: "site-" + i });
-    var box = el("div", { "class": "site" });
-    var h = el("h2", { id: "h-" + i, text: s.host });
-    h.appendChild(el("span", { "class": "status", text: s.status }));
-    box.appendChild(h);
-    box.appendChild(el("p", { text: s.what }));
-    var act = el("div", { "class": "actions" });
-    var tour = el("button", { type: "button", "class": "btn primary", text: "Play the tour" });
-    tour.addEventListener("click", function () { openTour(s, tour); });
-    var go = el("a", { "class": "btn", href: s.url, rel: "noopener", text: "Go to the site" });
-    var q = el("button", { type: "button", "class": "btn", "aria-expanded": "false", "aria-controls": "faq-" + i, text: "Questions" });
-    act.appendChild(tour); act.appendChild(go); act.appendChild(q);
-    box.appendChild(act);
-    var faq = el("div", { "class": "faq", id: "faq-" + i, hidden: "" });
-    s.faq.forEach(function (f) {
-      faq.appendChild(el("h3", { text: f[0] }));
-      faq.appendChild(el("p", { text: f[1] }));
-    });
-    q.addEventListener("click", function () {
-      var open = faq.hasAttribute("hidden");
-      if (open) faq.removeAttribute("hidden"); else faq.setAttribute("hidden", "");
-      q.setAttribute("aria-expanded", String(open));
-    });
-    box.appendChild(faq);
-    sec.appendChild(box);
-    sites.appendChild(sec);
-
-    var li = el("li");
-    li.appendChild(el("a", { href: s.url, rel: "noopener", text: s.host }));
-    foot.appendChild(li);
-  });
-
-
-  /* ---------- tour modal ---------- */
-  var modal = document.getElementById("modal"), dlg = modal.querySelector(".dlg"),
-      stage = document.getElementById("m-stage"), cap = document.getElementById("m-cap"),
-      title = document.getElementById("m-title"), dots = document.getElementById("m-dots"),
-      bPrev = document.getElementById("m-prev"), bNext = document.getElementById("m-next"),
-      bPlay = document.getElementById("m-play"), bClose = document.getElementById("m-close");
-  var cur = null, idx = 0, timer = null, playing = true, opener = null;
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function scene(kind, n) {
-    stage.textContent = "";
-    var big = el("div", { "class": "big", text: String(n + 1) + " / " + cur.slides.length });
-    function put(cls, css) { var d = el("div", { "class": cls }); d.style.cssText = css; stage.appendChild(d); }
-    if (kind === "rings") {
-      put("ring", "width:160px;height:160px"); put("ring r2", "width:160px;height:160px");
-    } else if (kind === "bars") {
-      put("bar", "width:120px;top:50px;left:calc(50% - 60px)"); put("bar b", "width:90px;top:90px;left:calc(50% - 45px)");
-      put("bar", "width:140px;top:130px;left:calc(50% - 70px)");
-    } else {
-      put("orb", "width:60px;height:60px;left:18%;top:60px"); put("orb b", "width:44px;height:44px;left:70%;top:80px");
-      put("orb c", "width:90px;height:90px;left:44%;top:70px");
-    }
-    stage.appendChild(big);
-  }
+  function stopSpeech() { token++; clearTimeout(timer); if (canSpeak) synth.cancel(); }
   function show(i) {
-    idx = (i + cur.slides.length) % cur.slides.length;
-    var s = cur.slides[idx];
-    scene(s[2], idx);
-    cap.textContent = s[0] + ". " + s[1];
+    idx = Math.max(0, Math.min(cur.slides.length - 1, i));
+    track.style.transform = "translateX(" + (-100 * idx) + "%)";
     dots.textContent = "";
     cur.slides.forEach(function (_, k) { dots.appendChild(el("i", k === idx ? { "class": "on" } : {})); });
+    bPrev.disabled = idx === 0; bNext.disabled = idx === cur.slides.length - 1;
+    Array.prototype.forEach.call(track.children, function (c, k) { c.setAttribute("aria-hidden", k === idx ? "false" : "true"); });
   }
-  function tick() {
-    clearTimeout(timer);
-    if (playing && !modal.hidden) timer = setTimeout(function () { show(idx + 1); tick(); }, 5000);
+  function narrate() {
+    var my = ++token; clearTimeout(timer); if (canSpeak) synth.cancel();
+    if (!playing) return;
+    var s = cur.slides[idx], text = s[0] + ". " + s[2];
+    function next() {
+      if (my !== token || !playing) return;
+      if (idx < cur.slides.length - 1) { show(idx + 1); narrate(); } else setPlay(false);
+    }
+    if (canSpeak) {
+      var u = new SpeechSynthesisUtterance(text); u.rate = 0.95;
+      u.onend = next; u.onerror = function () { if (my === token) setPlay(false); };
+      synth.speak(u);
+    } else {
+      timer = setTimeout(next, Math.max(6000, text.length * 60));
+    }
   }
-  function setPlay(p) { playing = p; bPlay.textContent = p ? "Pause" : "Play"; tick(); }
-  function openTour(s, from) {
-    cur = s; opener = from; title.textContent = s.host + " tour";
-    modal.hidden = false; show(0); setPlay(!reduce);
-    dlg.focus();
+  function setPlay(p) {
+    playing = p; bPlay.textContent = p ? "Pause narration" : "Play narration";
+    bPlay.setAttribute("aria-pressed", String(p));
+    if (p) narrate(); else stopSpeech();
+  }
+  function go(i) { show(i); if (playing) narrate(); }
+  function openTour(key, from) {
+    var t = TOURS[key]; if (!t) return;
+    cur = t; opener = from; title.textContent = t.title;
+    track.textContent = "";
+    t.slides.forEach(function (s, k) {
+      var fig = el("figure", { "class": "slide" });
+      var img = el("img", { src: IMG + s[1] + ".png", alt: "Screenshot of " + t.host + ": " + s[0], width: "1120", height: "630" });
+      if (k > 0) img.setAttribute("loading", "lazy");
+      fig.appendChild(img);
+      var cap = el("figcaption", {}, [el("b", { text: s[0] }), el("span", { text: s[2] })]);
+      fig.appendChild(cap); track.appendChild(fig);
+    });
+    bGo.setAttribute("href", t.url);
+    modal.hidden = false; document.body.classList.add("tour-open");
+    playing = false; bPlay.textContent = "Play narration"; bPlay.setAttribute("aria-pressed", "false");
+    bPlay.hidden = false;
+    show(0); win.focus();
   }
   function closeTour() {
-    modal.hidden = true; clearTimeout(timer);
+    stopSpeech(); playing = false; modal.hidden = true; document.body.classList.remove("tour-open");
     if (opener) opener.focus();
   }
-  bPrev.addEventListener("click", function () { show(idx - 1); tick(); });
-  bNext.addEventListener("click", function () { show(idx + 1); tick(); });
+  window.hmrOpenTour = openTour;
+  bPrev.addEventListener("click", function () { go(idx - 1); });
+  bNext.addEventListener("click", function () { go(idx + 1); });
   bPlay.addEventListener("click", function () { setPlay(!playing); });
   bClose.addEventListener("click", closeTour);
   modal.addEventListener("click", function (e) { if (e.target === modal) closeTour(); });
+  window.addEventListener("pagehide", stopSpeech);
   modal.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { e.preventDefault(); closeTour(); return; }
-    if (e.key === "ArrowRight") { show(idx + 1); tick(); }
-    if (e.key === "ArrowLeft") { show(idx - 1); tick(); }
+    if (e.key === "ArrowRight") go(idx + 1);
+    if (e.key === "ArrowLeft") go(idx - 1);
     if (e.key === "Tab") {
-      var f = Array.prototype.slice.call(dlg.querySelectorAll("button")), first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && (document.activeElement === first || document.activeElement === dlg)) { e.preventDefault(); last.focus(); }
+      var f = Array.prototype.slice.call(win.querySelectorAll("button:not([disabled]),a[href]")), first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === win)) { e.preventDefault(); last.focus(); }
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });

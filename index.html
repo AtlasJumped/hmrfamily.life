@@ -28,7 +28,12 @@
   </div>
 </header>
 <main id="main">
-  <noscript><div class="wrap"><p class="note">This page lists our sites with a tour for each. Turn on JavaScript to see them. The footer links work without it.</p></div></noscript>
+  <noscript><div class="wrap"><p class="note">This page shows our sites as cards, with a tour for each and a sortable list of our domain names. Turn on JavaScript to see them. The footer links work without it.</p></div></noscript>
+  <section class="wrap" aria-labelledby="safe-h">
+    <h2 id="safe-h">Safety and responsibility</h2>
+    <p>We value new ideas, and we also value not breaking things. Standard security protocols are in place on every site: every page is served over a secure connection, forms send only what you choose to type, and we do not sell your data.</p>
+    <p>None of our sites takes payments yet. Where a page mentions giving, it says "Donations open soon."</p>
+  </section>
   <section class="wrap talk" aria-labelledby="talk-h">
     <h2 id="talk-h">What every one of our sites has</h2>
     <p>Every site we build has the same row of buttons along the bottom. You will not find this anywhere else. True to our values, we want everyone who visits to be able to send us a signal, express themselves, and enjoy themselves.</p>
@@ -43,48 +48,51 @@
   </section>
   <section class="wrap" aria-labelledby="map-h">
     <h2 id="map-h">Site map</h2>
-    <p>Our sites come in two groups. <b>The HMR family</b> is always free, forever. <b>The HMR experiment</b> is our test bed of ideas.</p>
-    <h3 class="tier-h"><span class="star" aria-hidden="true">★</span> The HMR family</h3>
-    <div id="tree" class="tree"></div>
+    <p>This page, hmrfamily.life, is the hub. From it grow a flagship, the soul of the model, and the sites that explore the model one subject at a time. Every family site is always free, forever. Take the tour on any card for a look inside.</p>
+    <div id="fam" class="fam"></div>
+    <p class="keep" aria-hidden="true"><span>Keep scrolling</span><i></i></p>
   </section>
-  <div id="sites"></div>
   <section class="wrap" id="experiment" aria-labelledby="exp-h">
-    <h2 id="exp-h">The HMR experiment</h2>
-    <p>Beyond the family, we own more than 130 more web addresses. Each one is an idea, and each has a simple starting site with the same buttons along the bottom.</p>
-    <p>Here is our plan, in the open. We made a significant investment in these names. We will never ask anyone for money. Each site will do one of three things: sit quietly, get better because people like you give it ideas and feedback, or attract someone who wants to build it, buy it, or support it. If one becomes a real business, or if offers over the next year return more than we spent, the experiment worked. If you want to offer a donation or buy something we make, you are welcome to, and we will listen. We will not ask.</p>
-    <p>One person owns all of these, working with AI, with no team and no further spending planned. Web addresses are cheap right now. <span id="under5"></span> If you have been thinking about building your own sites, this is a good time.</p>
-    <div id="exp" class="exp"></div>
+    <h2 id="exp-h">Our other domain names</h2>
+    <p>Beyond the HMR family of websites, we own more than 130 domain names, all of which we think will increase in value over time.</p>
+    <p>We bought them in one day. More than 30 of them cost under $5 for the first year. The cheapest way we know to build a site costs about $25 ($20 for a month of Claude Pro plus under $5 for a domain), and none of it goes to us. We can build sites and teach others to, so we expect these names to gain value within about six months, whether they are sold or used by our community.</p>
+    <p>Each name is an idea, and each will have a simple starting site with the same buttons along the bottom. If you have been thinking about building your own sites, this is a good time.</p>
+    <div id="fav" class="fav"></div>
+    <h3 id="list-h" class="list-h">Every name, in a list</h3>
+    <div class="sortbar" role="group" aria-label="Sort the list"><span id="sort-l">Sort by</span><span id="sortbtns"></span></div>
+    <p class="small" id="list-sum"></p>
+    <div id="dlist" class="dlist" aria-labelledby="list-h"></div>
+    <p class="small" id="held"></p>
   </section>
   <section class="wrap next" aria-labelledby="next-h">
-    <h2 id="next-h">What we are building next</h2>
+    <h2 id="next-h">What we're building next</h2>
     <p>We are making a list of things the world needs that are not built yet, or not built for free. For each one we will build a free version. Where someone else already makes a product, paid or not, we will link to it and give it an honest rating against our standard.</p>
+    <p>On the family list now: the work dashboard (the second product under claudebomb.com), the fascia and language sites, and the Reaction App.</p>
     <p><span class="tag">Planned</span></p>
-  </section>
-  <section class="wrap" aria-labelledby="safe-h">
-    <h2 id="safe-h">Safety and responsibility</h2>
-    <p>We value new ideas, and we also value not breaking things. Standard security protocols are in place on every site: every page is served over a secure connection, forms send only what you choose to type, and we do not sell your data.</p>
   </section>
 </main>
 <footer>
   <div class="wrap">
     <h2 class="foot-h">All our sites</h2>
     <ul id="footlinks" class="foot"></ul>
-    <p><a class="btn primary" href="https://discord.gg/gEnC8TpNc" rel="noopener">Join us on Discord</a></p>
+    <p><a class="btn primary" href="https://discord.gg/gEnC8TpNc" target="_blank" rel="noopener">Join us on Discord</a></p>
     <p class="small">Always free, forever.</p>
   </div>
 </footer>
 
 <div id="modal" class="modal" hidden>
-  <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">
-    <div class="dlg-top"><h2 id="m-title"></h2><button type="button" class="btn" id="m-close" aria-label="Close tour">Close</button></div>
-    <div class="stage" id="m-stage" aria-hidden="true"></div>
-    <p class="cap" id="m-cap" aria-live="polite"></p>
-    <div class="dlg-bot">
-      <button type="button" class="btn" id="m-prev">Back</button>
-      <span class="dots" id="m-dots"></span>
-      <button type="button" class="btn" id="m-play">Pause</button>
-      <button type="button" class="btn primary" id="m-next">Next</button>
+  <div class="tour" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">
+    <div class="tour-top">
+      <h2 id="m-title"></h2>
+      <button type="button" class="btn primary" id="m-play">Play narration</button>
+      <button type="button" class="tour-x" id="m-close" aria-label="Close tour">&times;</button>
     </div>
+    <div class="tour-view">
+      <button type="button" class="tour-nav prev" id="m-prev" aria-label="Previous">&#8249;</button>
+      <div class="tour-track" id="m-track"></div>
+      <button type="button" class="tour-nav next" id="m-next" aria-label="Next">&#8250;</button>
+    </div>
+    <div class="tour-bot"><span class="dots" id="m-dots"></span><a class="btn" id="m-go" target="_blank" rel="noopener" href="#">Visit the site</a></div>
   </div>
 </div>
 

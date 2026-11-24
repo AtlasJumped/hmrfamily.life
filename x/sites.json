@@ -332,12 +332,12 @@
 },
 "certified.charity": {
 "t": "Certified Charity",
-"p": "How to check a charity before you give: the public records to look up and the red flags to watch for.",
+"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
 "k": "charity"
 },
 "corrupt.charity": {
 "t": "Corrupt Charity",
-"p": "Learn the tricks fake charities use, so no one fools you twice.",
+"p": "We spend it however we want. At least we are honest about it. Donations open soon.",
 "k": "charity"
 },
 "cosmicjoke.lol": {
@@ -367,7 +367,7 @@
 },
 "definitelyreal.charity": {
 "t": "Definitely Real Charity",
-"p": "A name that sounds like a scam on purpose. Here we teach you how to tell the real from the fake.",
+"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
 "k": "charity"
 },
 "delulu.monster": {
@@ -437,12 +437,12 @@
 },
 "holy.charity": {
 "t": "Holy Charity",
-"p": "How giving works across faiths and traditions, and how to give wisely.",
+"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
 "k": "charity"
 },
 "honorable.charity": {
 "t": "Honorable Charity",
-"p": "A name that sounds too good to be true. Here we teach you how to check any charity before you give.",
+"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
 "k": "charity"
 },
 "hornswoggl.ing": {
@@ -532,7 +532,7 @@
 },
 "notascam.charity": {
 "t": "Not a Scam Charity",
-"p": "It sounds like a scam on purpose. Learn the signs of real ones and check any charity before you give.",
+"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
 "k": "charity"
 },
 "oneclicksite.click": {
@@ -562,7 +562,7 @@
 },
 "renegade.charity": {
 "t": "Renegade Charity",
-"p": "Giving that breaks the old rules: open books, direct help, no middlemen.",
+"p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
 "k": "charity"
 },
 "robobrew.beer": {
@@ -602,12 +602,12 @@
 },
 "totallylegit.charity": {
 "t": "Totally Legit Charity",
-"p": "It sounds like a scam on purpose. Here is how to check that any charity is real.",
+"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
 "k": "charity"
 },
 "trustme.charity": {
 "t": "Trust Me Charity",
-"p": "Never give just because someone says trust me. Here is how to check a charity instead.",
+"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
 "k": "charity"
 },
 "underthebed.monster": {
@@ -632,7 +632,7 @@
 },
 "virtuous.charity": {
 "t": "Virtuous Charity",
-"p": "What makes giving truly good, and how to give with your eyes open.",
+"p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
 "k": "charity"
 },
 "webbuild.ing": {
@@ -659,6 +659,16 @@
 "t": "Wonderful Charity",
 "p": "Wonderful acts of giving, and how to check that a charity is wonderful before you give.",
 "k": "charity"
+},
+"pontificat.ing": {
+"t": "Pontificating",
+"p": "Big opinions, kindly delivered, with every claim tied to something you can check.",
+"k": "mind"
+},
+"renegade.monster": {
+"t": "Renegade Monster",
+"p": "A monster that breaks the rules for fun. Quick to try, easy to share.",
+"k": "fun"
 }
 },
 "kinds": {
@@ -689,7 +699,7 @@
 "charity": {
 "sub": "A giving and trust idea in the HMR family",
 "b": [
-"We do not collect donations here.",
+"Donations open soon.",
 "Learn to check any charity before you give: look up its public records and how it spends money.",
 "Real charities welcome questions. Pressure and secrecy are red flags."
 ]
@@ -742,5 +752,36 @@
 "Read the full model at universemodel.ai."
 ]
 }
-}
+},
+"live": [
+"aiplumber.tech",
+"agentbank.ing",
+"agentbrew.beer",
+"agentbrows.ing",
+"agentbuilt.website",
+"agentmarket.ing",
+"agentmonitor.ing",
+"agentmonitor.tech",
+"agentorchestrat.ing",
+"agentshopp.ing",
+"agentstaff.ing",
+"aiaccount.ing",
+"aiadjuster.tech",
+"aiapproved.loan",
+"aiauditor.tech",
+"aiautomat.ing",
+"aibartender.beer",
+"aibookkeep.ing",
+"aibookkeeper.tech",
+"aibrew.beer",
+"aibrewery.beer",
+"aibudget.ing",
+"aiclaims.tech",
+"aiclos.ing",
+"aicomedy.live",
+"aicontractor.tech",
+"aielectrician.tech",
+"aiestimat.ing",
+"aiestimator.tech"
+]
 }
