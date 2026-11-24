@@ -104,10 +104,6 @@
   var map = document.getElementById("sitemap"), sites = document.getElementById("sites"),
       foot = document.getElementById("footlinks");
   SITES.forEach(function (s, i) {
-    var a = el("a", { "class": "card", href: "#site-" + i });
-    a.appendChild(el("b", { text: s.host }));
-    a.appendChild(el("span", { text: s.short }));
-    map.appendChild(a);
 
     var sec = el("section", { "class": "wrap", "aria-labelledby": "h-" + i, id: "site-" + i });
     var box = el("div", { "class": "site" });
@@ -140,13 +136,7 @@
     li.appendChild(el("a", { href: s.url, rel: "noopener", text: s.host }));
     foot.appendChild(li);
   });
-  var soon = document.getElementById("soon");
-  SOON.forEach(function (h) {
-    var li = el("li", { text: h + " " });
-    li.appendChild(el("small", { text: "coming soon" }));
-    soon.appendChild(li);
-    foot.appendChild(el("li", { "class": "small", text: h + " (coming soon)" }));
-  });
+
 
   /* ---------- tour modal ---------- */
   var modal = document.getElementById("modal"), dlg = modal.querySelector(".dlg"),

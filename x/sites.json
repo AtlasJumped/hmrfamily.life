@@ -1,0 +1,746 @@
+{
+"sites": {
+"agentbank.ing": {
+"t": "Agent Banking",
+"p": "Banking built for AI agents: safe spending limits, receipts, and a human who approves every big move.",
+"k": "biz"
+},
+"agentbrew.beer": {
+"t": "Agent Brew",
+"p": "An AI brewing assistant that plans recipes, tracks fermentation, and keeps a brew log for home and craft brewers.",
+"k": "beer"
+},
+"agentbrows.ing": {
+"t": "Agent Browsing",
+"p": "Teach an AI agent to browse the web for you, and see every page it visits and every click it makes.",
+"k": "biz"
+},
+"agentbuilt.website": {
+"t": "Agent Built",
+"p": "A showcase of websites built end to end by AI agents, with the prompts and the process shown in the open.",
+"k": "build"
+},
+"agentmarket.ing": {
+"t": "Agent Marketing",
+"p": "Marketing run with AI agents: plans, posts, and reports, with a person checking every step.",
+"k": "biz"
+},
+"agentmonitor.ing": {
+"t": "Agent Monitoring",
+"p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
+"k": "biz"
+},
+"agentmonitor.tech": {
+"t": "Agent Monitor",
+"p": "The tools behind agent monitoring: dashboards, alerts, and audit trails for teams that run AI agents.",
+"k": "biz"
+},
+"agentorchestrat.ing": {
+"t": "Agent Orchestrating",
+"p": "Many AI agents working as one team, each with a clear job, a shared plan, and a human conductor.",
+"k": "biz"
+},
+"agentshopp.ing": {
+"t": "Agent Shopping",
+"p": "An AI agent that finds the best deal, compares honestly, and asks you before it buys anything.",
+"k": "biz"
+},
+"agentstaff.ing": {
+"t": "Agent Staffing",
+"p": "Find the right AI agent for a job the way you would hire a person: skills, references, and a trial run.",
+"k": "biz"
+},
+"aiaccount.ing": {
+"t": "AI Accounting",
+"p": "Accounting help for small businesses, with AI doing the sorting and a person signing off.",
+"k": "biz"
+},
+"aiadjuster.tech": {
+"t": "AI Adjuster",
+"p": "Faster, fairer insurance claim estimates with AI that shows its reasoning to both sides.",
+"k": "biz"
+},
+"aiapproved.loan": {
+"t": "AI Approved",
+"p": "An honest guide to how AI is used in lending decisions, and what you can ask a lender. We do not offer loans.",
+"k": "loan"
+},
+"aiauditor.tech": {
+"t": "AI Auditor",
+"p": "Audit help that checks every line, flags what looks wrong, and explains why.",
+"k": "biz"
+},
+"aiautomat.ing": {
+"t": "AI Automating",
+"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
+"k": "biz"
+},
+"aibartender.beer": {
+"t": "AI Bartender",
+"p": "Tell it what you like and it suggests a beer or a drink, and teaches you why it fits.",
+"k": "beer"
+},
+"aibookkeep.ing": {
+"t": "AI Bookkeeping",
+"p": "Bookkeeping for small businesses: receipts in, clean books out, a person checks the result.",
+"k": "biz"
+},
+"aibookkeeper.tech": {
+"t": "AI Bookkeeper",
+"p": "The bookkeeper that never sleeps, built for freelancers and small shops.",
+"k": "biz"
+},
+"aibrew.beer": {
+"t": "AI Brew",
+"p": "Brew better beer at home with an AI guide for every step, from grain to glass.",
+"k": "beer"
+},
+"aibrewery.beer": {
+"t": "AI Brewery",
+"p": "Tools that help small breweries plan batches, track stock, and tell their story.",
+"k": "beer"
+},
+"aibudget.ing": {
+"t": "AI Budgeting",
+"p": "A budget that builds itself from your real spending and talks to you in plain words.",
+"k": "biz"
+},
+"aiclaims.tech": {
+"t": "AI Claims",
+"p": "Help people file insurance claims clearly and completely, the first time.",
+"k": "biz"
+},
+"aiclos.ing": {
+"t": "AI Closing",
+"p": "Sales help for the last step: answer questions, remove doubt, and keep every promise honest.",
+"k": "biz"
+},
+"aicomedy.live": {
+"t": "AI Comedy Live",
+"p": "Live comedy where people and AI trade jokes in real time, and the audience decides who wins.",
+"k": "show"
+},
+"aicontractor.tech": {
+"t": "AI Contractor",
+"p": "Software for contractors: quotes, schedules, and customer updates handled by AI.",
+"k": "biz"
+},
+"aielectrician.tech": {
+"t": "AI Electrician",
+"p": "Tools for electricians: estimates, code lookups, and job notes in one place.",
+"k": "biz"
+},
+"aiestimat.ing": {
+"t": "AI Estimating",
+"p": "Fast, clear job estimates for trades and services, with every number explained.",
+"k": "biz"
+},
+"aiestimator.tech": {
+"t": "AI Estimator",
+"p": "The estimating engine behind fair quotes for contractors and their customers.",
+"k": "biz"
+},
+"aifollowup.tech": {
+"t": "AI Follow-Up",
+"p": "Never forget to follow up: AI reminds, drafts, and tracks every customer conversation.",
+"k": "biz"
+},
+"aiforecast.ing": {
+"t": "AI Forecasting",
+"p": "Forecasts for small businesses that say what they know, what they guess, and how sure they are.",
+"k": "biz"
+},
+"aigameshow.live": {
+"t": "AI Game Show Live",
+"p": "A game show where people play against and alongside AI, streamed live.",
+"k": "show"
+},
+"aigrantwrit.ing": {
+"t": "AI Grant Writing",
+"p": "Help nonprofits find grants and write strong, honest applications.",
+"k": "biz"
+},
+"aigrantwriter.tech": {
+"t": "AI Grant Writer",
+"p": "The grant writer for small nonprofits that cannot afford one.",
+"k": "biz"
+},
+"aihir.ing": {
+"t": "AI Hiring",
+"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
+"k": "biz"
+},
+"aiillustrat.ing": {
+"t": "AI Illustrating",
+"p": "Illustration with AI as a partner to human artists, with credit where credit is due.",
+"k": "biz"
+},
+"aiintake.tech": {
+"t": "AI Intake",
+"p": "Friendly intake for law offices and clinics: the right questions, asked kindly, sorted well.",
+"k": "biz"
+},
+"aiintern.tech": {
+"t": "AI Intern",
+"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
+"k": "biz"
+},
+"aiinvoic.ing": {
+"t": "AI Invoicing",
+"p": "Invoices that send themselves, follow up politely, and keep your cash flow clear.",
+"k": "biz"
+},
+"aileasing.tech": {
+"t": "AI Leasing",
+"p": "Help landlords and renters with listings, questions, and lease paperwork.",
+"k": "biz"
+},
+"ailoan.loan": {
+"t": "AI Loan Guide",
+"p": "Learn how AI reads a loan application and how to protect yourself. We do not offer loans.",
+"k": "loan"
+},
+"aiparalegal.tech": {
+"t": "AI Paralegal",
+"p": "Paralegal help for small law firms: research, drafts, and deadlines, reviewed by a lawyer.",
+"k": "biz"
+},
+"aiphotoedit.ing": {
+"t": "AI Photo Editing",
+"p": "Edit photos by describing what you want, and keep the original safe.",
+"k": "biz"
+},
+"aiplann.ing": {
+"t": "AI Planning",
+"p": "Plans for projects, trips, and weeks that adjust when life happens.",
+"k": "biz"
+},
+"aiplumber.tech": {
+"t": "AI Plumber",
+"p": "Software for plumbers: booking, dispatch, quotes, and follow-ups in one place.",
+"k": "biz"
+},
+"aiplumber.website": {
+"t": "AI Plumber Website",
+"p": "A ready-made website for plumbing businesses, set up in an afternoon.",
+"k": "build"
+},
+"aipropertymanager.tech": {
+"t": "AI Property Manager",
+"p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
+"k": "biz"
+},
+"aiproposal.tech": {
+"t": "AI Proposal",
+"p": "Write winning proposals faster, with every claim backed by a source.",
+"k": "biz"
+},
+"aiquot.ing": {
+"t": "AI Quoting",
+"p": "Quotes customers understand, sent the same day they ask.",
+"k": "biz"
+},
+"airoofer.tech": {
+"t": "AI Roofer",
+"p": "Tools for roofers: measurements, estimates, and storm-season scheduling.",
+"k": "biz"
+},
+"aisalesrep.tech": {
+"t": "AI Sales Rep",
+"p": "An AI sales rep that answers questions honestly, books calls, and hands off to a person.",
+"k": "biz"
+},
+"aisetter.tech": {
+"t": "AI Appointment Setter",
+"p": "Book appointments around the clock without double bookings or pushy scripts.",
+"k": "biz"
+},
+"aitaxfil.ing": {
+"t": "AI Tax Filing",
+"p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
+"k": "biz"
+},
+"aitaxprep.tech": {
+"t": "AI Tax Prep",
+"p": "Tax prep help for freelancers and small businesses, reviewed by a person.",
+"k": "biz"
+},
+"aitranslat.ing": {
+"t": "AI Translating",
+"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
+"k": "biz"
+},
+"aiunderwriter.loan": {
+"t": "AI Underwriter",
+"p": "An open look at automated underwriting: what it checks, where it can be unfair, and how to fix it. We do not offer loans.",
+"k": "loan"
+},
+"aivideoedit.ing": {
+"t": "AI Video Editing",
+"p": "Cut, caption, and polish video by describing what you want.",
+"k": "biz"
+},
+"aivoiceact.ing": {
+"t": "AI Voice Acting",
+"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
+"k": "biz"
+},
+"aiwebhost.ing": {
+"t": "AI Web Hosting",
+"p": "Hosting that sets itself up, watches itself, and tells you in plain words when something is wrong.",
+"k": "build"
+},
+"aiwebsite.click": {
+"t": "AI Website in One Click",
+"p": "Describe your business, click once, and get a working website.",
+"k": "build"
+},
+"aurafarm.monster": {
+"t": "Aura Farm Monster",
+"p": "A playful place to collect good moments and share them, no likes needed.",
+"k": "fun"
+},
+"botbattle.live": {
+"t": "Bot Battle Live",
+"p": "Watch AI bots compete live in games, puzzles, and debates.",
+"k": "show"
+},
+"botlender.loan": {
+"t": "Bot Lender Watch",
+"p": "A watchdog guide to robot lending: what to look out for, and your rights. We do not offer loans.",
+"k": "loan"
+},
+"brewagent.beer": {
+"t": "Brew Agent",
+"p": "An AI agent for brewers that orders supplies, tracks batches, and never forgets a step.",
+"k": "beer"
+},
+"brewbot.beer": {
+"t": "Brew Bot",
+"p": "A friendly brewing bot that answers any homebrew question.",
+"k": "beer"
+},
+"buildmysite.click": {
+"t": "Build My Site",
+"p": "Click, answer a few questions, and get a site that is yours to keep.",
+"k": "build"
+},
+"builtbyai.website": {
+"t": "Built by AI",
+"p": "A badge and directory for websites built with AI, with honest notes on how each was made.",
+"k": "build"
+},
+"certified.charity": {
+"t": "Certified Charity",
+"p": "How to check a charity before you give: the public records to look up and the red flags to watch for.",
+"k": "charity"
+},
+"corrupt.charity": {
+"t": "Corrupt Charity",
+"p": "Learn the tricks fake charities use, so no one fools you twice.",
+"k": "charity"
+},
+"cosmicjoke.lol": {
+"t": "Cosmic Joke",
+"p": "The funniest true facts about the universe.",
+"k": "fun"
+},
+"cosmicru.sh": {
+"t": "Cosmic Rush",
+"p": "A fast space game for one quick break.",
+"k": "fun"
+},
+"craftai.beer": {
+"t": "Craft AI Beer",
+"p": "Where craft brewing meets AI: recipe ideas, label art, and brewer stories.",
+"k": "beer"
+},
+"createjoy.art": {
+"t": "Create Joy Art",
+"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
+"k": "fun"
+},
+"crowdsource.charity": {
+"t": "Crowdsource Charity",
+"p": "Let the crowd find and vet good causes together, in the open.",
+"k": "charity"
+},
+"definitelyreal.charity": {
+"t": "Definitely Real Charity",
+"p": "A name that sounds like a scam on purpose. Here we teach you how to tell the real from the fake.",
+"k": "charity"
+},
+"delulu.monster": {
+"t": "Delulu Monster",
+"p": "Dream big on purpose, then turn the dream into one small real step today.",
+"k": "fun"
+},
+"discombobulat.ing": {
+"t": "Discombobulating",
+"p": "Puzzles and illusions that scramble your brain, in a good way.",
+"k": "fun"
+},
+"doomscroll.monster": {
+"t": "Doomscroll Monster",
+"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
+"k": "fun"
+},
+"dragonrid.ing": {
+"t": "Dragon Riding",
+"p": "An adventure game where you ride dragons across worlds.",
+"k": "fun"
+},
+"dragonrider.quest": {
+"t": "Dragon Rider Quest",
+"p": "Quests and challenges for would-be dragon riders of every age.",
+"k": "fun"
+},
+"dreamsite.website": {
+"t": "Dream Site",
+"p": "Describe your dream website, and we help you build it.",
+"k": "build"
+},
+"dreamweav.ing": {
+"t": "Dream Weaving",
+"p": "Weave your dreams into stories, art, and plans.",
+"k": "fun"
+},
+"elevat.ing": {
+"t": "Elevating",
+"p": "Elevating humanity: small daily actions that lift you and the people around you.",
+"k": "mind"
+},
+"fennsma.sh": {
+"t": "Fen Smash",
+"p": "Smash things in a game made for joy and stress relief.",
+"k": "fun"
+},
+"glitterbomb.monster": {
+"t": "Glitter Bomb Monster",
+"p": "Send a friend a surprise burst of digital glitter and joy.",
+"k": "fun"
+},
+"goodguys.charity": {
+"t": "Good Guys Charity",
+"p": "Stories of everyday people doing good, shared to inspire more of it.",
+"k": "charity"
+},
+"gravitydefy.ing": {
+"t": "Gravity Defying",
+"p": "Physics that seems to defy gravity, explained simply.",
+"k": "mind"
+},
+"grubbing.money": {
+"t": "Grubbing Money",
+"p": "An honest, funny look at money grabs, and how to spot them.",
+"k": "fun"
+},
+"holy.charity": {
+"t": "Holy Charity",
+"p": "How giving works across faiths and traditions, and how to give wisely.",
+"k": "charity"
+},
+"honorable.charity": {
+"t": "Honorable Charity",
+"p": "A name that sounds too good to be true. Here we teach you how to check any charity before you give.",
+"k": "charity"
+},
+"hornswoggl.ing": {
+"t": "Hornswoggling",
+"p": "Learn the classic cons and scams, so no one can hornswoggle you.",
+"k": "mind"
+},
+"ilovedogs.art": {
+"t": "I Love Dogs Art",
+"p": "Dog art from people who love dogs. Share yours.",
+"k": "dogs"
+},
+"ilovedogs.cloud": {
+"t": "I Love Dogs Cloud",
+"p": "A home for every photo of every good dog.",
+"k": "dogs"
+},
+"ilovedogs.dog": {
+"t": "I Love Dogs",
+"p": "Everything for people who love dogs.",
+"k": "dogs"
+},
+"ilovedogs.live": {
+"t": "I Love Dogs Live",
+"p": "Live dog cams and happy dog moments.",
+"k": "dogs"
+},
+"ilovedogs.space": {
+"t": "I Love Dogs Space",
+"p": "A calm space for dog lovers to share and meet.",
+"k": "dogs"
+},
+"ilovedogs.tech": {
+"t": "I Love Dogs Tech",
+"p": "Tech for dog lovers: trackers, health logs, and smart tools.",
+"k": "dogs"
+},
+"lifeaffirm.ing": {
+"t": "Life Affirming",
+"p": "A daily dose of things that make life feel worth it.",
+"k": "mind"
+},
+"madebyai.website": {
+"t": "Made by AI",
+"p": "A badge and gallery for websites made by AI, with how each one was built.",
+"k": "build"
+},
+"maincharacter.quest": {
+"t": "Main Character Quest",
+"p": "Quests that help you live like the main character of your own story, kindly.",
+"k": "fun"
+},
+"mcpstore.tech": {
+"t": "MCP Store",
+"p": "A directory of MCP tools that connect AI assistants to apps, with honest ratings.",
+"k": "biz"
+},
+"microsaas.ing": {
+"t": "Micro SaaS-ing",
+"p": "Build and run a tiny software business on your own, with AI as your team.",
+"k": "build"
+},
+"mindbend.ing": {
+"t": "Mind Bending",
+"p": "Ideas that bend your mind, tested against reality.",
+"k": "mind"
+},
+"mindboggl.ing": {
+"t": "Mind Boggling",
+"p": "The most mind boggling true facts, each with a source.",
+"k": "mind"
+},
+"mindru.sh": {
+"t": "Mind Rush",
+"p": "Quick brain games for a rush of focus.",
+"k": "fun"
+},
+"moneygrubbing.money": {
+"t": "Money Grubbing",
+"p": "Satire about greed, and the real cost of chasing money over joy.",
+"k": "fun"
+},
+"nailbit.ing": {
+"t": "Nail Biting",
+"p": "The most nail biting moments, stories, and games.",
+"k": "fun"
+},
+"notascam.charity": {
+"t": "Not a Scam Charity",
+"p": "It sounds like a scam on purpose. Learn the signs of real ones and check any charity before you give.",
+"k": "charity"
+},
+"oneclicksite.click": {
+"t": "One Click Site",
+"p": "One click to a working website for your small business.",
+"k": "build"
+},
+"overreact.ing": {
+"t": "Overreacting",
+"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"k": "fun"
+},
+"philanthropic.charity": {
+"t": "Philanthropic Charity",
+"p": "A plain guide to giving: how to find causes that match your values and check that your money helps.",
+"k": "charity"
+},
+"rabblerous.ing": {
+"t": "Rabble Rousing",
+"p": "Make noise for good causes, peacefully and honestly.",
+"k": "mind"
+},
+"rekindl.ing": {
+"t": "Rekindling",
+"p": "Rekindle old friendships, old hobbies, and old joys.",
+"k": "mind"
+},
+"renegade.charity": {
+"t": "Renegade Charity",
+"p": "Giving that breaks the old rules: open books, direct help, no middlemen.",
+"k": "charity"
+},
+"robobrew.beer": {
+"t": "Robo Brew",
+"p": "Robots and AI in the brewery: automation for small brewers.",
+"k": "beer"
+},
+"rulebreak.ing": {
+"t": "Rule Breaking",
+"p": "Break the rules that should be broken, and keep the ones that protect people.",
+"k": "mind"
+},
+"showstopp.ing": {
+"t": "Show Stopping",
+"p": "Make something so good it stops the show.",
+"k": "fun"
+},
+"sitebuild.ing": {
+"t": "Site Building",
+"p": "Build a website with AI, step by step, and learn as you go.",
+"k": "build"
+},
+"sitefactory.tech": {
+"t": "Site Factory",
+"p": "Build many websites at once from one framework, the way we build ours.",
+"k": "build"
+},
+"sitelaunch.ing": {
+"t": "Site Launching",
+"p": "Launch your site the right way: domain, security, speed, and the first visitors.",
+"k": "build"
+},
+"startupbuild.ing": {
+"t": "Startup Building",
+"p": "Build a startup with AI from idea to first customer, in the open.",
+"k": "build"
+},
+"totallylegit.charity": {
+"t": "Totally Legit Charity",
+"p": "It sounds like a scam on purpose. Here is how to check that any charity is real.",
+"k": "charity"
+},
+"trustme.charity": {
+"t": "Trust Me Charity",
+"p": "Never give just because someone says trust me. Here is how to check a charity instead.",
+"k": "charity"
+},
+"underthebed.monster": {
+"t": "Under the Bed Monster",
+"p": "Bedtime stories where the monster under the bed is your friend.",
+"k": "fun"
+},
+"universemodel.life": {
+"t": "Universe Model Life",
+"p": "Living by the Holistic Model of Reality: the ideas of universemodel.ai, applied to daily life.",
+"k": "hmr"
+},
+"vibebrew.beer": {
+"t": "Vibe Brew",
+"p": "Find a beer that matches your vibe.",
+"k": "beer"
+},
+"vibecheck.monster": {
+"t": "Vibe Check Monster",
+"p": "A quick, friendly vibe check for you and your friends.",
+"k": "fun"
+},
+"virtuous.charity": {
+"t": "Virtuous Charity",
+"p": "What makes giving truly good, and how to give with your eyes open.",
+"k": "charity"
+},
+"webbuild.ing": {
+"t": "Web Building",
+"p": "Learn to build websites with AI, from your first page to your first business.",
+"k": "build"
+},
+"whatis67.fyi": {
+"t": "What Is 67?",
+"p": "What 67 means, where it came from, and why kids keep saying it.",
+"k": "fun"
+},
+"whatis67.wtf": {
+"t": "What Is 67, WTF?",
+"p": "The 67 meme explained for confused parents and teachers.",
+"k": "fun"
+},
+"whatisreality.wtf": {
+"t": "What Is Reality?",
+"p": "The big question, answered as best we can, with links to the Holistic Model of Reality.",
+"k": "hmr"
+},
+"wonderful.charity": {
+"t": "Wonderful Charity",
+"p": "Wonderful acts of giving, and how to check that a charity is wonderful before you give.",
+"k": "charity"
+}
+},
+"kinds": {
+"biz": {
+"sub": "A business idea in the HMR family",
+"b": [
+"A simple, honest tool that does one job well.",
+"AI does the busywork; a person stays in charge.",
+"Clear prices, no tricks, and your data stays yours."
+]
+},
+"build": {
+"sub": "A website building idea in the HMR family",
+"b": [
+"Get a real website fast, without code.",
+"You own what you build, start to finish.",
+"We show how it was made, so you can learn too."
+]
+},
+"beer": {
+"sub": "A brewing idea in the HMR family",
+"b": [
+"For home brewers, craft brewers, and people who love good beer.",
+"Practical help, honest tasting notes, and good stories.",
+"Please enjoy beer responsibly, and only if you are of legal drinking age."
+]
+},
+"charity": {
+"sub": "A giving and trust idea in the HMR family",
+"b": [
+"We do not collect donations here.",
+"Learn to check any charity before you give: look up its public records and how it spends money.",
+"Real charities welcome questions. Pressure and secrecy are red flags."
+]
+},
+"loan": {
+"sub": "A lending education idea in the HMR family",
+"b": [
+"We do not offer, broker, or advertise loans.",
+"Plain-language guides to how automated lending decisions work.",
+"Know your rights, and what to ask any lender."
+]
+},
+"show": {
+"sub": "A live show idea in the HMR family",
+"b": [
+"People and AI, live, together.",
+"The audience helps decide what happens.",
+"Fun first, and always kind."
+]
+},
+"fun": {
+"sub": "A fun idea in the HMR family",
+"b": [
+"Made for joy, nothing else.",
+"Quick to try, easy to share.",
+"Tell us what would make it more fun."
+]
+},
+"mind": {
+"sub": "An ideas site in the HMR family",
+"b": [
+"Big ideas, made simple.",
+"Every claim tied to something you can check.",
+"Grounded in the Holistic Model of Reality."
+]
+},
+"dogs": {
+"sub": "A dog lover's idea in the HMR family",
+"b": [
+"For people who love dogs.",
+"Share photos, art, and stories.",
+"Kind to dogs, kind to people."
+]
+},
+"hmr": {
+"sub": "Part of the Holistic Model of Reality",
+"b": [
+"Start from the whole, then work down to the part.",
+"Every claim tied to a test.",
+"Read the full model at universemodel.ai."
+]
+}
+}
+}

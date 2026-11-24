@@ -29,32 +29,40 @@
 </header>
 <main id="main">
   <noscript><div class="wrap"><p class="note">This page lists our sites with a tour for each. Turn on JavaScript to see them. The footer links work without it.</p></div></noscript>
+  <section class="wrap talk" aria-labelledby="talk-h">
+    <h2 id="talk-h">What every one of our sites has</h2>
+    <p>Every site we build has the same row of buttons along the bottom. You will not find this anywhere else. True to our values, we want everyone who visits to be able to send us a signal, express themselves, and enjoy themselves.</p>
+    <ul>
+      <li><b>Back</b> and <b>Forward</b>, far left and far right, work like your browser's buttons. They are there so you never have to reach for the top of the screen.</li>
+      <li><b>Design</b>, bottom left, lets you change how the page looks and feels: color, layout, fonts, motion, even your mouse pointer. Pick a style (professional, retro, fantasy, and more), step through the options, and send us what you like. People like different things. We believe the way to design for perfection is to give you the controls. We build a solid starting point, and you shape it.</li>
+      <li><b>Funsies</b>, in the middle, is a button for joy. Toys, games, and ways to wreck the page for fun. If every website had a fun button at the bottom, you would always know where to go when you need a smile.</li>
+      <li><b>Speak here</b>, next to Funsies, opens a microphone. Say anything. Your words appear as text, you can fix them, and one press sends them to us.</li>
+      <li><b>React</b>, bottom right, lets you pick a feeling and point at the exact spot on the page that caused it.</li>
+    </ul>
+    <p>You can also select any text on any of our pages to highlight it, share it, or send us a note about it.</p>
+  </section>
   <section class="wrap" aria-labelledby="map-h">
     <h2 id="map-h">Site map</h2>
-    <div id="sitemap" class="grid"></div>
-    <h3 class="soon-h">Coming soon</h3>
-    <ul id="soon" class="chips"></ul>
+    <p>Our sites come in two groups. <b>The HMR family</b> is always free, forever. <b>The HMR experiment</b> is our test bed of ideas.</p>
+    <h3 class="tier-h"><span class="star" aria-hidden="true">★</span> The HMR family</h3>
+    <div id="tree" class="tree"></div>
   </section>
   <div id="sites"></div>
-  <section class="wrap talk" aria-labelledby="talk-h">
-    <h2 id="talk-h">Talk to us any time</h2>
-    <p>We built many ways for you to tell us what you think. If you like, make this your daily habit: come here and press Speak here whenever you feel like it.</p>
-    <p>The round and pill buttons along the bottom of every one of our pages each do one thing.</p>
-    <ul>
-      <li><b>Design</b> lets you change how the page looks and feels, and tell us what you chose.</li>
-      <li><b>Feedback</b> is the big favor: type or talk and tell us what you think.</li>
-      <li><b>Back</b> takes you to the page you came from.</li>
-      <li><b>Funsies</b> opens our toys and games, or lets you wreck the page for fun.</li>
-      <li><b>Speak here</b> opens a microphone. Say anything you want. Your words appear as text, you can fix them, and one press sends them to us. We want your input.</li>
-      <li><b>Forward</b> takes you ahead again after you went back.</li>
-      <li><b>I'm lost</b> tells us where you got stuck, so we can fix it.</li>
-      <li><b>React</b> lets you pick a feeling, and point at the spot on the page that caused it.</li>
-    </ul>
+  <section class="wrap" id="experiment" aria-labelledby="exp-h">
+    <h2 id="exp-h">The HMR experiment</h2>
+    <p>Beyond the family, we own more than 130 more web addresses. Each one is an idea, and each has a simple starting site with the same buttons along the bottom.</p>
+    <p>Here is our plan, in the open. We made a significant investment in these names. We will never ask anyone for money. Each site will do one of three things: sit quietly, get better because people like you give it ideas and feedback, or attract someone who wants to build it, buy it, or support it. If one becomes a real business, or if offers over the next year return more than we spent, the experiment worked. If you want to offer a donation or buy something we make, you are welcome to, and we will listen. We will not ask.</p>
+    <p>One person owns all of these, working with AI, with no team and no further spending planned. Web addresses are cheap right now. <span id="under5"></span> If you have been thinking about building your own sites, this is a good time.</p>
+    <div id="exp" class="exp"></div>
   </section>
   <section class="wrap next" aria-labelledby="next-h">
     <h2 id="next-h">What we are building next</h2>
     <p>We are making a list of things the world needs that are not built yet, or not built for free. For each one we will build a free version. Where someone else already makes a product, paid or not, we will link to it and give it an honest rating against our standard.</p>
     <p><span class="tag">Planned</span></p>
+  </section>
+  <section class="wrap" aria-labelledby="safe-h">
+    <h2 id="safe-h">Safety and responsibility</h2>
+    <p>We value new ideas, and we also value not breaking things. Standard security protocols are in place on every site: every page is served over a secure connection, forms send only what you choose to type, and we do not sell your data.</p>
   </section>
 </main>
 <footer>
@@ -82,6 +90,7 @@
 
 <div id="picker"></div>
 <script src="js/app.js"></script>
+<script src="js/tree.js"></script>
 <script src="js/hmr-dock.js" data-site="hmrfamily.life" data-design=".pk-open" data-design-panel=".pk-panel" defer></script>
 </body>
 </html>
