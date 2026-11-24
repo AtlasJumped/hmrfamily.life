@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The HMR family of websites</title>
+<meta name="description" content="Always free, forever. A family of websites built by a community with AI, to lift humanity and create joy.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The HMR family of websites">
+<meta property="og:description" content="Always free, forever. A family of websites built by a community with AI, to lift humanity and create joy.">
+<meta property="og:url" content="https://hmrfamily.life/">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">hmrfamily.life</p>
+    <h1>The HMR family of websites</h1>
+    <p class="lead">We build free tools and ideas, together, with AI. Here is what we stand for.</p>
+    <ul class="mission" aria-label="Our mission">
+      <li><strong>Always free, forever.</strong> It is not about money. Nothing we make will ever ask you to pay.</li>
+      <li><strong>Elevating humanity.</strong> If we all lift each other, it comes back to us.</li>
+      <li><strong>Open source.</strong> We build in the open, as a community of people working with AI.</li>
+      <li><strong>Creating joy.</strong> We want what we make to be fun to use.</li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+  <noscript><div class="wrap"><p class="note">This page lists our sites with a tour for each. Turn on JavaScript to see them. The footer links work without it.</p></div></noscript>
+  <section class="wrap" aria-labelledby="map-h">
+    <h2 id="map-h">Site map</h2>
+    <div id="sitemap" class="grid"></div>
+    <h3 class="soon-h">Coming soon</h3>
+    <ul id="soon" class="chips"></ul>
+  </section>
+  <div id="sites"></div>
+  <section class="wrap next" aria-labelledby="next-h">
+    <h2 id="next-h">What we are building next</h2>
+    <p>We are making a list of things the world needs that are not built yet, or not built for free. For each one we will build a free version. Where someone else already makes a product, paid or not, we will link to it and give it an honest rating against our standard.</p>
+    <p><span class="tag">Planned</span></p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <h2 class="foot-h">All our sites</h2>
+    <ul id="footlinks" class="foot"></ul>
+    <p><a class="btn primary" href="https://discord.gg/gEnC8TpNc" rel="noopener">Join us on Discord</a></p>
+    <p class="small">Always free, forever.</p>
+  </div>
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">
+    <div class="dlg-top"><h2 id="m-title"></h2><button type="button" class="btn" id="m-close" aria-label="Close tour">Close</button></div>
+    <div class="stage" id="m-stage" aria-hidden="true"></div>
+    <p class="cap" id="m-cap" aria-live="polite"></p>
+    <div class="dlg-bot">
+      <button type="button" class="btn" id="m-prev">Back</button>
+      <span class="dots" id="m-dots"></span>
+      <button type="button" class="btn" id="m-play">Pause</button>
+      <button type="button" class="btn primary" id="m-next">Next</button>
+    </div>
+  </div>
+</div>
+
+<div id="picker"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
