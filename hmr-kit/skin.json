@@ -1,0 +1,7 @@
+{
+  "version": "2026-11-25.1",
+  "about": "Shared design kit for every HMR family site. The HMR dash on each site reads this file. Palettes, fonts and media added here appear across the whole HMR ecosystem.",
+  "palettes": [],
+  "fonts": [],
+  "media": []
+}
