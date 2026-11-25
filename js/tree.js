@@ -14,7 +14,7 @@
     text: "Your helping hand into the blossoming world of artificial intelligence. A dashboard and an AI introduction kit in one piece of free text." };
   var PRODUCTS = [
     { name: "Personal dash", state: "Available now", text: "Free forever. Copy it, paste it into your AI assistant, and start today.", on: true },
-    { name: "Work dash", state: "The future, V2", text: "Planned for early 2027. The personal dash paves the way. Not built yet.", on: false }
+    { name: "Work dash", state: "The future, V2", text: "Planned for mid to late 2027. The personal dash paves the way. Not built yet.", on: false }
   ];
   var ENDGAME = { host: "endgame.life", url: "https://endgame.life", tour: "endgame", status: "In progress", tag: "The vision",
     text: "Where claudebomb leads once both dashboards exist: a picture of life around 2036, with personal AI that works for you." };

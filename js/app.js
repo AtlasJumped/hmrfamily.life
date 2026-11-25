@@ -17,7 +17,7 @@
       host: "claudebomb.com", url: "https://claudebomb.com", title: "claudebomb.com, the flagship",
       slides: [
         ["Your helping hand into AI", "claudebomb-1", "Claude Bomb is a dashboard plus an AI introduction kit: a handshake, rules of engagement, and a planning document, all in one piece of text. Paste it into your AI assistant, and within five minutes it starts working for you."],
-        ["Two products", "claudebomb-2", "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for early 2027. It is not built yet, and the personal dashboard paves the way for it."],
+        ["Two products", "claudebomb-2", "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for mid to late 2027. It is not built yet, and the personal dashboard paves the way for it."],
         ["It is a text file", "claudebomb-3", "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere. Try it now: click this button to copy, then paste it into your favorite artificial intelligence system. It will work right away.", "copy"]
       ]
     },
