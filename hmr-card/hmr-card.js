@@ -227,7 +227,7 @@ function load(id) {
   var all = D.querySelectorAll('script[type="application/json"][data-hmr-scenario]');
   for (var i = 0; i < all.length; i++) if (all[i].getAttribute('data-hmr-scenario') === id) { var t = all[i].textContent; return Promise.resolve().then(function () { return JSON.parse(t); }); }
   if (!W.fetch) return Promise.reject(new Error('no fetch'));
-  return W.fetch(BASE + 'cards/' + encodeURIComponent(id) + '.json').then(function (r) { if (!r.ok) throw new Error('not found'); return r.json(); });
+  return W.fetch(BASE + 'cards/' + encodeURIComponent(id) + '.json?v=4').then(function (r) { if (!r.ok) throw new Error('not found'); return r.json(); });
 }
 function check(sc) {
   if (!sc || sc.schema !== 'hmr-card/1') throw new Error('unknown schema');
@@ -238,7 +238,7 @@ function screen(sc) {
   if (SCREENS[n]) return Promise.resolve(sc);
   if (!/^[a-z0-9-]+$/.test(n)) return Promise.reject(new Error('unknown screen'));
   return new Promise(function (res, rej) {
-    var s = D.createElement('script'); s.src = BASE + 'screens/' + n + '.js';
+    var s = D.createElement('script'); s.src = BASE + 'screens/' + n + '.js?v=4';
     s.onload = function () { SCREENS[n] ? res(sc) : rej(new Error('unknown screen')); };
     s.onerror = function () { rej(new Error('screen not found')); };
     D.head.appendChild(s);

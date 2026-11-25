@@ -2,7 +2,7 @@
  "schema": "hmr-card/1",
  "id": "explore",
  "title": "Explore the demo dashboard",
- "intro": "A short tour of the six tabs of a dashboard with made-up data. At the end, you can click around yourself.",
+ "intro": "A short tour of the seven tabs of a dashboard with made-up data. At the end, you can click around yourself.",
  "frame": "16:9",
  "screen": "dashboard",
  "cast": [],
@@ -64,6 +64,15 @@
     [
      "click",
      "tab:closer"
+    ]
+   ]
+  },
+  {
+   "say": "Integrations and partnerships shows what feeds your dashboard, and what you could connect next.",
+   "act": [
+    [
+     "click",
+     "tab:integrations"
     ]
    ]
   },
