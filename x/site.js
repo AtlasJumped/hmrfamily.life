@@ -14,3 +14,4 @@
   [].forEach.call(document.querySelectorAll('.f-d2'),function(e){e.textContent=host;});
   var ds=document.querySelector('script[src*="hmr-dock.js"]'); if(ds) ds.setAttribute('data-site',host);
 })();
+(function(){if(document.querySelector('script[src*="hmr-aud.js"]'))return;var a=document.createElement('script');a.src='https://hmrfamily.life/x/hmr-aud.js?v=1';a.defer=true;document.head.appendChild(a);})();
