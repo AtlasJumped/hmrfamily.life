@@ -8,7 +8,7 @@
       slides: [
         ["One picture of reality", "universemodel-1", "Physics describes matter, biology describes life, medicine describes illness, psychology describes the mind, and religion describes meaning. Each sees its own part clearly. None describes the whole. The Holistic Model of Reality, or HMR, is our proposal for one picture that does."],
         ["A partial model and a holistic one", "universemodel-1", "A street map shows the roads and nothing of the buildings or the people. A blueprint draws structure, rooms, wiring, and plumbing together, each part fitting the others. HMR tries to be the blueprint for all of reality: the origin of the universe, the laws of physics, life, the mind, health, and how to live."],
-        ["Three parts", "universemodel-2", "HMR rests on three parts. Mind: a Universal Intelligence exists. Body: fascia, the body's continuous web, is a tensegrity. The marriage: the physics between them, which is how one intelligence acts through a body. These are HMR's view, and the site says so."],
+        ["Three parts", "universemodel-2", "HMR rests on three parts. Mind: a Universal Intelligence exists. Body: fascia, the body's continuous web, is a tensegrity. The marriage: the physics between them, which is how one intelligence acts through a body."],
         ["East and West", "universemodel-3", "HMR treats Eastern and Western thought as two languages describing one reality, and it aims at the whole, from the origin of physical reality to the human body, including consciousness and health."],
         ["Tied to tests", "universemodel-3", "A model is only worth holding if you can test it. HMR comes with science and practices you can test, and it labels each claim as established science, HMR's view, or open."]
       ]
@@ -16,7 +16,7 @@
     claudebomb: {
       host: "claudebomb.com", url: "https://claudebomb.com", title: "claudebomb.com, the flagship",
       slides: [
-        ["Your helping hand into AI", "claudebomb-1", "Claude Bomb is a dashboard plus an AI introduction kit: a handshake, rules of engagement, and a planning document, all in one piece of text. Paste it into your AI assistant, and within five minutes it starts working for you."],
+        ["Your helping hand into AI", "claudebomb-1", "claudebomb is your helping hand into the blossoming world of artificial intelligence. Copy one piece of text into your AI assistant, and within minutes it starts working for you."],
         ["Two products", "claudebomb-2", "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for mid to late 2027. It is not built yet, and the personal dashboard paves the way for it."],
         ["It is a text file", "claudebomb-3", "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere. Try it now: click this button to copy, then paste it into your favorite artificial intelligence system. It will work right away.", "copy"]
       ]
@@ -26,14 +26,14 @@
       slides: [
         ["One dashboard", "endgame-1", "One dashboard. Your whole life in view. Imagine everyone has a calm page that runs the day: the plan, the inbox, the people, the trip, the fun."],
         ["Life in 2036", "endgame-2", "Nine moments from invented people. Under each one, a line says what works today with the free dashboard file at claudebomb.com, and another says what we hope will be true in 2036."],
-        ["A vision, not a promise", "endgame-3", "This site says plainly that it is a vision, not a promise. It is the picture of where the flagship products are headed, after both are built."]
+        ["A vision, not a promise", "endgame-3", "It is the picture of where the flagship products are headed, after both are built."]
       ]
     },
     physics: {
       host: "hmrphysics.life", url: "https://hmrphysics.life", title: "hmrphysics.life",
       slides: [
         ["HMR physics in plain words", "hmrphysics-1", "HMR keeps every equation physics has confirmed. What it changes is the framework the equations are read in: Universal Intelligence comes first, and space, time, and matter come after."],
-        ["What HMR claims", "hmrphysics-2", "In HMR, space, time, and matter are not the bottom layer of reality. Read that way, the open problems of physics change shape. Every label on the page says whose claim it is."],
+        ["What HMR claims", "hmrphysics-2", "In HMR, space, time, and matter are not the bottom layer of reality. Read that way, the open problems of physics change shape."],
         ["Established and open", "hmrphysics-3", "Established science carries a source. HMR's view is HMR's. Open means nobody has the answer yet, and the page says so in those words."]
       ]
     },
