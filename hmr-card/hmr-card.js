@@ -34,6 +34,7 @@ var CSS = [
 '.hc-begin{position:absolute;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center;background:@B}',
 '.hc-intro{margin:0;max-width:34em;font-size:17px}',
 '.hc-err{margin:16px 0;padding:12px;border:1px solid @A;border-radius:8px}',
+'.hc-fb{margin:0}.hc-fb img{display:block;width:100%;height:auto;border:1px solid @L;border-radius:8px}.hc-fb .hc-err{margin:12px 0 0}',
 '.hc-cap{margin:12px 0 0;min-height:3em;font-size:17px;font-weight:600;line-height:1.5}',
 '.hc-fd{animation:hc-fade var(--hc-base) var(--hc-ease)}',
 '.hc-off{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}',
@@ -206,11 +207,19 @@ function open(id, opener) {
     me.stage.setAttribute('data-f', sc.frame || '16:9');
     q('.hc-intro').textContent = sc.intro || 'This is a short demo with made-up data. Nothing is sent.';
     me.btn.pause.hidden = me.manual;
-    var bg = q('[data-k=begin]'); bg.disabled = false; bg.focus(); ui();
+    var bg = q('[data-k=begin]'); bg.disabled = false;
+    var op = me.opener && me.opener.getAttribute ? me.opener : null;
+    if (op && op.getAttribute('data-hmr-at') === 'end') { /* open straight into the card's last (free-play) step */
+      me.begun = true; me.begin.hidden = true; goto(sc.steps.length - 1, false);
+      var f = op.getAttribute('data-hmr-focus'); if (f) quick(['click', f], false);
+      ui(); me.dlg.focus({ preventScroll: true }); return;
+    }
+    bg.focus(); ui();
   }).catch(function (err) {
     if (S !== me) return;
-    q('#hc-t').textContent = 'Card not available';
-    q('.hc-body').innerHTML = '<p class="hc-err" role="alert">This card could not be loaded' + (err && err.message ? ' (' + esc(err.message) + ')' : '') + '. Close this window and try again later.</p>';
+    if (W.console) console.warn('hmr-card: ' + id + ': ' + (err && err.message));
+    q('#hc-t').textContent = 'Demo not available here';
+    q('.hc-body').innerHTML = '<figure class="hc-fb"><img src="' + BASE + 'still.svg" alt="A still picture of the demo dashboard, with made-up data." width="960" height="540"><figcaption class="hc-err" role="alert">This demo could not play on this device, so here is a still picture of it. Nothing is sent.</figcaption></figure>';
     q('.hc-ctl').hidden = true; q('.hc-cap').hidden = true; q('[data-k=close]').focus();
   });
 }
