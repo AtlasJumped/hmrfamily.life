@@ -1,0 +1,81 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-universemodel",
+ "title": "Tour: universemodel.life, the soul of HMR",
+ "intro": "A short look at universemodel.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. Physics describes matter, biology describes life, medicine describes illness, psychology describes the mind, and religion describes meaning. Each sees its own part clearly. None describes the whole.",
+   "act": [
+    [
+     "show",
+     "universemodel.s1"
+    ]
+   ]
+  },
+  {
+   "say": "The Holistic Model of Reality, or HMR, is our proposal for one picture that does."
+  },
+  {
+   "say": "A street map shows the roads and nothing of the buildings or the people. A blueprint draws structure, rooms, wiring, and plumbing together, each part fitting the others.",
+   "act": [
+    [
+     "hide",
+     "universemodel.s1"
+    ],
+    [
+     "show",
+     "universemodel.s2"
+    ]
+   ]
+  },
+  {
+   "say": "HMR tries to be the blueprint for all of reality: the origin of the universe, the laws of physics, life, the mind, health, and how to live."
+  },
+  {
+   "say": "HMR rests on three parts. Mind: a Universal Intelligence exists. Body: fascia, the body's continuous web, is a tensegrity. The marriage: the physics between them, which is how one intelligence acts through a body.",
+   "act": [
+    [
+     "hide",
+     "universemodel.s2"
+    ],
+    [
+     "show",
+     "universemodel.s3"
+    ]
+   ]
+  },
+  {
+   "say": "HMR treats Eastern and Western thought as two languages describing one reality, and it aims at the whole, from the origin of physical reality to the human body, including consciousness and health.",
+   "act": [
+    [
+     "hide",
+     "universemodel.s3"
+    ],
+    [
+     "show",
+     "universemodel.s4"
+    ]
+   ]
+  },
+  {
+   "say": "A model is only worth holding if you can test it. HMR comes with science and practices you can test, and it labels each claim as established science, HMR's view, or open.",
+   "act": [
+    [
+     "hide",
+     "universemodel.s4"
+    ],
+    [
+     "show",
+     "universemodel.s5"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-universemodel.licence.json"
+}

@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-reaction",
+ "title": "Tour: reactionapp.life",
+ "intro": "A short look at reactionapp.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. Watch anything. Keep your best reactions. Reaction videos, made by you and your people.",
+   "act": [
+    [
+     "show",
+     "reaction.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Watch longer content and get a highlight reel of your strongest reactions. The camera records your face and the screen records what you watch. You choose the moments to keep, then post, save, or send them.",
+   "act": [
+    [
+     "hide",
+     "reaction.s1"
+    ],
+    [
+     "show",
+     "reaction.s2"
+    ]
+   ]
+  },
+  {
+   "say": "The heart of the app is a public board of reactions that people choose to share. Every one can be reacted to, and the thread grows. This site is still in progress.",
+   "act": [
+    [
+     "hide",
+     "reaction.s2"
+    ],
+    [
+     "show",
+     "reaction.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-reaction.licence.json"
+}

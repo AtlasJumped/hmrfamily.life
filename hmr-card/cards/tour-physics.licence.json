@@ -1,0 +1,32 @@
+[
+ {
+  "asset": "Scenario text and captions (our own words, as shown on the family page)",
+  "source": "own work",
+  "licence": "own work",
+  "checked": "2026-11-25"
+ },
+ {
+  "asset": "Screenshots img/tour/hmrphysics-1, hmrphysics-2, hmrphysics-3.png: screenshots of an HMR family site, taken by us",
+  "source": "own work (HMR family site hmrphysics.life)",
+  "licence": "own work",
+  "checked": "2026-11-25"
+ },
+ {
+  "asset": "Slides screen module (inline code, no extra images)",
+  "source": "own work",
+  "licence": "own work",
+  "checked": "2026-11-25"
+ },
+ {
+  "asset": "Fonts: none shipped, system font stack",
+  "source": "none",
+  "licence": "not applicable",
+  "checked": "2026-11-25"
+ },
+ {
+  "asset": "Sound, music, voice: none shipped (optional narration uses the visitor's own browser speech)",
+  "source": "none",
+  "licence": "not applicable",
+  "checked": "2026-11-25"
+ }
+]

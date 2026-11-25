@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-endgame",
+ "title": "Tour: endgame.life, the vision",
+ "intro": "A short look at endgame.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. One dashboard. Your whole life in view. Imagine everyone has a calm page that runs the day: the plan, the inbox, the people, the trip, the fun.",
+   "act": [
+    [
+     "show",
+     "endgame.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Nine moments from invented people. Under each one, a line says what works today with the free dashboard file at claudebomb.com, and another says what we hope will be true in 2036.",
+   "act": [
+    [
+     "hide",
+     "endgame.s1"
+    ],
+    [
+     "show",
+     "endgame.s2"
+    ]
+   ]
+  },
+  {
+   "say": "It is the picture of where the flagship products are headed, after both are built.",
+   "act": [
+    [
+     "hide",
+     "endgame.s2"
+    ],
+    [
+     "show",
+     "endgame.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-endgame.licence.json"
+}

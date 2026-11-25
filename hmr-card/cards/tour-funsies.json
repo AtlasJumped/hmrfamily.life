@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-funsies",
+ "title": "Tour: funsies.fun",
+ "intro": "A short look at funsies.fun in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. Everything here exists to have fun.",
+   "act": [
+    [
+     "show",
+     "funsies.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Each game opens right on the page, full screen. Fennsmash, the smash game. A Reaction App test of your reactions. A tensegrity physics sim where you pluck a living structure.",
+   "act": [
+    [
+     "hide",
+     "funsies.s1"
+    ],
+    [
+     "show",
+     "funsies.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Press a button and watch the page misbehave. It always puts itself back.",
+   "act": [
+    [
+     "hide",
+     "funsies.s2"
+    ],
+    [
+     "show",
+     "funsies.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-funsies.licence.json"
+}

@@ -43,7 +43,7 @@
     if (s.tour) {
       var b = el("button", { type: "button", "class": "btn primary", text: "Take the tour" });
       b.setAttribute("aria-label", "Take the tour of " + s.host);
-      b.addEventListener("click", function () { window.hmrOpenTour(s.tour, b); });
+      b.setAttribute("data-hmr-card", "tour-" + s.tour);
       act.appendChild(b);
     }
     if (s.url) { var v = ext(s.url, "Visit", "btn"); v.setAttribute("aria-label", "Visit " + s.host + " (opens in a new tab)"); act.appendChild(v); }

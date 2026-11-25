@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-math",
+ "title": "Tour: hmrmath.life",
+ "intro": "A short look at hmrmath.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. Why does the universe obey equations? In HMR's account, mathematics is the ordered pattern of thought within a Universal Intelligence, and nature is mathematical because it is made of that ordered thought.",
+   "act": [
+    [
+     "show",
+     "math.s1"
+    ]
+   ]
+  },
+  {
+   "say": "The physicist Eugene Wigner called the usefulness of mathematics in physics unreasonable, and said there is no rational explanation for it. HMR offers one, and labels it as HMR's view.",
+   "act": [
+    [
+     "hide",
+     "math.s1"
+    ],
+    [
+     "show",
+     "math.s2"
+    ]
+   ]
+  },
+  {
+   "say": "The page is marked work in progress, and it shows how far along each of its parts is.",
+   "act": [
+    [
+     "hide",
+     "math.s2"
+    ],
+    [
+     "show",
+     "math.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-math.licence.json"
+}

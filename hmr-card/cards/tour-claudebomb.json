@@ -1,0 +1,53 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-claudebomb",
+ "title": "Tour: claudebomb.com, the flagship",
+ "intro": "A short look at claudebomb.com in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. claudebomb is your helping hand into the blossoming world of artificial intelligence. Copy one piece of text into your AI assistant, and within minutes it starts working for you.",
+   "act": [
+    [
+     "show",
+     "claudebomb.s1"
+    ]
+   ]
+  },
+  {
+   "say": "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for mid to late 2027. It is not built yet, and the personal dashboard paves the way for it.",
+   "act": [
+    [
+     "hide",
+     "claudebomb.s1"
+    ],
+    [
+     "show",
+     "claudebomb.s2"
+    ]
+   ]
+  },
+  {
+   "say": "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere.",
+   "act": [
+    [
+     "hide",
+     "claudebomb.s2"
+    ],
+    [
+     "show",
+     "claudebomb.s3"
+    ]
+   ]
+  },
+  {
+   "say": "Try it now: click this button to copy, then paste it into your favorite artificial intelligence system. It will work right away.",
+   "free": true
+  }
+ ],
+ "licence": "cards/tour-claudebomb.licence.json"
+}

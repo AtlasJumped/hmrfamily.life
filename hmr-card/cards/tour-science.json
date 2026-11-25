@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-science",
+ "title": "Tour: hmrscience.life",
+ "intro": "A short look at hmrscience.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. HMR does not say believe this. It lays out a chain you can inspect and labels every claim, so a skeptic only has to find the link that breaks.",
+   "act": [
+    [
+     "show",
+     "science.s1"
+    ]
+   ]
+  },
+  {
+   "say": "Each claim is marked once, where it is made, as established science, HMR's view, or open. Established science carries a source link. Open means we do not know yet.",
+   "act": [
+    [
+     "hide",
+     "science.s1"
+    ],
+    [
+     "show",
+     "science.s2"
+    ]
+   ]
+  },
+  {
+   "say": "It tells one narrative that never breaks logic, from a non-physical intelligence to the physical universe. It does not prove that Universal Intelligence exists, replace established physics, or yet derive gravity.",
+   "act": [
+    [
+     "hide",
+     "science.s2"
+    ],
+    [
+     "show",
+     "science.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-science.licence.json"
+}

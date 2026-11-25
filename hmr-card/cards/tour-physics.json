@@ -1,0 +1,49 @@
+{
+ "schema": "hmr-card/1",
+ "id": "tour-physics",
+ "title": "Tour: hmrphysics.life",
+ "intro": "A short look at hmrphysics.life in screenshots of the site itself, with our own words for each one. Nothing here is sent anywhere.",
+ "frame": "16:9",
+ "screen": "slides",
+ "cast": [],
+ "level": 0,
+ "media": null,
+ "steps": [
+  {
+   "say": "Screenshots only, nothing is sent. HMR keeps every equation physics has confirmed. What it changes is the framework the equations are read in: Universal Intelligence comes first, and space, time, and matter come after.",
+   "act": [
+    [
+     "show",
+     "physics.s1"
+    ]
+   ]
+  },
+  {
+   "say": "In HMR, space, time, and matter are not the bottom layer of reality. Read that way, the open problems of physics change shape.",
+   "act": [
+    [
+     "hide",
+     "physics.s1"
+    ],
+    [
+     "show",
+     "physics.s2"
+    ]
+   ]
+  },
+  {
+   "say": "Established science carries a source. HMR's view is HMR's. Open means nobody has the answer yet, and the page says so in those words.",
+   "act": [
+    [
+     "hide",
+     "physics.s2"
+    ],
+    [
+     "show",
+     "physics.s3"
+    ]
+   ]
+  }
+ ],
+ "licence": "cards/tour-physics.licence.json"
+}
