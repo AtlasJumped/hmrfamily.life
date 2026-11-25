@@ -18,7 +18,7 @@
       slides: [
         ["Your helping hand into AI", "claudebomb-1", "Claude Bomb is a dashboard plus an AI introduction kit: a handshake, rules of engagement, and a planning document, all in one piece of text. Paste it into your AI assistant, and within five minutes it starts working for you."],
         ["Two products", "claudebomb-2", "The personal dashboard is available now: free text you copy and paste into your AI assistant. The work dashboard is the future, planned for early 2027. It is not built yet, and the personal dashboard paves the way for it."],
-        ["It is a text file", "claudebomb-3", "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere."]
+        ["It is a text file", "claudebomb-3", "That is all it is. You copy plain text, like a note, and paste it into a chat. There is nothing to download, it contains no code that runs by itself, and it sends nothing anywhere. Try it now: click this button to copy, then paste it into your favorite artificial intelligence system. It will work right away.", "copy"]
       ]
     },
     endgame: {
@@ -96,59 +96,89 @@
       bNext = document.getElementById("m-next"), bPlay = document.getElementById("m-play"),
       bClose = document.getElementById("m-close"), bGo = document.getElementById("m-go");
   var cur = null, idx = 0, playing = false, opener = null, timer = null, token = 0;
-  var synth = window.speechSynthesis, canSpeak = !!(synth && window.SpeechSynthesisUtterance);
+  var N = window.HMRNarrator, canSpeak = !!(N && N.can);
+  var bVoice = document.getElementById("m-voice");
+  if (canSpeak && bVoice) N.bindSelect(bVoice);
+  else if (bVoice) bVoice.hidden = true;
+  if (bVoice) bVoice.addEventListener("change", function () { if (playing) narrate(); });
 
-  function stopSpeech() { token++; clearTimeout(timer); if (canSpeak) synth.cancel(); }
+  function stopSpeech() { token++; clearTimeout(timer); if (N) N.cancel(); }
+  function bodyText(s) {
+    var t = s[2], ti = s[0].replace(/[.!?]+$/, "");
+    if (t.toLowerCase().indexOf(ti.toLowerCase()) === 0) t = t.slice(ti.length).replace(/^[\s.,:;!?-]+/, "");
+    return t;
+  }
   function show(i) {
     idx = Math.max(0, Math.min(cur.slides.length - 1, i));
     track.style.transform = "translateX(" + (-100 * idx) + "%)";
     dots.textContent = "";
-    cur.slides.forEach(function (_, k) { dots.appendChild(el("i", k === idx ? { "class": "on" } : {})); });
+    cur.slides.forEach(function (_, k) {
+      var d = el("i", { role: "tab", "aria-label": "Slide " + (k + 1) + " of " + cur.slides.length, "aria-selected": String(k === idx) });
+      if (k === idx) d.setAttribute("class", "on");
+      d.addEventListener("click", function () { go(k); });
+      dots.appendChild(d);
+    });
     bPrev.disabled = idx === 0; bNext.disabled = idx === cur.slides.length - 1;
     Array.prototype.forEach.call(track.children, function (c, k) { c.setAttribute("aria-hidden", k === idx ? "false" : "true"); });
   }
   function narrate() {
-    var my = ++token; clearTimeout(timer); if (canSpeak) synth.cancel();
+    var my = ++token; clearTimeout(timer); if (N) N.cancel();
     if (!playing) return;
-    var s = cur.slides[idx], text = s[0] + ". " + s[2];
+    var text = bodyText(cur.slides[idx]);
     function next() {
       if (my !== token || !playing) return;
       if (idx < cur.slides.length - 1) { show(idx + 1); narrate(); } else setPlay(false);
     }
-    if (canSpeak) {
-      var u = new SpeechSynthesisUtterance(text); u.rate = 0.95;
-      u.onend = next; u.onerror = function () { if (my === token) setPlay(false); };
-      synth.speak(u);
-    } else {
-      timer = setTimeout(next, Math.max(6000, text.length * 60));
-    }
+    var ok = canSpeak && N.speak(text, { rate: 0.98, onend: next, onerror: function () { if (my === token) setPlay(false); } });
+    if (!ok) timer = setTimeout(next, Math.max(6000, text.length * 60));
   }
   function setPlay(p) {
-    playing = p; bPlay.textContent = p ? "Pause narration" : "Play narration";
+    playing = p; bPlay.textContent = p ? "Pause" : "Play";
     bPlay.setAttribute("aria-pressed", String(p));
     if (p) narrate(); else stopSpeech();
   }
   function go(i) { show(i); if (playing) narrate(); }
+  function copySetup(btn, ok) {
+    var url = "https://claudebomb.com/setup/claude-setup-guide.md";
+    function done() { ok.textContent = "Copied"; setTimeout(function () { ok.textContent = ""; }, 3000); }
+    function fail() { window.open("https://claudebomb.com/#get", "_blank", "noopener"); }
+    function put(t) {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, function () { legacy(t); });
+      else legacy(t);
+    }
+    function legacy(t) {
+      var ta = el("textarea", { "aria-hidden": "true" }); ta.value = t; ta.style.cssText = "position:fixed;left:-999px";
+      document.body.appendChild(ta); ta.select();
+      var good = false; try { good = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta); if (good) done(); else fail();
+    }
+    fetch(url).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(put, fail);
+  }
   function openTour(key, from) {
     var t = TOURS[key]; if (!t) return;
     cur = t; opener = from; title.textContent = t.title;
     track.textContent = "";
     t.slides.forEach(function (s, k) {
       var fig = el("figure", { "class": "slide" });
-      var img = el("img", { src: IMG + s[1] + ".png", alt: "Screenshot of " + t.host + ": " + s[0], width: "1120", height: "630" });
+      var img = el("img", { src: IMG + s[1] + ".png", alt: "Screenshot of " + t.host + ": " + s[0], width: "1120", height: "630", draggable: "false" });
       if (k > 0) img.setAttribute("loading", "lazy");
       fig.appendChild(img);
       var cap = el("figcaption", {}, [el("b", { text: s[0] }), el("span", { text: s[2] })]);
+      if (s[3] === "copy") {
+        var cb = el("button", { type: "button", "class": "btn primary copybtn", text: "Copy" });
+        var ok = el("span", { "class": "copyok", role: "status" });
+        cb.addEventListener("click", function () { copySetup(cb, ok); });
+        cap.insertBefore(el("div", {}, [cb, ok]), cap.lastChild);
+      }
       fig.appendChild(cap); track.appendChild(fig);
     });
     bGo.setAttribute("href", t.url);
     modal.hidden = false; document.body.classList.add("tour-open");
-    playing = false; bPlay.textContent = "Play narration"; bPlay.setAttribute("aria-pressed", "false");
-    bPlay.hidden = false;
     show(0); win.focus();
+    setPlay(true);
   }
   function closeTour() {
-    stopSpeech(); playing = false; modal.hidden = true; document.body.classList.remove("tour-open");
+    stopSpeech(); playing = false; bPlay.textContent = "Pause"; modal.hidden = true; document.body.classList.remove("tour-open");
     if (opener) opener.focus();
   }
   window.hmrOpenTour = openTour;
@@ -156,6 +186,19 @@
   bNext.addEventListener("click", function () { go(idx + 1); });
   bPlay.addEventListener("click", function () { setPlay(!playing); });
   bClose.addEventListener("click", closeTour);
+  var view = modal.querySelector(".tour-view"), tx = null, ty = 0, wheelAt = 0;
+  view.addEventListener("touchstart", function (e) { var t = e.touches[0]; tx = t.clientX; ty = t.clientY; }, { passive: true });
+  view.addEventListener("touchend", function (e) {
+    if (tx === null) return;
+    var t = e.changedTouches[0], dx = t.clientX - tx, dy = t.clientY - ty; tx = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.3) go(idx + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  view.addEventListener("wheel", function (e) {
+    if (Math.abs(e.deltaX) < 8 || Math.abs(e.deltaX) < Math.abs(e.deltaY)) return;
+    e.preventDefault();
+    var now = Date.now(); if (now - wheelAt < 600) return;
+    wheelAt = now; go(idx + (e.deltaX > 0 ? 1 : -1));
+  }, { passive: false });
   modal.addEventListener("click", function (e) { if (e.target === modal) closeTour(); });
   window.addEventListener("pagehide", stopSpeech);
   modal.addEventListener("keydown", function (e) {
