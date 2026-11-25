@@ -212,7 +212,7 @@ function open(id, opener) {
     if (op && op.getAttribute('data-hmr-at') === 'end') { /* open straight into the card's last (free-play) step */
       me.begun = true; me.begin.hidden = true; goto(sc.steps.length - 1, false);
       var f = op.getAttribute('data-hmr-focus'); if (f) quick(['click', f], false);
-      ui(); me.dlg.focus({ preventScroll: true }); return;
+      me.cur.hidden = true; ui(); me.dlg.focus({ preventScroll: true }); return;
     }
     bg.focus(); ui();
   }).catch(function (err) {
