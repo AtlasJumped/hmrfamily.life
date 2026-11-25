@@ -95,7 +95,7 @@
     ["hmrphysics.life", "https://hmrphysics.life/", "HMR physics."],
     ["hmrmath.life", "https://hmrmath.life/", "HMR mathematics."],
     ["hmrscience.life", "https://hmrscience.life/", "The sciences beyond math and physics."],
-    ["hmrfascia.life", null, "The body and fascia."],
+    ["hmrfascia.life", null, "The body and connective tissue."],
     ["hmrlanguage.life", null, "Language."],
     ["reactionapp.life", "https://reactionapp.life/", "Record and share your reactions."],
     ["funsies.fun", "https://funsies.fun/", "Toys and games, made for joy."],
