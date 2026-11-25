@@ -19,7 +19,7 @@
   var ENDGAME = { host: "endgame.life", url: "https://endgame.life", tour: "endgame", status: "In progress", tag: "The vision",
     text: "Where claudebomb leads once both dashboards exist: a picture of life around 2036, with personal AI that works for you." };
   var SOUL = { host: "universemodel.life", url: "https://universemodel.ai", tour: "universemodel", status: "Live", tag: "The soul of HMR",
-    text: "The Holistic Model of Reality: one picture of reality that joins Eastern and Western thought, sees the body as a tensegrity with fascia, includes a set of values, and ties its claims to tests." };
+    text: "The Holistic Model of Reality: one picture of reality that joins Eastern and Western thought, sees the body as a biotensegrity of connective tissue (often called fascia), includes a set of values, and ties its claims to tests." };
   var MEMBERS = [
     { host: "hmrphysics.life", url: "https://hmrphysics.life", tour: "physics", status: "Live", tag: "Physics", text: "HMR keeps every equation physics has confirmed and reads them in a new framework. Every claim is labeled as established, HMR's view, or open." },
     { host: "hmrmath.life", url: "https://hmrmath.life", tour: "math", status: "In progress", tag: "Mathematics", text: "Why the universe obeys equations, in HMR's account." },
