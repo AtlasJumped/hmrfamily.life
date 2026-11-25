@@ -115,6 +115,25 @@
   function ending(h) { return "." + h.split(".").pop(); }
   function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
 
+  /* Coolness of the name itself (Leo, 2026-11-24 20:55). 10 is top. Names he did not rate score 3. */
+  var SCORE = {
+    "claudebomb.com": 10, "grubbing.money": 10, "ilovedogs": 9.8,
+    "funsies.fun": 9, "underthebed.monster": 9, "overreact.ing": 9, "cosmicjoke.lol": 9, "delulu.monster": 9, "discombobulat.ing": 9,
+    "dragonrid.ing": 8.5, "fennsma.sh": 8.5,
+    "mindru.sh": 8, "whatis67.wtf": 8, "whatisreality.wtf": 8, "honorable.charity": 8,
+    "doomscroll.monster": 7.5, "cosmicru.sh": 7.5, "dreamweav.ing": 7.5, "aiforecast.ing": 7.5,
+    "corrupt.charity": 7, "notascam.charity": 7, "trustme.charity": 7, "buildmysite.click": 7, "madebyai.website": 7, "aiestimat.ing": 7,
+    "endgame.life": 6.5, "universemodel.life": 6.5, "agentorchestrat.ing": 6.5, "agentshopp.ing": 6.5, "agentstaff.ing": 6.5,
+    "aiaccount.ing": 6.5, "aibookkeep.ing": 6.5, "aibudget.ing": 6.5, "mcpstore.tech": 6.5, "aiauditor.tech": 6.5,
+    "reactionapp.life": 6, "personaldash.life": 6, "workdash.life": 6, "nailbit.ing": 6, "showstopp.ing": 6, "gravitydefy.ing": 6,
+    "lifeaffirm.ing": 6, "mindbend.ing": 6, "mindboggl.ing": 6, "pontificat.ing": 6, "rabblerous.ing": 6, "rekindl.ing": 6,
+    "rulebreak.ing": 6, "renegade.monster": 6, "vibecheck.monster": 6, "oneclicksite.click": 6, "moneygrubbing.money": 6,
+    "sitebuild.ing": 5.5, "startupbuild.ing": 5.5, "webbuild.ing": 5.5, "agentbuilt.website": 5.5, "agentbrows.ing": 5.5,
+    "agentmarket.ing": 5.5, "agentmonitor.ing": 5.5, "aihir.ing": 5.5, "aivideoedit.ing": 5.5,
+    "hornswoggl.ing": 5, "aiwebhost.ing": 5
+  };
+  function scoreOf(h) { return /^ilovedogs\./.test(h) ? SCORE.ilovedogs : (SCORE[h] || 3); }
+  function isTech(h) { return /^(ai|agent|bot|mcp|site|web|startup|build|oneclick|madebyai|dreamsite|craftai|brew|robo|vibebrew)/.test(h) || /\.(tech|website|click)$/.test(h); }
   var rows = [], liveSet = {}, sortKey = "cool";
   function build(db) {
     (db.live || []).forEach(function (h) { liveSet[h] = 1; });
@@ -136,9 +155,15 @@
       rows.push({ host: h, url: live ? "https://" + h + "/" : null, pitch: s.p, title: s.t, cat: cat, end: ending(h),
         mark: live ? "Live" : "In progress", tier: tier, sub: sub });
     });
-    var fam = rows.slice(0, FAMILY_ROWS.length), rest = rows.slice(FAMILY_ROWS.length);
-    rest.sort(function (a, b) { return a.tier - b.tier || a.sub - b.sub || cmp(a.host, b.host); });
-    rows = fam.concat(rest);
+    /* bundle every ilovedogs domain into one row */
+    var dogs = rows.filter(function (r) { return /^ilovedogs\./.test(r.host); });
+    if (dogs.length) {
+      rows = rows.filter(function (r) { return !/^ilovedogs\./.test(r.host); });
+      rows.push({ host: "ilovedogs (" + dogs.length + " domains)", dogs: dogs, url: null, cat: "dogs", end: ".dog",
+        pitch: "We will not let these go to waste. We are working out how to make each one valuable.", mark: dogs.some(function (d) { return d.mark === "Live"; }) ? "Live" : "In progress" });
+    }
+    rows.forEach(function (r) { r.score = r.dogs ? SCORE.ilovedogs : scoreOf(r.host); r.tech = !r.dogs && isTech(r.host); });
+    rows.sort(function (a, b) { return b.score - a.score || cmp(a.host, b.host); });
     rows.forEach(function (r, i) { r.n = i + 1; });
     render();
   }
@@ -146,6 +171,7 @@
   function sorted() {
     var r = rows.slice();
     if (sortKey === "cool") return [{ rows: r }];
+    if (sortKey === "tech") return [{ head: "AI and web building (" + r.filter(function (x) { return x.tech; }).length + ")", rows: r.filter(function (x) { return x.tech; }) }];
     var key = sortKey === "end" ? "end" : "cat", groups = {}, order = [];
     r.forEach(function (x) { var k = x[key]; if (!groups[k]) { groups[k] = []; order.push(k); } groups[k].push(x); });
     if (sortKey === "end") order.sort(function (a, b) { return groups[b].length - groups[a].length || cmp(a, b); });
@@ -166,7 +192,17 @@
         var li = el("li", { "class": "dl-row" });
         li.appendChild(el("span", { "class": "dl-n", text: sortKey === "cool" ? String(r.n) : "" }));
         var d = el("span", { "class": "dl-d" });
-        if (r.url) d.appendChild(ext(r.url, r.host)); else d.textContent = r.host;
+        if (r.dogs) {
+          var det = el("details", { "class": "dogs" }); det.appendChild(el("summary", { text: r.host }));
+          var dl = el("ul", { "class": "dogl" });
+          r.dogs.forEach(function (x) { var i2 = el("li"); if (x.url) i2.appendChild(ext(x.url, x.host)); else i2.textContent = x.host; dl.appendChild(i2); });
+          det.appendChild(dl);
+          det.appendChild(el("p", { "class": "dognote", text: "Want to make a case for owning one of these? We love dogs, and we are happy to partner with people who do too." }));
+          var ca = el("a", { href: "#", "class": "doglink", text: "Tell us (opens a note)" });
+          ca.addEventListener("click", function (e) { e.preventDefault(); try { if (window.HMRDock && HMRDock.openSpeak) { HMRDock.openSpeak(); setTimeout(function () { var t = document.querySelector(".hmr-dock textarea, [class*=speak] textarea"); if (t && !t.value) t.value = "We love dogs. "; }, 300); } } catch (_) {} });
+          det.appendChild(ca);
+          d.appendChild(det);
+        } else if (r.url) d.appendChild(ext(r.url, r.host)); else d.textContent = r.host;
         li.appendChild(d);
         li.appendChild(el("span", { "class": "dl-m " + (r.mark === "Live" ? "live" : r.mark === "HMR family" ? "fam" : "wip"), text: r.mark }));
         li.appendChild(el("span", { "class": "dl-p", text: r.pitch }));
@@ -177,10 +213,10 @@
     var sum = document.getElementById("list-sum");
     if (sum) {
       var live = rows.filter(function (r) { return r.mark === "Live"; }).length;
-      sum.textContent = (rows.length - FAMILY_ROWS.length) + " names beyond the family. " + live + " are live and linked. The rest are in progress, with new sites going live over the next few days.";
+      sum.textContent = (rows.length - FAMILY_ROWS.length) + " rows beyond the family, ranked by how cool the name is. " + live + " are live and linked. The rest are in progress, with new sites going live over the next few days.";
     }
   }
-  var SORTS = [["cool", "Coolness"], ["end", "By ending"], ["cat", "By category"]];
+  var SORTS = [["cool", "Coolness"], ["end", "By ending"], ["cat", "By category"], ["tech", "AI and web building"]];
   var sb = document.getElementById("sortbtns");
   function setSort(k) {
     sortKey = k; render();
