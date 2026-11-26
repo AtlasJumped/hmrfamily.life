@@ -270,12 +270,15 @@
     var sum = document.getElementById("list-sum");
     if (sum) {
       var rated = all.filter(function (r) { return r.s; }).length, live = all.filter(function (r) { return r.u; }).length;
-      sum.textContent = "Showing " + shown + " of " + all.length + " names. " + live + " have a page you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
+      sum.textContent = "Showing " + shown + " of " + all.length + " names still to build or finish. " + live + " have a page you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
     }
   }
   function buildList(data) {
     var n = 0, dogN = 0;
-    all = (data.domains || []).map(function (r) {
+    // Flagships and Done sites have their own cards above; the list is the inventory still to build.
+    var shown = {}; [PERSONALDASH, CLAUDEBOMB].concat(DONE).forEach(function (x) { if (x.host !== "ilovedogs.dog") shown[x.host] = 1; });
+    shown["hmrfamily.life"] = 1;
+    all = (data.domains || []).filter(function (r) { return !shown[r.h]; }).map(function (r) {
       r.e = ending(r.h);
       if (/^ilovedogs\./.test(r.h)) { if (!dogN) dogN = ++n; r.n = dogN; } else r.n = ++n;
       return r;
