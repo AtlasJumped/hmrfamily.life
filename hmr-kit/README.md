@@ -1,7 +1,7 @@
 # HMR kit
 
 One file, `skin.json`, feeds the HMR dash on every HMR family site
-(claudebomb.com, hmrfamily.life, universemodel.ai, endgame.life, reactionapp.life).
+(claudebomb.com, hmrfamily.life, endgame.life, reactionapp.life).
 Push a change here and every site picks it up within about an hour (each visitor's
 browser keeps a copy for one hour).
 

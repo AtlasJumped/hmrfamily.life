@@ -615,11 +615,6 @@
    "p": "Bedtime stories where the monster under the bed is your friend.",
    "k": "fun"
   },
-  "universemodel.life": {
-   "t": "Universe Model Life",
-   "p": "Living by the Holistic Model of Reality: the ideas of universemodel.ai, applied to daily life.",
-   "k": "hmr"
-  },
   "vibebrew.beer": {
    "t": "Vibe Brew",
    "p": "Find a beer that matches your vibe.",
@@ -748,8 +743,7 @@
    "sub": "Part of the Holistic Model of Reality",
    "b": [
     "Start from the whole, then work down to the part.",
-    "Every claim tied to a test.",
-    "Read the full model at universemodel.ai."
+    "Every claim tied to a test."
    ]
   }
  },

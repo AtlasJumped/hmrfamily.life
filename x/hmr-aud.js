@@ -13,7 +13,7 @@
     teens:       { label: "Teen view",           home: "https://hmrfamily.life/teens/" },
     millennials: { label: "Everyday view",       home: "https://hmrfamily.life/millennials/" }
   };
-  var FAMILY = ["hmrfamily.life", "hmr.family", "universemodel.ai", "claudebomb.com", "endgame.life",
+  var FAMILY = ["hmrfamily.life", "hmr.family", "claudebomb.com", "endgame.life",
     "reactionapp.life", "chronomath.ai", "hmrfascia.life", "hmrmath.life", "hmrphysics.life",
     "hmrscience.life", "hmrlanguage.life", "hmrfunsies.fun", "hmruniverse.life", "funsies.fun",
     "personaldash.life", "workdash.life", "whatisreality.wtf"];

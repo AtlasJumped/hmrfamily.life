@@ -154,3 +154,5 @@ body.tour-open{overflow:hidden}
 
 .slide .copybtn{display:inline-block;margin-top:10px}
 .slide .copyok{margin-left:10px;font-weight:700;color:var(--accent)}
+.flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:start}
+.flags>.fc{margin:0}

@@ -10,16 +10,16 @@
 
   /* ---------- the family, as cards ---------- */
   // url: null means shown without a link until the site is secure.
+  var PERSONALDASH = { host: "personaldash.life", url: "https://personaldash.life", status: "Live", tag: "Flagship",
+    text: "Your helping hand into the blossoming world of AI. A free personal dashboard and AI introduction kit in one piece of text." };
   var CLAUDEBOMB = { host: "claudebomb.com", url: "https://claudebomb.com", tour: "claudebomb", status: "Live", tag: "Flagship",
-    text: "Your helping hand into the blossoming world of artificial intelligence. A dashboard and an AI introduction kit in one piece of free text." };
+    text: "The prompt bank for every AI model, not just Claude. Free forever, with no ads." };
   var PRODUCTS = [
     { name: "Personal dash", state: "Available now", text: "Free forever. Copy it, paste it into your AI assistant, and start today.", on: true },
     { name: "Work dash", state: "The future, V2", text: "Planned for mid to late 2027. The personal dash paves the way. Not built yet.", on: false }
   ];
   var ENDGAME = { host: "endgame.life", url: "https://endgame.life", tour: "endgame", status: "In progress", tag: "The vision",
-    text: "Where claudebomb leads once both dashboards exist: a picture of life around 2036, with personal AI that works for you." };
-  var SOUL = { host: "universemodel.life", url: "https://universemodel.ai", tour: "universemodel", status: "Live", tag: "The soul of HMR",
-    text: "The Holistic Model of Reality: one picture of reality that joins Eastern and Western thought, sees the body as a biotensegrity of connective tissue (often called fascia), includes a set of values, and ties its claims to tests." };
+    text: "Where the dashboards lead once both exist: a picture of life around 2036, with personal AI that works for you." };
   var MEMBERS = [
     { host: "hmrphysics.life", url: "https://hmrphysics.life", tour: "physics", status: "Live", tag: "Physics", text: "HMR keeps every equation physics has confirmed and reads them in a new framework. Every claim is labeled as established, HMR's view, or open." },
     { host: "hmrmath.life", url: "https://hmrmath.life", tour: "math", status: "In progress", tag: "Mathematics", text: "Why the universe obeys equations, in HMR's account." },
@@ -58,7 +58,7 @@
       el("b", { text: "hmrfamily.life" }),
       el("span", { text: "The hub. You are here." })
     ]));
-    fam.appendChild(el("p", { "class": "lvl", text: "The flagship" }));
+    fam.appendChild(el("p", { "class": "lvl", text: "The two flagships" }));
     var prods = el("div", { "class": "prods" });
     PRODUCTS.forEach(function (p) {
       prods.appendChild(el("div", { "class": "prod" + (p.on ? " on" : "") }, [
@@ -66,11 +66,9 @@
         el("h4", { text: p.name }), el("p", { text: p.text })
       ]));
     });
-    fam.appendChild(card(CLAUDEBOMB, "flag", [prods]));
+    fam.appendChild(el("div", { "class": "flags" }, [card(PERSONALDASH, "flag", [prods]), card(CLAUDEBOMB, "flag")]));
     fam.appendChild(el("p", { "class": "then", "aria-hidden": "true", text: "after both, the vision" }));
     fam.appendChild(card(ENDGAME, "vision"));
-    fam.appendChild(el("p", { "class": "lvl", text: "The soul of HMR" }));
-    fam.appendChild(card(SOUL, "soul"));
     fam.appendChild(el("p", { "class": "lvl", text: "The family" }));
     var g = el("div", { "class": "fgrid" });
     MEMBERS.forEach(function (m) { g.appendChild(card(m)); });
@@ -80,7 +78,7 @@
   /* footer links: every linked family site */
   var foot = document.getElementById("footlinks");
   if (foot) {
-    [{ host: "hmrfamily.life", url: "https://hmrfamily.life/" }, CLAUDEBOMB, ENDGAME, SOUL].concat(MEMBERS).forEach(function (s) {
+    [{ host: "hmrfamily.life", url: "https://hmrfamily.life/" }, PERSONALDASH, CLAUDEBOMB, ENDGAME].concat(MEMBERS).forEach(function (s) {
       if (!s.url) return;
       var li = el("li"); li.appendChild(s.host === "hmrfamily.life" ? el("a", { href: s.url, text: s.host }) : ext(s.url, s.host)); foot.appendChild(li);
     });
@@ -89,9 +87,9 @@
   /* ---------- the domain list ---------- */
   var FAMILY_ROWS = [
     ["hmrfamily.life", "https://hmrfamily.life/", "The hub of the HMR family of websites."],
-    ["claudebomb.com", CLAUDEBOMB.url, "The flagship: personal dash now, work dash next."],
+    ["personaldash.life", PERSONALDASH.url, "Flagship: your helping hand into the blossoming world of AI."],
+    ["claudebomb.com", CLAUDEBOMB.url, "Flagship: the prompt bank for every AI model."],
     ["endgame.life", ENDGAME.url, "The vision, after both dashboards."],
-    ["universemodel.life", SOUL.url, "The soul of HMR."],
     ["hmrphysics.life", "https://hmrphysics.life/", "HMR physics."],
     ["hmrmath.life", "https://hmrmath.life/", "HMR mathematics."],
     ["hmrscience.life", "https://hmrscience.life/", "The sciences beyond math and physics."],
@@ -99,10 +97,9 @@
     ["hmrlanguage.life", null, "Language."],
     ["reactionapp.life", "https://reactionapp.life/", "Record and share your reactions."],
     ["funsies.fun", "https://funsies.fun/", "Toys and games, made for joy."],
-    ["personaldash.life", null, "The personal dash, a claudebomb product."],
-    ["workdash.life", null, "The work dash, the future V2 of claudebomb."]
+    ["workdash.life", null, "The work dash, the future V2 of the personal dash."]
   ];
-  var HELD = ["hmruniverse.life", "chronomath.ai", "hmrfunsies.fun", "universemodel.ai"];
+  var HELD = ["hmruniverse.life", "chronomath.ai", "hmrfunsies.fun"];
   var TOP = ["underthebed.monster", "overreact.ing", "dragonrid.ing", "elevat.ing", "fennsma.sh", "cosmicjoke.lol", "delulu.monster", "doomscroll.monster", "cosmicru.sh", "createjoy.art", "ilovedogs.dog"];
   var AI = ["aihir.ing", "aiautomat.ing", "aiintern.tech", "aiplann.ing", "aiphotoedit.ing", "aiquot.ing", "aitranslat.ing", "aivideoedit.ing", "aivoiceact.ing"];
   var CHARITY = ["honorable", "virtuous", "holy", "wonderful", "philanthropic", "goodguys", "crowdsource", "certified", "renegade", "corrupt", "notascam", "totallylegit", "definitelyreal", "trustme"].map(function (n) { return n + ".charity"; });
@@ -123,7 +120,7 @@
     "mindru.sh": 8, "whatis67.wtf": 8, "whatisreality.wtf": 8, "honorable.charity": 8,
     "doomscroll.monster": 7.5, "cosmicru.sh": 7.5, "dreamweav.ing": 7.5, "aiforecast.ing": 7.5,
     "corrupt.charity": 7, "notascam.charity": 7, "trustme.charity": 7, "buildmysite.click": 7, "madebyai.website": 7, "aiestimat.ing": 7,
-    "endgame.life": 6.5, "universemodel.life": 6.5, "agentorchestrat.ing": 6.5, "agentshopp.ing": 6.5, "agentstaff.ing": 6.5,
+    "endgame.life": 6.5, "agentorchestrat.ing": 6.5, "agentshopp.ing": 6.5, "agentstaff.ing": 6.5,
     "aiaccount.ing": 6.5, "aibookkeep.ing": 6.5, "aibudget.ing": 6.5, "mcpstore.tech": 6.5, "aiauditor.tech": 6.5,
     "reactionapp.life": 6, "personaldash.life": 6, "workdash.life": 6, "nailbit.ing": 6, "showstopp.ing": 6, "gravitydefy.ing": 6,
     "lifeaffirm.ing": 6, "mindbend.ing": 6, "mindboggl.ing": 6, "pontificat.ing": 6, "rabblerous.ing": 6, "rekindl.ing": 6,
@@ -142,7 +139,6 @@
     });
     Object.keys(db.sites).forEach(function (h) {
       var s = db.sites[h];
-      if (s.k === "hmr" && h === "universemodel.life") return;
       var isIng = /\.ing$/.test(h), cat = s.k;
       if (isIng && s.k === "biz" && h !== "aiautomat.ing") cat = "ing";
       var tier, sub;
