@@ -45,6 +45,9 @@
 .co-chips label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;min-height:40px;cursor:pointer;font-size:.95rem}
 .co-out{margin:0;min-height:1.3em;font-weight:700}
 .co-copy{display:none}
+.co-tw{position:relative}.co-tw textarea{padding-right:56px}
+.co-mic{position:absolute;right:8px;bottom:8px;width:40px;height:40px;border-radius:50%;border:2px solid var(--accent);background:var(--card);font-size:1.1rem;cursor:pointer;padding:0}
+.co-mic.rec{background:#c62828;border-color:#c62828}
 .co-copy textarea{width:100%;min-height:160px;font:inherit;font-size:.9rem;padding:8px;border:1px solid var(--line);border-radius:10px;background:var(--bg2);color:var(--ink)}
 </style>
 </head>
@@ -210,6 +213,27 @@
         if (r && r.ok) { out.textContent = "Sent. Thank you, and welcome to the family. Every message is read."; f.reset(); }
         else { out.textContent = "Your email app should have opened with your message. It is also below, ready to copy."; document.getElementById("coCopy").style.display = "block"; }
       }, function () { btn.disabled = false; out.textContent = "That didn't send. Your message is below, ready to copy."; document.getElementById("coCopy").style.display = "block"; });
+  });
+})();
+</script>
+<script>
+/* every box: type, or press the mic inside it and talk */
+(function () {
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition; if (!SR) return;
+  [].forEach.call(document.querySelectorAll("#coForm textarea:not([readonly])"), function (ta) {
+    var w = document.createElement("div"); w.className = "co-tw"; ta.parentNode.insertBefore(w, ta); w.appendChild(ta);
+    var b = document.createElement("button"); b.type = "button"; b.className = "co-mic"; b.textContent = "\uD83C\uDF99"; b.setAttribute("aria-pressed", "false"); b.setAttribute("aria-label", "Talk instead of typing"); w.appendChild(b);
+    var rec = null, on = false, base = "";
+    function stop() { on = false; b.classList.remove("rec"); b.setAttribute("aria-pressed", "false"); }
+    b.addEventListener("click", function () {
+      if (on) { try { rec.stop(); } catch (e) {} return; }
+      try {
+        rec = new SR(); rec.continuous = true; rec.interimResults = true; rec.lang = "en-US";
+        base = ta.value ? ta.value.replace(/\s*$/, " ") : "";
+        rec.onresult = function (e) { var t = "", i; for (i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; ta.value = base + t; };
+        rec.onend = stop; rec.onerror = stop; rec.start(); on = true; b.classList.add("rec"); b.setAttribute("aria-pressed", "true");
+      } catch (e) { stop(); }
+    });
   });
 })();
 </script>
