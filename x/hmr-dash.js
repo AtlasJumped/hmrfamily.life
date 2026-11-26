@@ -1,4 +1,5 @@
-/* HMR dash v1.6 (Nov 26, Leo): Log in asks a few optional questions (stored on this device); sharing enough and saying yes to new ideas about reality reveals a hidden invitation.
+/* HMR dash v1.7 (Nov 26): Log in is live. One HMR family account (email and password, Supabase via hmr-auth.js next to this file) works on every HMR site; the optional questions stay below it.
+   HMR dash v1.6 (Nov 26, Leo): Log in asks a few optional questions (stored on this device); sharing enough and saying yes to new ideas about reality reveals a hidden invitation.
    HMR dash v1.5 (Nov 25, Leo's feedback): the dashboard can be dragged anywhere on the screen by its top bar, with a one-time hint.
    HMR dash v1.4: the HMR family experience dashboard, opened by the round HMR button in the center of the shared bottom bar (hmr-dock.js v6.5+).
    One file, copied next to hmr-dock.js on every HMR site, lazy-loaded the first time the HMR button is pressed (or at boot when a visitor has a saved look).
@@ -11,7 +12,7 @@
      Funsies   the toy box plus each toy by name.
      Places    sections of this page, and the other HMR family sites.
      Settings  intro on/off, reset studio, reset everything saved on this site (with a confirm), privacy line, version.
-    Log in    button at the top of the dashboard; accounts are coming soon, so it opens a short note for now.
+    Log in    button at the top of the dashboard: log in, create an account, reset a password, log out (hmr-auth.js), then optional questions.
    Shared design assets: the skin manifest https://hmrfamily.life/hmr-kit/skin.json (palettes, fonts, media) is read by every site, so a new palette or a
    finished render added there shows up across the whole HMR ecosystem without touching each site. Built-in palettes work offline.
    Everything a visitor chooses is stored in this browser only (localStorage, per site), always inside try/catch.
@@ -19,8 +20,9 @@
 (function () {
   'use strict';
   if (window.HMRDash && window.HMRDash.version >= 1) return;
-  var doc = document, root = doc.documentElement, VERSION = 1.6;
+  var doc = document, root = doc.documentElement, VERSION = 1.7;
   var SKIN_URL = 'https://hmrfamily.life/hmr-kit/skin.json';
+  var AUTHSRC = (function () { try { var u = new URL(doc.currentScript.src, location.href); u.pathname = u.pathname.replace(/[^\/]*$/, 'hmr-auth.js'); u.search = '?v=1'; u.hash = ''; return u.toString(); } catch (e) { return 'https://hmrfamily.life/x/hmr-auth.js?v=1'; } })();
   var DRAG_KEY = 'hmr-dash-drag-hint', KEY = 'hmr-studio-v1', INTRO_KEY = 'hmr-dash-intro-off', SKIN_CACHE = 'hmr-skin-v1';
   function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
   function lsSet(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } }
@@ -398,9 +400,11 @@
     '.hmrd-toast button{min-height:44px;padding:0 12px;border-radius:999px;border:0;background:#fff;color:#111;font-weight:800;font-size:13px;flex:none}',
     '.hmrd-media{display:grid;gap:10px}.hmrd-media figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--d-line);background:#000}.hmrd-media video,.hmrd-media img{display:block;width:100%;height:auto;max-height:46vh;object-fit:contain;background:#000}.hmrd-media figcaption{padding:8px 10px;background:var(--d-bg);font-size:13px}',
     '.hmrd-about{display:grid;gap:10px;margin:4px 0 14px}.hmrd-f{display:grid;gap:6px;margin:0;padding:0;border:0;color:var(--d-fg);font-size:14px;font-weight:700}.hmrd-f legend{padding:0;margin-bottom:6px}',
-    '.hmrd-f input[type=text],.hmrd-f input[type=number]{min-height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--d-line);background:var(--d-tile);color:var(--d-fg);font:inherit;font-weight:500}',
+    '.hmrd-f input[type=text],.hmrd-f input[type=number],.hmrd-f input[type=email],.hmrd-f input[type=password]{min-height:44px;padding:0 12px;border-radius:12px;border:1px solid var(--d-line);background:var(--d-tile);color:var(--d-fg);font:inherit;font-weight:500}',
     '.hmrd-opts{display:flex;flex-wrap:wrap;gap:8px}.hmrd-opts label{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 12px;border-radius:999px;border:1px solid var(--d-line);background:var(--d-tile);font-weight:600;cursor:pointer}',
     '.hmrd-err:empty{display:none}.hmrd-err{color:#ffb4b4}',
+    '.hmrd-acct{margin:0 0 18px;padding:14px;border-radius:16px;border:1px solid var(--d-line);background:var(--d-tile)}.hmrd-acct .hmrd-about{margin-bottom:6px}.hmrd-msg:empty{display:none}.hmrd-msg{margin:0;font-size:14px;color:var(--d-fg)}',
+    '.hmrd-link{justify-self:start;min-height:44px;padding:0 4px;border:0;background:none;color:var(--d-fg);font:inherit;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:3px}.hmrd-sub{margin:4px 0 6px;font-size:16px;font-weight:800;color:var(--d-fg)}',
     '.hmrd-save{justify-self:start;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--d-acc);color:#111;font-weight:800;font-size:14px}',
     '.hmrd-egg{margin:6px 0 14px}.hmrd-eggbtn{display:block;width:100%;min-height:52px;padding:12px 14px;border-radius:16px;border:0;background:var(--d-grad);color:#fff;font-weight:800;font-size:14px;line-height:1.35;text-align:center;text-decoration:none}',
     '.hmrd-inv{padding:14px;border-radius:16px;border:1px solid var(--d-line);background:var(--d-tile)}.hmrd-inv .hmrd-p{color:var(--d-fg)}.hmrd-enter{margin-top:6px}',
@@ -434,7 +438,7 @@
     var logo = el('span', 'hmrd-logo', 'HMR'); logo.setAttribute('aria-hidden', 'true');
     var h = el('h2'); h.id = 'hmrd-title';
     var x = btn('hmrd-ib', '', 'Close the dashboard'); x.innerHTML = svg('x'); x.addEventListener('click', function () { close(true); });
-    var li = btn('hmrd-login', 'Log in', 'Log in (coming soon)'); li.addEventListener('click', function () { show('login'); });
+    var li = btn('hmrd-login', 'Log in', 'Log in or create your HMR family account'); li.addEventListener('click', function () { show('login'); });
     bk.addEventListener('click', function () { show('home'); });
     hd.appendChild(bk); hd.appendChild(logo); hd.appendChild(h); hd.appendChild(li); hd.appendChild(x); dash.appendChild(hd);
     var body = el('div', 'hmrd-body'); dash.appendChild(body);
@@ -644,13 +648,86 @@
     // personaldash.life / claudebomb.com first-visit panel answers on this same site also count
     var p = jget('cbProfile', null);
     if (p && typeof p === 'object') { if (!o.ai && p.tier) n++; if (!o.family && p.parent && p.parent !== 'skip') n++; if (!o.by && p.by) n++; if (p.ai && p.ai.length) n++; if (p.plan) n++; }
+    // claudebomb.com welcome pop-up answers (assets/cb-gate.js) also count
+    var c = jget('cb-ctx-v1', null);
+    if (c && typeof c === 'object') { if (!o.name && c.name && String(c.name).trim()) n++; if (!(o.why && String(o.why).trim().length >= 3) && c.intent) n++; if (!o.ai && c.level) n++; if (c.ai) n++; }
     return n;
   }
   function eggEarned() { var o = aboutGet(); return o.reality === 'yes' && aboutCount(o) >= EGG_MIN && !/(^|\.)universemodel\.ai$/i.test(location.hostname); }
+  // ---- HMR family account (hmr-auth.js, loaded from the same folder as this file the first time Log in opens)
+  function loadAuth(cb) {
+    if (window.HMRAuth) { cb(window.HMRAuth); return; }
+    var s = doc.querySelector('script[data-hmr-auth]');
+    if (!s) { s = el('script'); s.src = AUTHSRC; s.async = true; s.setAttribute('data-hmr-auth', ''); (doc.head || root).appendChild(s); }
+    s.addEventListener('load', function () { cb(window.HMRAuth || null); });
+    s.addEventListener('error', function () { cb(null); });
+  }
+  var acctMode = 'in';
+  function acctBox(box) {
+    box.appendChild(el('p', 'hmrd-p', 'Loading your account...'));
+    loadAuth(function (A) {
+      if (!A) { box.textContent = ''; box.appendChild(el('p', 'hmrd-p hmrd-err', 'Logging in could not load. Check your connection and try again.')); return; }
+      A.onChange(function () { if (box.isConnected) draw(); });
+      function field(f, name, label, type, auto) { var w = el('label', 'hmrd-f'); w.appendChild(el('span', '', label)); var i = el('input'); i.type = type; i.name = name; i.autocomplete = auto; if (type === 'email') { i.inputMode = 'email'; i.autocapitalize = 'off'; i.spellcheck = false; } w.appendChild(i); f.appendChild(w); return i; }
+      function okEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+      function draw() {
+        box.textContent = '';
+        if (A.failed) { box.appendChild(el('p', 'hmrd-p hmrd-err', 'We could not reach the account service. Check your connection and try again.')); return; }
+        if (!A.ready) { box.appendChild(el('p', 'hmrd-p', 'Loading your account...')); return; }
+        var f = el('form', 'hmrd-about'); f.noValidate = true;
+        var msg = el('p', 'hmrd-msg'); msg.setAttribute('role', 'status');
+        if (A.user && A.recovery) {
+          box.appendChild(el('p', 'hmrd-p', 'Choose a new password for ' + A.user.email + '.'));
+          var np = field(f, 'password', 'New password (at least 8 characters)', 'password', 'new-password');
+          f.appendChild(msg); var sv = btn('hmrd-save', 'Save new password'); sv.type = 'submit'; f.appendChild(sv); box.appendChild(f);
+          f.addEventListener('submit', function (ev) { ev.preventDefault(); if (np.value.length < 8) { msg.textContent = 'Use at least 8 characters.'; return; } msg.textContent = 'Saving...'; A.setPassword(np.value).then(function (r) { if (r.error) msg.textContent = A.say(r.error); else { toast('Password changed.'); draw(); } }); });
+          return;
+        }
+        if (A.user) {
+          box.appendChild(el('p', 'hmrd-p', 'You are logged in as ' + A.user.email + '.'));
+          box.appendChild(el('p', 'hmrd-p', 'This one free account works on every HMR family site. On another HMR site, log in there with the same email and password.'));
+          var out = btn('hmrd-save', 'Log out'); out.addEventListener('click', function () { out.disabled = true; A.signOut().then(function () { toast('Logged out on this site.'); }); });
+          box.appendChild(out); return;
+        }
+        var up = acctMode === 'up';
+        box.appendChild(el('p', 'hmrd-p', up ? 'Create one free account for every HMR family site. No ads, ever.' : 'Log in with your HMR family account. The same email and password work on every HMR family site.'));
+        var em = field(f, 'email', 'Email', 'email', 'email');
+        var pw = field(f, 'password', up ? 'Password (at least 8 characters)' : 'Password', 'password', up ? 'new-password' : 'current-password');
+        f.appendChild(msg);
+        var go = btn('hmrd-save', up ? 'Create account' : 'Log in'); go.type = 'submit'; f.appendChild(go);
+        box.appendChild(f);
+        f.addEventListener('submit', function (ev) {
+          ev.preventDefault(); var e = em.value.trim();
+          if (!okEmail(e)) { msg.textContent = 'That email does not look right. Check it and try again.'; em.focus(); return; }
+          if (pw.value.length < (up ? 8 : 1)) { msg.textContent = up ? 'Use a password with at least 8 characters.' : 'Enter your password.'; pw.focus(); return; }
+          go.disabled = true; msg.textContent = up ? 'Creating your account...' : 'Logging in...';
+          (up ? A.signUp(e, pw.value) : A.signIn(e, pw.value)).then(function (r) {
+            go.disabled = false;
+            if (r.error) { msg.textContent = A.say(r.error); return; }
+            if (up && !(r.data && r.data.session)) { acctMode = 'in'; draw(); box.querySelector('.hmrd-msg').textContent = 'Almost done. Open the link we emailed to ' + e + ', then log in here.'; return; }
+            toast(up ? 'Account created. You are logged in.' : 'Logged in.');
+          });
+        });
+        var sw = btn('hmrd-link', up ? 'Have an account? Log in' : 'New here? Create a free account');
+        sw.addEventListener('click', function () { acctMode = up ? 'in' : 'up'; draw(); var i = box.querySelector('input'); if (i) i.focus(); });
+        box.appendChild(sw);
+        if (!up) {
+          var fg = btn('hmrd-link', 'Forgot your password?');
+          fg.addEventListener('click', function () {
+            var e = em.value.trim(); if (!okEmail(e)) { msg.textContent = 'Type your email above first, then tap Forgot your password again.'; em.focus(); return; }
+            msg.textContent = 'Sending...';
+            A.reset(e).then(function (r) { msg.textContent = r.error ? A.say(r.error) : 'If ' + e + ' has an account, we sent it a link to choose a new password.'; });
+          });
+          box.appendChild(fg);
+        }
+      }
+      draw();
+    });
+  }
   function login(b) {
-    b.appendChild(el('span', 'hmrd-soon', 'Coming soon'));
-    b.appendChild(el('p', 'hmrd-p', 'Soon you can log in so your look and settings follow you to every HMR family site, on any device.'));
-    b.appendChild(el('p', 'hmrd-p', 'While you wait, tell us a little about you. Every question is optional. Your answers stay in this browser, on this site, and are never sent to us.'));
+    var acct = el('div', 'hmrd-acct'); b.appendChild(acct); acctBox(acct);
+    b.appendChild(el('h3', 'hmrd-sub', 'About you (optional)'));
+    b.appendChild(el('p', 'hmrd-p', 'Tell us a little about you. Every question is optional. Your answers stay in this browser, on this site, and are never sent to us.'));
     var o = aboutGet(), f = el('form', 'hmrd-about'); f.noValidate = true;
     function txt(id, label, val, ph, type) { var w = el('label', 'hmrd-f'); w.appendChild(el('span', '', label)); var i = el('input'); i.type = type || 'text'; i.name = id; i.value = val || ''; if (ph) i.placeholder = ph; if (type === 'number') { i.inputMode = 'numeric'; i.min = '1900'; } w.appendChild(i); f.appendChild(w); return i; }
     function pick(id, label, opts, val) { var fs = el('fieldset', 'hmrd-f'); fs.appendChild(el('legend', '', label)); var r = el('div', 'hmrd-opts'); opts.forEach(function (x) { var l = el('label'); var i = el('input'); i.type = 'radio'; i.name = id; i.value = x[0]; i.checked = val === x[0]; l.appendChild(i); l.appendChild(doc.createTextNode(' ' + x[1])); r.appendChild(l); }); fs.appendChild(r); f.appendChild(fs); }
@@ -693,7 +770,7 @@
     });
     drawEgg();
     var l = el('div', 'hmrd-list'), D = dock();
-    if (D.openFeedback) l.appendChild(item('write', 'Tell us what you want from an account', 'Your ideas shape how logging in works', then(function () { D.openFeedback(); })));
+    if (D.openFeedback) l.appendChild(item('write', 'Tell us what you want from your account', 'Your ideas shape what accounts do next', then(function () { D.openFeedback(); })));
     l.appendChild(item('settings', 'Your settings', 'See or reset what is saved here', function () { show('settings'); }));
     b.appendChild(l);
   }
