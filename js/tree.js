@@ -192,7 +192,7 @@
     saleBox.appendChild(el("p", { "class": "dsale-h", text: "For sale? Tap one or more:" }));
     var sc = counted("sale"), row = el("div", { "class": "dsale-row" });
     SALE.forEach(function (x) {
-      var b = el("button", { type: "button", "class": "sb " + x[0], "aria-pressed": "false", "data-sale": x[0], text: x[1] + " (" + (sc[x[0]] || 0) + ")" });
+      var b = el("button", { type: "button", "class": "sb s-" + x[0], "aria-pressed": "false", "data-sale": x[0], text: x[1] + " (" + (sc[x[0]] || 0) + ")" });
       b.addEventListener("click", function () {
         if (st.sale[x[0]]) delete st.sale[x[0]]; else st.sale[x[0]] = 1;
         b.setAttribute("aria-pressed", String(!!st.sale[x[0]])); render();
@@ -283,7 +283,7 @@
         } else if (r.u) d.appendChild(ext(r.u, r.h)); else d.textContent = r.h;
         li.appendChild(d);
         li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: STAGE[r.m] || r.m }));
-        if (r.sale) li.appendChild(el("span", { "class": "dl-s " + r.sale, text: SALEN[r.sale] }));
+        if (r.sale) li.appendChild(el("span", { "class": "dl-s s-" + r.sale, text: SALEN[r.sale] }));
         var meta = r.c + (r.s ? " · cool score " + r.s : "");
         li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), el("b", { "class": "dl-plan", text: "The plan: " }), document.createTextNode(r.p)]));
         var vh = el("div", { "class": "dl-v" });
