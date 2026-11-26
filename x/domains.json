@@ -239,7 +239,7 @@
 "p": "A fast space game for one quick break.",
 "u": "https://cosmicru.sh/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "madebyai.website",
@@ -249,7 +249,7 @@
 "p": "A badge and gallery for websites made by AI, with how each one was built.",
 "u": "https://madebyai.website/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "notascam.charity",
@@ -269,7 +269,7 @@
 "p": "Fast, clear job estimates for trades and services, with every number explained.",
 "u": "https://aiestimat.ing/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "buildmysite.click",
@@ -279,7 +279,7 @@
 "p": "Click, answer a few questions, and get a site that is yours to keep.",
 "u": "https://buildmysite.click/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "trustme.charity",
@@ -319,7 +319,7 @@
 "p": "A directory of MCP tools that connect AI assistants to apps, with honest ratings.",
 "u": "https://mcpstore.tech/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "agentorchestrat.ing",
@@ -329,7 +329,7 @@
 "p": "Many AI agents working as one team, each with a clear job, a shared plan, and a human conductor.",
 "u": "https://agentorchestrat.ing/",
 "m": "Live",
-"sale": "feat"
+"sale": "sale"
 },
 {
 "h": "agentshopp.ing",
@@ -2269,6 +2269,1816 @@
 "p": "Points to universemodel.ai.",
 "u": null,
 "m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "65plus.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Plain-English AI help for people 65 and up.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "adulting.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 6.0,
+"p": "Grown-up life skills, one small win at a time.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "agentwhisperer.pro",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "Tips for getting AI agents to do what you mean.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aianimator.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "An AI animator for short, simple explainer clips.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiathome.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Gentle first steps with AI at home.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aidog.dog",
+"c": "Dogs",
+"s": 6.5,
+"a": 5.0,
+"p": "AI tools for dog owners: training plans, health notes, walk logs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiforboomers.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "AI explained for boomers, no jargon.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiforgrandpa.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "AI help made for grandpas.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiformyparents.com",
+"c": "AI help for seniors and families",
+"s": 7.0,
+"a": 7.0,
+"p": "Help your parents start with AI, safely and slowly.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiforoldtimers.com",
+"c": "AI help for seniors and families",
+"s": 6.0,
+"a": 6.0,
+"p": "A friendly, funny AI guide for old-timers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiillustrator.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "An AI illustrator for small projects.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aimentor.ing",
+"c": "AI agents and business",
+"s": 6.0,
+"a": 5.0,
+"p": "An AI mentor that helps you learn any skill.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aistorytell.ing",
+"c": "AI agents and business",
+"s": 6.0,
+"a": 5.0,
+"p": "Make stories with AI, for kids and grown-ups.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aistoryteller.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "The pro version of AI storytelling.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aistrategist.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "An AI strategist for small businesses.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aitamer.pro",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 4.0,
+"p": "Taming AI: keep it useful, honest and safe.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiwithgrandma.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Learn AI together with grandma.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "aiwrangler.pro",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 4.0,
+"p": "Wrangling AI tools so they work together.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "allinoneai.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "One place for all your everyday AI help.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "almostpro.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For people who are almost pros, and proud of it.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "armchairexpert.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "A home for armchair experts and their hot takes.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "askgrandpa.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Ask grandpa anything, with AI backup.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "askmeai.online",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Ask a friendly AI your questions.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "backseatdriver.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "Funny gifts and memes for backseat drivers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "backyardchef.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 5.0,
+"p": "Recipes and grilling tips for backyard chefs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "bedtime.monster",
+"c": "Fun and games",
+"s": 8.0,
+"a": 6.0,
+"p": "Bedtime stories where the monster is the nice one.",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "bingewatch.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "What to binge next, picked for you.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "biotensegrities.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "HMR's word for living bodies: biotensegrities.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "biotensegrity.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "The body as a biotensegrity, explained simply.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "bodyworker.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "A directory and guide for bodyworkers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "bottrainer.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Train your own AI bot, step by step.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "breathcoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "Simple breathing practices, coached.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "budtend.ing",
+"c": "Everyday help",
+"s": null,
+"a": 4.0,
+"p": "Learn what a budtender knows, where it is legal.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "bugslayer.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For coders who slay bugs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "buttonmasher.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For gamers who mash buttons and win anyway.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "captionwriter.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Captions for posts and videos, written fast.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "cheapdate.live",
+"c": "Fun and games",
+"s": 7.0,
+"a": 5.0,
+"p": "Cheap, fun date ideas near you.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "cheaperthan.coffee",
+"c": "Fun and games",
+"s": 8.0,
+"a": 5.0,
+"p": "Things that cost less than a cup of coffee.",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "christmas2026.app",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "A Christmas 2026 countdown and gift planner.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "claudebomb.ai",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.app",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.art",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.life",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.net",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.online",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.org",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.pro",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.shop",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.space",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.store",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "claudebomb.xyz",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "clipeditor.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Quick video clip editing.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "coffeeaddict.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "For coffee addicts: brews, gear and jokes.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "complainer.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "A safe place to complain, then feel better.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "connectivetissue.pro",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Connective tissue (often called fascia), explained.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "couchadvice.com",
+"c": "Fun and games",
+"s": 7.0,
+"a": 6.0,
+"p": "Advice from the couch: honest, funny, free.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "couchadvice.pro",
+"c": "Fun and games",
+"s": null,
+"a": 3.0,
+"p": "Points to couchadvice.com.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "couchadvice.xyz",
+"c": "Fun and games",
+"s": null,
+"a": 3.0,
+"p": "Points to couchadvice.com.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "couchpotato.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For proud couch potatoes.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "coursecreator.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Build an online course with AI help.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "dadjoke.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 5.0,
+"p": "A dad joke a day.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "dadlife.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "Tips and laughs for dads.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "dashboarddesigner.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Design your own AI dashboard.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "digitalartist.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 4.0,
+"p": "A home for digital artists.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "dogtrainer.pro",
+"c": "Dogs",
+"s": null,
+"a": 5.0,
+"p": "Dog training help and trainer finder.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "doomscroll.pro",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "Points to doomscroll.monster.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "elevatehumanity.life",
+"c": "Elevate humanity",
+"s": null,
+"a": 6.0,
+"p": "Our mission, elevating humanity, in one place.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "elevatehumanity.uk",
+"c": "Elevate humanity",
+"s": null,
+"a": 3.0,
+"p": "Points to elevatehumanity.life.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "elevatehumanity.us",
+"c": "Elevate humanity",
+"s": null,
+"a": 3.0,
+"p": "Points to elevatehumanity.life.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "elevatinghumanity.world",
+"c": "Elevate humanity",
+"s": null,
+"a": 4.0,
+"p": "Points to elevatehumanity.life.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "eli5.college",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "College subjects, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.consulting",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 3.0,
+"p": "Consulting jargon, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.dating",
+"c": "Explain like I'm 5",
+"s": 6.5,
+"a": 4.0,
+"p": "Dating, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.design",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Design ideas, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.diy",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "DIY projects, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.fitness",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Fitness, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.living",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Everyday living, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.lol",
+"c": "Explain like I'm 5",
+"s": 7.0,
+"a": 5.0,
+"p": "Funny things, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.online",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Anything online, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.pics",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Explained like you're five, with pictures.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.pro",
+"c": "Explain like I'm 5",
+"s": 7.0,
+"a": 5.0,
+"p": "Pro topics, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.science",
+"c": "Explain like I'm 5",
+"s": 7.0,
+"a": 5.0,
+"p": "Science, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.tips",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Quick tips, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.website",
+"c": "Explain like I'm 5",
+"s": null,
+"a": 4.0,
+"p": "Websites, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.world",
+"c": "Explain like I'm 5",
+"s": 7.0,
+"a": 6.0,
+"p": "The world, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "eli5.wtf",
+"c": "Explain like I'm 5",
+"s": 8.5,
+"a": 5.0,
+"p": "The confusing stuff, explained like you're five.",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "ethicalhacker.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 5.0,
+"p": "Learn ethical hacking, safely and legally.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "excelwizard.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 5.0,
+"p": "Spreadsheet tricks from Excel wizards.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "excusegenerator.pro",
+"c": "Fun and games",
+"s": 7.5,
+"a": 5.0,
+"p": "A silly excuse generator.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "excusemaker.pro",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "Points to excusegenerator.pro.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "excuses.pro",
+"c": "Fun and games",
+"s": 7.0,
+"a": 5.0,
+"p": "The best excuses, ranked.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "fasciacoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "Coaching for healthy connective tissue (often called fascia).",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "freeforever.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Our promise: free forever.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "gentleai.pro",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Gentle AI help, pro version.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "goodestboy.dog",
+"c": "Dogs",
+"s": 8.5,
+"a": 5.0,
+"p": "For the goodest boys (and girls).",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "grandkids.tech",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Grandkids teach grandparents tech.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "grandpa.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 5.0,
+"p": "For pro grandpas.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "grandpajokes.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "Grandpa jokes, worse than dad jokes.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "grillsergeant.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 4.0,
+"p": "Grilling tips from the grill sergeant.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "growoldwithai.com",
+"c": "AI help for seniors and families",
+"s": 6.5,
+"a": 6.0,
+"p": "Grow old with AI as a helper, not a replacement.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.baby",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "Humanity's newest members.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.beauty",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "The beauty in humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.careers",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "Careers that help humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.doctor",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "Health for all of humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.dog",
+"c": "Humanity",
+"s": 7.0,
+"a": 4.0,
+"p": "Humanity's best friend.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.feedback",
+"c": "Humanity",
+"s": 6.5,
+"a": 5.0,
+"p": "Feedback for all of humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.gifts",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "Gifts that do good.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.hair",
+"c": "Humanity",
+"s": null,
+"a": 3.0,
+"p": "Hair for all of humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.rest",
+"c": "Humanity",
+"s": 6.0,
+"a": 4.0,
+"p": "Rest for all of humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "humanity.support",
+"c": "Humanity",
+"s": null,
+"a": 4.0,
+"p": "Support for all of humanity.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "idealbody.pro",
+"c": "Body and movement",
+"s": null,
+"a": 4.0,
+"p": "Your ideal body, defined by you.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "ilovedogs.app",
+"c": "Dogs",
+"s": null,
+"a": 6.0,
+"p": "An app for people who love dogs.",
+"u": null,
+"m": "Parked",
+"sale": "free"
+},
+{
+"h": "ilovedogs.pet",
+"c": "Dogs",
+"s": null,
+"a": 5.0,
+"p": "For people who love dogs and pets.",
+"u": null,
+"m": "Parked",
+"sale": "free"
+},
+{
+"h": "indiehacker.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Tools for indie hackers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "internetexpert.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "For self-made internet experts.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "itworkedonmymachine.pro",
+"c": "Pros and personas",
+"s": 8.5,
+"a": 5.0,
+"p": "For every coder who said it worked on my machine.",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "kindapro.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For people who are kinda pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "landingpagepro.pro",
+"c": "Website building",
+"s": null,
+"a": 4.0,
+"p": "Landing pages that work.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "laughsmith.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "A smith of laughs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "linkedinwriter.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Better LinkedIn posts.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "llmwhisperer.pro",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 5.0,
+"p": "Tips for whispering to large language models.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "maincharacter.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 5.0,
+"p": "Live like the main character.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "mansbestfriend.dog",
+"c": "Dogs",
+"s": 7.5,
+"a": 5.0,
+"p": "Man's best friend.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "medicalcannabis.care",
+"c": "Everyday help",
+"s": null,
+"a": 4.0,
+"p": "Plain facts about medical cannabis, where legal.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "memelord.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 4.0,
+"p": "For memelords.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "mobilitycoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "Mobility coaching.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "modeltrainer.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Learn to train AI models.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "momlife.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "Tips and laughs for moms.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "movementcoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "Movement coaching.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "multitasker.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "For proud multitaskers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "newsletterwriter.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Better newsletters.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "notapro.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 4.0,
+"p": "For people who are not pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "onepersonstartup.pro",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "Run a one-person startup with AI.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "overthinker.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For overthinkers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "personaldash.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to personaldash.life.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "pitchcoach.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Pitch coaching.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "pixelpusher.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "For pixel pushers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "posturecoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 4.0,
+"p": "Posture coaching.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "prankster.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "Harmless pranks.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "prettymuchpro.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For people who are pretty much pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "procrastinate.pro",
+"c": "Pros and personas",
+"s": 8.0,
+"a": 5.0,
+"p": "For pro procrastinators. We'll finish this page later.",
+"u": null,
+"m": "Parked",
+"sale": "feat"
+},
+{
+"h": "professionalgrandma.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 5.0,
+"p": "For professional grandmas.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "professionaloverthinker.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For professional overthinkers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "promptartist.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Prompt artistry.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "promptbomb.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to claudebomb.com.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "promptdesigner.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Prompt design.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "promptsmith.pro",
+"c": "AI agents and business",
+"s": 6.0,
+"a": 4.0,
+"p": "Prompt smithing.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "promptwhisperer.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Prompt whispering.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "promptwizard.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Prompt wizardry.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "punmaster.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "Puns, mastered.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "punslinger.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 4.0,
+"p": "The fastest puns in the west.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "ragequitter.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For rage quitters.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "reallyamateur.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For proud amateurs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "remotecontrol.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 4.0,
+"p": "Remote work tips.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "replyall.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For people who hit reply all.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "retiredpro.pro",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "For retired pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "screenaddict.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 4.0,
+"p": "For screen addicts.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "selfproclaimed.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For self-proclaimed pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "semipro.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For semi-pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "shortseditor.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Shorts editing.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "sidecharacter.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For proud side characters.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "silvertongue.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For silver tongues.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "sortapro.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For people who are sorta pros.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "stretchcoach.pro",
+"c": "Body and movement",
+"s": null,
+"a": 4.0,
+"p": "Stretch coaching.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "techwhisperer.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Tech whispering.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "thefinalcountdown.app",
+"c": "Fun and games",
+"s": 7.0,
+"a": 5.0,
+"p": "A countdown app for any big day.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "thefinalcountdown.live",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "Points to thefinalcountdown.app.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "thumbnailartist.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Better thumbnails.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "timehacker.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 4.0,
+"p": "Time hacks.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "tokenburner.pro",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 4.0,
+"p": "For people who burn AI tokens.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "totalamateur.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "For total amateurs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "universalintelligence.pro",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Universal intelligence, HMR's first layer.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "universemodel.app",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to universemodel.ai.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "vibeengineer.pro",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "For vibe engineers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "voiceactor.pro",
+"c": "Pros and personas",
+"s": null,
+"a": 4.0,
+"p": "Voice acting tips.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "whine.pro",
+"c": "Pros and personas",
+"s": 7.0,
+"a": 4.0,
+"p": "For pro whiners.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "wholebody.pro",
+"c": "Body and movement",
+"s": null,
+"a": 5.0,
+"p": "The whole body, as one system.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "workdash.app",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to workdash.life.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "workflowwizard.pro",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Workflow wizardry.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "worrier.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "For worriers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "youraidash.online",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to personaldash.life.",
+"u": null,
+"m": "Parked",
 "sale": "keep"
 }
 ]
