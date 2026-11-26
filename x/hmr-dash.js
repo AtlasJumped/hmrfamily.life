@@ -20,7 +20,7 @@
 (function () {
   'use strict';
   if (window.HMRDash && window.HMRDash.version >= 1) return;
-  var doc = document, root = doc.documentElement, VERSION = 1.7;
+  var doc = document, root = doc.documentElement, VERSION = 1.8;
   var SKIN_URL = 'https://hmrfamily.life/hmr-kit/skin.json';
   var AUTHSRC = (function () { try { var u = new URL(doc.currentScript.src, location.href); u.pathname = u.pathname.replace(/[^\/]*$/, 'hmr-auth.js'); u.search = '?v=1'; u.hash = ''; return u.toString(); } catch (e) { return 'https://hmrfamily.life/x/hmr-auth.js?v=1'; } })();
   var DRAG_KEY = 'hmr-dash-drag-hint', KEY = 'hmr-studio-v1', INTRO_KEY = 'hmr-dash-intro-off', SKIN_CACHE = 'hmr-skin-v1';
@@ -405,6 +405,7 @@
     '.hmrd-err:empty{display:none}.hmrd-err{color:#ffb4b4}',
     '.hmrd-acct{margin:0 0 18px;padding:14px;border-radius:16px;border:1px solid var(--d-line);background:var(--d-tile)}.hmrd-acct .hmrd-about{margin-bottom:6px}.hmrd-msg:empty{display:none}.hmrd-msg{margin:0;font-size:14px;color:var(--d-fg)}',
     '.hmrd-link{justify-self:start;min-height:44px;padding:0 4px;border:0;background:none;color:var(--d-fg);font:inherit;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:3px}.hmrd-sub{margin:4px 0 6px;font-size:16px;font-weight:800;color:var(--d-fg)}',
+    '.hmrd-seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0 0 12px;padding:4px;border-radius:999px;background:var(--d-line)}.hmrd-segb{min-height:44px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:var(--d-fg);font:inherit;font-size:14px;font-weight:800;cursor:pointer}.hmrd-segb.on{background:var(--d-acc);color:#111;box-shadow:0 2px 8px rgba(0,0,0,.18)}.hmrd-segb:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}' +
     '.hmrd-save{justify-self:start;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--d-acc);color:#111;font-weight:800;font-size:14px}',
     '.hmrd-egg{margin:6px 0 14px}.hmrd-eggbtn{display:block;width:100%;min-height:52px;padding:12px 14px;border-radius:16px;border:0;background:var(--d-grad);color:#fff;font-weight:800;font-size:14px;line-height:1.35;text-align:center;text-decoration:none}',
     '.hmrd-inv{padding:14px;border-radius:16px;border:1px solid var(--d-line);background:var(--d-tile)}.hmrd-inv .hmrd-p{color:var(--d-fg)}.hmrd-enter{margin-top:6px}',
@@ -690,6 +691,14 @@
           box.appendChild(out); return;
         }
         var up = acctMode === 'up';
+        // v1.8 (Leo, Nov 26): Log in and Create account sit side by side at the top, so a new visitor sees how to sign up right away
+        var seg = el('div', 'hmrd-seg'); seg.setAttribute('role', 'group'); seg.setAttribute('aria-label', 'Log in or create an account');
+        [['in', 'Log in'], ['up', 'Create a free account']].forEach(function (m) {
+          var sb = btn('hmrd-segb' + (acctMode === m[0] ? ' on' : ''), m[1]); sb.setAttribute('aria-pressed', acctMode === m[0] ? 'true' : 'false');
+          sb.addEventListener('click', function () { if (acctMode === m[0]) return; acctMode = m[0]; draw(); var i = box.querySelector('input'); if (i) i.focus(); });
+          seg.appendChild(sb);
+        });
+        box.appendChild(seg);
         box.appendChild(el('p', 'hmrd-p', up ? 'Create one free account for every HMR family site. No ads, ever.' : 'Log in with your HMR family account. The same email and password work on every HMR family site.'));
         var em = field(f, 'email', 'Email', 'email', 'email');
         var pw = field(f, 'password', up ? 'Password (at least 8 characters)' : 'Password', 'password', up ? 'new-password' : 'current-password');
@@ -708,9 +717,6 @@
             toast(up ? 'Account created. You are logged in.' : 'Logged in.');
           });
         });
-        var sw = btn('hmrd-link', up ? 'Have an account? Log in' : 'New here? Create a free account');
-        sw.addEventListener('click', function () { acctMode = up ? 'in' : 'up'; draw(); var i = box.querySelector('input'); if (i) i.focus(); });
-        box.appendChild(sw);
         if (!up) {
           var fg = btn('hmrd-link', 'Forgot your password?');
           fg.addEventListener('click', function () {
