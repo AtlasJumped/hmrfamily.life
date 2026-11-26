@@ -1,0 +1,2030 @@
+{
+"updated": "2026-11-26",
+"domains": [
+{
+"h": "claudebomb.com",
+"c": "HMR family",
+"s": 10.0,
+"a": 6.0,
+"p": "Flagship: the prompt bank for every AI model.",
+"u": "https://claudebomb.com/",
+"m": "HMR family"
+},
+{
+"h": "grubbing.money",
+"c": "Fun and games",
+"s": 10.0,
+"a": 4.0,
+"p": "An honest, funny look at money grabs, and how to spot them.",
+"u": "https://grubbing.money/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.dog",
+"c": "Dogs",
+"s": 9.8,
+"a": 8.0,
+"p": "Everything for people who love dogs.",
+"u": "https://ilovedogs.dog/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.live",
+"c": "Dogs",
+"s": 9.8,
+"a": 6.0,
+"p": "Live dog cams and happy dog moments.",
+"u": "https://ilovedogs.live/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.art",
+"c": "Dogs",
+"s": 9.8,
+"a": 5.0,
+"p": "Dog art from people who love dogs. Share yours.",
+"u": "https://ilovedogs.art/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.tech",
+"c": "Dogs",
+"s": 9.8,
+"a": 5.0,
+"p": "Tech for dog lovers: trackers, health logs, and smart tools.",
+"u": "https://ilovedogs.tech/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.cloud",
+"c": "Dogs",
+"s": 9.8,
+"a": 4.0,
+"p": "A home for every photo of every good dog.",
+"u": "https://ilovedogs.cloud/",
+"m": "Live"
+},
+{
+"h": "ilovedogs.space",
+"c": "Dogs",
+"s": 9.8,
+"a": 4.0,
+"p": "A calm space for dog lovers to share and meet.",
+"u": "https://ilovedogs.space/",
+"m": "Live"
+},
+{
+"h": "funsies.fun",
+"c": "Fun and games",
+"s": 9.0,
+"a": 8.0,
+"p": "Toys and games, made for joy.",
+"u": "https://funsies.fun/",
+"m": "HMR family"
+},
+{
+"h": "underthebed.monster",
+"c": "Fun and games",
+"s": 9.0,
+"a": 7.0,
+"p": "Bedtime stories where the monster under the bed is your friend.",
+"u": "https://underthebed.monster/",
+"m": "Live"
+},
+{
+"h": "delulu.monster",
+"c": "Fun and games",
+"s": 9.0,
+"a": 6.0,
+"p": "Dream big on purpose, then turn the dream into one small real step today.",
+"u": "https://delulu.monster/",
+"m": "Live"
+},
+{
+"h": "discombobulat.ing",
+"c": "Fun and games",
+"s": 9.0,
+"a": 5.0,
+"p": "Puzzles and illusions that scramble your brain, in a good way.",
+"u": "https://discombobulat.ing/",
+"m": "Live"
+},
+{
+"h": "cosmicjoke.lol",
+"c": "Fun and games",
+"s": 9.0,
+"a": 4.0,
+"p": "The funniest true facts about the universe.",
+"u": "https://cosmicjoke.lol/",
+"m": "Live"
+},
+{
+"h": "overreact.ing",
+"c": "Fun and games",
+"s": 9.0,
+"a": 4.0,
+"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"u": "https://overreact.ing/",
+"m": "Live"
+},
+{
+"h": "dragonrid.ing",
+"c": "Fun and games",
+"s": 8.5,
+"a": 5.0,
+"p": "An adventure game where you ride dragons across worlds.",
+"u": "https://dragonrid.ing/",
+"m": "Live"
+},
+{
+"h": "fennsma.sh",
+"c": "Fun and games",
+"s": 8.5,
+"a": 2.0,
+"p": "Smash things in a game made for joy and stress relief.",
+"u": "https://fennsma.sh/",
+"m": "Live"
+},
+{
+"h": "whatisreality.wtf",
+"c": "Fun and games",
+"s": 8.0,
+"a": 6.0,
+"p": "The big question, answered as best we can, with links to the Holistic Model of Reality.",
+"u": "https://whatisreality.wtf/",
+"m": "Live"
+},
+{
+"h": "honorable.charity",
+"c": "Giving and trust",
+"s": 8.0,
+"a": 4.0,
+"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
+"u": "https://honorable.charity/",
+"m": "Live"
+},
+{
+"h": "mindru.sh",
+"c": "AI agents and business",
+"s": 8.0,
+"a": 4.0,
+"p": "Quick brain games for a rush of focus.",
+"u": "https://mindru.sh/",
+"m": "Live"
+},
+{
+"h": "whatis67.wtf",
+"c": "Fun and games",
+"s": 8.0,
+"a": 3.0,
+"p": "The 67 meme explained for confused parents and teachers.",
+"u": "https://whatis67.wtf/",
+"m": "Live"
+},
+{
+"h": "doomscroll.monster",
+"c": "Fun and games",
+"s": 7.5,
+"a": 6.0,
+"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
+"u": "https://doomscroll.monster/",
+"m": "Live"
+},
+{
+"h": "aiforecast.ing",
+"c": "AI agents and business",
+"s": 7.5,
+"a": 5.0,
+"p": "Forecasts for small businesses that say what they know, what they guess, and how sure they are.",
+"u": "https://aiforecast.ing/",
+"m": "Live"
+},
+{
+"h": "dreamweav.ing",
+"c": "Fun and games",
+"s": 7.5,
+"a": 5.0,
+"p": "Weave your dreams into stories, art, and plans.",
+"u": "https://dreamweav.ing/",
+"m": "Live"
+},
+{
+"h": "cosmicru.sh",
+"c": "Fun and games",
+"s": 7.5,
+"a": 4.0,
+"p": "A fast space game for one quick break.",
+"u": "https://cosmicru.sh/",
+"m": "Live"
+},
+{
+"h": "madebyai.website",
+"c": "Website building",
+"s": 7.0,
+"a": 5.0,
+"p": "A badge and gallery for websites made by AI, with how each one was built.",
+"u": "https://madebyai.website/",
+"m": "Live"
+},
+{
+"h": "notascam.charity",
+"c": "Giving and trust",
+"s": 7.0,
+"a": 5.0,
+"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
+"u": "https://notascam.charity/",
+"m": "Live"
+},
+{
+"h": "aiestimat.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 4.0,
+"p": "Fast, clear job estimates for trades and services, with every number explained.",
+"u": "https://aiestimat.ing/",
+"m": "Live"
+},
+{
+"h": "buildmysite.click",
+"c": "Website building",
+"s": 7.0,
+"a": 4.0,
+"p": "Click, answer a few questions, and get a site that is yours to keep.",
+"u": "https://buildmysite.click/",
+"m": "Live"
+},
+{
+"h": "trustme.charity",
+"c": "Giving and trust",
+"s": 7.0,
+"a": 4.0,
+"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
+"u": "https://trustme.charity/",
+"m": "Live"
+},
+{
+"h": "corrupt.charity",
+"c": "Giving and trust",
+"s": 7.0,
+"a": 3.0,
+"p": "We spend it however we want. At least we are honest about it. Donations open soon.",
+"u": "https://corrupt.charity/",
+"m": "Live"
+},
+{
+"h": "agentstaff.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 7.0,
+"p": "Find the right AI agent for a job the way you would hire a person: skills, references, and a trial run.",
+"u": "https://agentstaff.ing/",
+"m": "Live"
+},
+{
+"h": "mcpstore.tech",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 7.0,
+"p": "A directory of MCP tools that connect AI assistants to apps, with honest ratings.",
+"u": "https://mcpstore.tech/",
+"m": "Live"
+},
+{
+"h": "agentorchestrat.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "Many AI agents working as one team, each with a clear job, a shared plan, and a human conductor.",
+"u": "https://agentorchestrat.ing/",
+"m": "Live"
+},
+{
+"h": "agentshopp.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "An AI agent that finds the best deal, compares honestly, and asks you before it buys anything.",
+"u": "https://agentshopp.ing/",
+"m": "Live"
+},
+{
+"h": "aiaccount.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "Accounting help for small businesses, with AI doing the sorting and a person signing off.",
+"u": "https://aiaccount.ing/",
+"m": "Live"
+},
+{
+"h": "aiauditor.tech",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "Audit help that checks every line, flags what looks wrong, and explains why.",
+"u": "https://aiauditor.tech/",
+"m": "Live"
+},
+{
+"h": "aibudget.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 5.0,
+"p": "A budget that builds itself from your real spending and talks to you in plain words.",
+"u": "https://aibudget.ing/",
+"m": "Live"
+},
+{
+"h": "endgame.life",
+"c": "HMR family",
+"s": 6.5,
+"a": 5.0,
+"p": "The vision, after both dashboards.",
+"u": "https://endgame.life/",
+"m": "HMR family"
+},
+{
+"h": "aibookkeep.ing",
+"c": "AI agents and business",
+"s": 6.5,
+"a": 4.0,
+"p": "Bookkeeping for small businesses: receipts in, clean books out, a person checks the result.",
+"u": "https://aibookkeep.ing/",
+"m": "Live"
+},
+{
+"h": "rekindl.ing",
+"c": "AI help for seniors and families",
+"s": 6.0,
+"a": 7.0,
+"p": "Rekindle old friendships, old hobbies, and old joys.",
+"u": "https://rekindl.ing/",
+"m": "Live"
+},
+{
+"h": "vibecheck.monster",
+"c": "Fun and games",
+"s": 6.0,
+"a": 6.0,
+"p": "A quick, friendly vibe check for you and your friends.",
+"u": "https://vibecheck.monster/",
+"m": "Live"
+},
+{
+"h": "gravitydefy.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 5.0,
+"p": "Physics that seems to defy gravity, explained simply.",
+"u": "https://gravitydefy.ing/",
+"m": "Live"
+},
+{
+"h": "lifeaffirm.ing",
+"c": "AI help for seniors and families",
+"s": 6.0,
+"a": 5.0,
+"p": "A daily dose of things that make life feel worth it.",
+"u": "https://lifeaffirm.ing/",
+"m": "Live"
+},
+{
+"h": "mindbend.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 5.0,
+"p": "Ideas that bend your mind, tested against reality.",
+"u": "https://mindbend.ing/",
+"m": "Live"
+},
+{
+"h": "personaldash.life",
+"c": "HMR family",
+"s": 6.0,
+"a": 5.0,
+"p": "Flagship: your helping hand into the blossoming world of AI.",
+"u": "https://personaldash.life/",
+"m": "HMR family"
+},
+{
+"h": "pontificat.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 5.0,
+"p": "Big opinions, kindly delivered, with every claim tied to something you can check.",
+"u": "https://pontificat.ing/",
+"m": "Live"
+},
+{
+"h": "reactionapp.life",
+"c": "HMR family",
+"s": 6.0,
+"a": 5.0,
+"p": "Record and share your reactions.",
+"u": "https://reactionapp.life/",
+"m": "HMR family"
+},
+{
+"h": "renegade.monster",
+"c": "Fun and games",
+"s": 6.0,
+"a": 5.0,
+"p": "A monster that breaks the rules for fun. Quick to try, easy to share.",
+"u": "https://renegade.monster/",
+"m": "Live"
+},
+{
+"h": "showstopp.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 5.0,
+"p": "Make something so good it stops the show.",
+"u": "https://showstopp.ing/",
+"m": "Live"
+},
+{
+"h": "workdash.life",
+"c": "HMR family",
+"s": 6.0,
+"a": 5.0,
+"p": "The work dash, the future V2 of the personal dash.",
+"u": null,
+"m": "HMR family"
+},
+{
+"h": "mindboggl.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 4.0,
+"p": "The most mind boggling true facts, each with a source.",
+"u": "https://mindboggl.ing/",
+"m": "Live"
+},
+{
+"h": "moneygrubbing.money",
+"c": "Giving and trust",
+"s": 6.0,
+"a": 4.0,
+"p": "Satire about greed, and the real cost of chasing money over joy.",
+"u": "https://moneygrubbing.money/",
+"m": "Live"
+},
+{
+"h": "nailbit.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 4.0,
+"p": "The most nail biting moments, stories, and games.",
+"u": "https://nailbit.ing/",
+"m": "Live"
+},
+{
+"h": "oneclicksite.click",
+"c": "Website building",
+"s": 6.0,
+"a": 4.0,
+"p": "One click to a working website for your small business.",
+"u": "https://oneclicksite.click/",
+"m": "Live"
+},
+{
+"h": "rabblerous.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 4.0,
+"p": "Make noise for good causes, peacefully and honestly.",
+"u": "https://rabblerous.ing/",
+"m": "Live"
+},
+{
+"h": "rulebreak.ing",
+"c": "Fun and games",
+"s": 6.0,
+"a": 4.0,
+"p": "Break the rules that should be broken, and keep the ones that protect people.",
+"u": "https://rulebreak.ing/",
+"m": "Live"
+},
+{
+"h": "agentbuilt.website",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 6.0,
+"p": "A showcase of websites built end to end by AI agents, with the prompts and the process shown in the open.",
+"u": "https://agentbuilt.website/",
+"m": "Live"
+},
+{
+"h": "agentmarket.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 6.0,
+"p": "Marketing run with AI agents: plans, posts, and reports, with a person checking every step.",
+"u": "https://agentmarket.ing/",
+"m": "Live"
+},
+{
+"h": "aihir.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 6.0,
+"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
+"u": "https://aihir.ing/",
+"m": "Live"
+},
+{
+"h": "agentmonitor.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 5.0,
+"p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
+"u": "https://agentmonitor.ing/",
+"m": "Live"
+},
+{
+"h": "aivideoedit.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 5.0,
+"p": "Cut, caption, and polish video by describing what you want.",
+"u": "https://aivideoedit.ing/",
+"m": "Live"
+},
+{
+"h": "startupbuild.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 5.0,
+"p": "Build a startup with AI from idea to first customer, in the open.",
+"u": "https://startupbuild.ing/",
+"m": "Live"
+},
+{
+"h": "agentbrows.ing",
+"c": "AI agents and business",
+"s": 5.5,
+"a": 4.0,
+"p": "Teach an AI agent to browse the web for you, and see every page it visits and every click it makes.",
+"u": "https://agentbrows.ing/",
+"m": "Live"
+},
+{
+"h": "sitebuild.ing",
+"c": "Website building",
+"s": 5.5,
+"a": 4.0,
+"p": "Build a website with AI, step by step, and learn as you go.",
+"u": "https://sitebuild.ing/",
+"m": "Live"
+},
+{
+"h": "webbuild.ing",
+"c": "Website building",
+"s": 5.5,
+"a": 4.0,
+"p": "Learn to build websites with AI, from your first page to your first business.",
+"u": "https://webbuild.ing/",
+"m": "Live"
+},
+{
+"h": "hornswoggl.ing",
+"c": "Fun and games",
+"s": 5.0,
+"a": 5.0,
+"p": "Learn the classic cons and scams, so no one can hornswoggle you.",
+"u": "https://hornswoggl.ing/",
+"m": "Live"
+},
+{
+"h": "aiwebhost.ing",
+"c": "Website building",
+"s": 5.0,
+"a": 4.0,
+"p": "Hosting that sets itself up, watches itself, and tells you in plain words when something is wrong.",
+"u": "https://aiwebhost.ing/",
+"m": "Live"
+},
+{
+"h": "aiforgrandparents.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 8.0,
+"p": "Idea: a free starter guide to AI for grandparents.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "grandkids.life",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 8.0,
+"p": "Idea: free grandparent activity ideas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askgrandma.fun",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: one wise tip per day.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aurafarm.monster",
+"c": "Fun and games",
+"s": null,
+"a": 7.0,
+"p": "A playful place to collect good moments and share them, no likes needed.",
+"u": "https://aurafarm.monster/",
+"m": "Live"
+},
+{
+"h": "callgrandma.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: nudges to call grandma.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "downsizing.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: step-by-step guide with AI helper deciding what to keep.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "elderhelp.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free resource hub on common elder concerns.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familyalbum.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free AI helper sorting and captioning photos.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familycall.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free step-by-step video call tutorials.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familyrecipes.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free chat that digitises handwritten recipes.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "frontporchai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free storytelling prompts.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "gentleai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free large-print guide.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "goldenyearsai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free large-print primers.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "gramps.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free tech guides for grandpas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "hmr.family",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "A second address for this hub.",
+"u": "https://hmr.family/",
+"m": "HMR family"
+},
+{
+"h": "hmrfamily.life",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "The hub of the HMR family of websites.",
+"u": "https://hmrfamily.life/",
+"m": "HMR family"
+},
+{
+"h": "mygrandma.life",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 7.0,
+"p": "Idea: free gentle AI companion explaining tech to seniors.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "agentbrew.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "An AI brewing assistant that plans recipes, tracks fermentation, and keeps a brew log for home and craft brewers.",
+"u": "https://agentbrew.beer/",
+"m": "Live"
+},
+{
+"h": "aiautomat.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
+"u": "https://aiautomat.ing/",
+"m": "Live"
+},
+{
+"h": "aibrew.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "Brew better beer at home with an AI guide for every step, from grain to glass.",
+"u": "https://aibrew.beer/",
+"m": "Live"
+},
+{
+"h": "aicomedy.live",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "Live comedy where people and AI trade jokes in real time, and the audience decides who wins.",
+"u": "https://aicomedy.live/",
+"m": "Live"
+},
+{
+"h": "aifollowup.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Never forget to follow up: AI reminds, drafts, and tracks every customer conversation.",
+"u": "https://aifollowup.tech/",
+"m": "Live"
+},
+{
+"h": "aiforgrandma.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a free, gentle demo of AI made for grandmas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiforgrandpa.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a free, gentle demo of AI made for grandpas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aigameshow.live",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "A game show where people play against and alongside AI, streamed live.",
+"u": "https://aigameshow.live/",
+"m": "Live"
+},
+{
+"h": "aigrantwrit.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Help nonprofits find grants and write strong, honest applications.",
+"u": "https://aigrantwrit.ing/",
+"m": "Live"
+},
+{
+"h": "aiillustrat.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Illustration with AI as a partner to human artists, with credit where credit is due.",
+"u": "https://aiillustrat.ing/",
+"m": "Live"
+},
+{
+"h": "aiintern.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
+"u": "https://aiintern.tech/",
+"m": "Live"
+},
+{
+"h": "aiinvoic.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Invoices that send themselves, follow up politely, and keep your cash flow clear.",
+"u": "https://aiinvoic.ing/",
+"m": "Live"
+},
+{
+"h": "aimadesimple.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a free chat that explains AI in plain words.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiporch.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: simple big-button AI chat for seniors, no signup.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aipropertymanager.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
+"u": "https://aipropertymanager.tech/",
+"m": "Live"
+},
+{
+"h": "aitranslat.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 6.0,
+"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
+"u": "https://aitranslat.ing/",
+"m": "Live"
+},
+{
+"h": "aiwithgrandma.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: simple video and chat intro to AI for grandmas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiwithnana.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: first steps with AI in plain language.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askgrandma.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: practical tips in a friendly voice.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askgrandpa.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: DIY tips in friendly voice.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "boomerai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: simple intro pages to AI.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "boomerhelper.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: step-by-step phone and AI guides.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "botbattle.live",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "Watch AI bots compete live in games, puzzles, and debates.",
+"u": "https://botbattle.live/",
+"m": "Live"
+},
+{
+"h": "brewagent.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "An AI agent for brewers that orders supplies, tracks batches, and never forgets a step.",
+"u": "https://brewagent.beer/",
+"m": "Live"
+},
+{
+"h": "brewbot.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "A friendly brewing bot that answers any homebrew question.",
+"u": "https://brewbot.beer/",
+"m": "Live"
+},
+{
+"h": "caregiverai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a starter checklist for new caregivers.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "caregivers.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: checklists and guides.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "carenotes.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a shared, simple care notebook.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "comfortai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: short calming exercises.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "cozyai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free printable first-week guides to using AI without stress.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "dragonrider.quest",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "Quests and challenges for would-be dragon riders of every age.",
+"u": "https://dragonrider.quest/",
+"m": "Live"
+},
+{
+"h": "easyai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free step-by-step first lessons.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "eldersai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free large-print guide.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familyhistory.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free interview guide and chat helper.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "friendlyai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a free first tutorial on AI.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "glitterbomb.monster",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "Send a friend a surprise burst of digital glitter and joy.",
+"u": "https://glitterbomb.monster/",
+"m": "Live"
+},
+{
+"h": "goldenhelper.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: a free hub of helpers.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "gramps.life",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free storytelling prompts.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "grandmas.life",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 6.0,
+"p": "Idea: free story hub.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "hmrfascia.life",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "The body and connective tissue (often called fascia).",
+"u": null,
+"m": "HMR family"
+},
+{
+"h": "hmrfunsies.fun",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Held for now.",
+"u": null,
+"m": "HMR family"
+},
+{
+"h": "maincharacter.quest",
+"c": "Fun and games",
+"s": null,
+"a": 6.0,
+"p": "Quests that help you live like the main character of your own story, kindly.",
+"u": "https://maincharacter.quest/",
+"m": "Live"
+},
+{
+"h": "robobrew.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "Robots and AI in the brewery: automation for small brewers.",
+"u": "https://robobrew.beer/",
+"m": "Live"
+},
+{
+"h": "vibebrew.beer",
+"c": "Brewing",
+"s": null,
+"a": 6.0,
+"p": "Find a beer that matches your vibe.",
+"u": "https://vibebrew.beer/",
+"m": "Live"
+},
+{
+"h": "65plus.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free plain-language chat assistant for seniors' tech and daily questions.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "agewell.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free daily tips for older adults.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiathome.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free daily how-to cards.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aibartender.beer",
+"c": "Brewing",
+"s": null,
+"a": 5.0,
+"p": "Tell it what you like and it suggests a beer or a drink, and teaches you why it fits.",
+"u": "https://aibartender.beer/",
+"m": "Live"
+},
+{
+"h": "aibasics.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free glossary and walkthroughs.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aibrewery.beer",
+"c": "Brewing",
+"s": null,
+"a": 5.0,
+"p": "Tools that help small breweries plan batches, track stock, and tell their story.",
+"u": "https://aibrewery.beer/",
+"m": "Live"
+},
+{
+"h": "aicorner.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free assistant for daily tech questions.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiforboomers.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free ten-minute AI intro.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiforelders.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: a free chat that answers everyday tech questions.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aigrantwriter.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "The grant writer for small nonprofits that cannot afford one.",
+"u": "https://aigrantwriter.tech/",
+"m": "Live"
+},
+{
+"h": "aiisfriendly.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: a free demo for first-time AI users.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiissafe.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: paste a message you are unsure about, and get a plain answer on whether it looks like a scam.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aimadesafe.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: a free checker for web pages that look suspicious.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiparlor.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: a free, friendly daily chat.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiplann.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Plans for projects, trips, and weeks that adjust when life happens.",
+"u": "https://aiplann.ing/",
+"m": "Live"
+},
+{
+"h": "aisalesrep.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "An AI sales rep that answers questions honestly, books calls, and hands off to a person.",
+"u": "https://aisalesrep.tech/",
+"m": "Live"
+},
+{
+"h": "aisetter.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Book appointments around the clock without double bookings or pushy scripts.",
+"u": "https://aisetter.tech/",
+"m": "Live"
+},
+{
+"h": "aitaxfil.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
+"u": "https://aitaxfil.ing/",
+"m": "Live"
+},
+{
+"h": "aivoiceact.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
+"u": "https://aivoiceact.ing/",
+"m": "Live"
+},
+{
+"h": "aiwithgrandpa.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: simple intro to AI for grandpas.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askbox.help",
+"c": "Everyday help",
+"s": null,
+"a": 5.0,
+"p": "Idea: free anonymous Q&A for groups.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askgranny.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: daily tips with a granny's wisdom.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "asknana.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: encouraging daily message.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askpapa.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: daily dad-style tips.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askthenurse.help",
+"c": "Everyday help",
+"s": null,
+"a": 5.0,
+"p": "Idea: help writing down what to ask your clinician.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "billhelper.help",
+"c": "Everyday help",
+"s": null,
+"a": 5.0,
+"p": "Idea: upload a bill, get plain-English summary.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "boomershelper.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: a simple FAQ for everyday tech.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "builtbyai.website",
+"c": "Website building",
+"s": null,
+"a": 5.0,
+"p": "A badge and directory for websites built with AI, with honest notes on how each was made.",
+"u": "https://builtbyai.website/",
+"m": "Live"
+},
+{
+"h": "callgrandpa.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: nudges to call grandpa.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "caregiverhelp.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: curated links and guides.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "caregiverhub.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: shared notes for a family's caregivers.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "celebrationoflife.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: helps draft a tribute.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "churchfamily.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free templates for church groups.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "craftai.beer",
+"c": "Brewing",
+"s": null,
+"a": 5.0,
+"p": "Where craft brewing meets AI: recipe ideas, label art, and brewer stories.",
+"u": "https://craftai.beer/",
+"m": "Live"
+},
+{
+"h": "createjoy.art",
+"c": "Fun and games",
+"s": null,
+"a": 5.0,
+"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
+"u": "https://createjoy.art/",
+"m": "Live"
+},
+{
+"h": "definitelyreal.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 5.0,
+"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
+"u": "https://definitelyreal.charity/",
+"m": "Live"
+},
+{
+"h": "doctornotes.help",
+"c": "Everyday help",
+"s": null,
+"a": 5.0,
+"p": "Idea: free tool turning symptoms into a question list for appointments.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familychat.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free guide to family group chats.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familystories.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free weekly prompt list.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "familytableai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free dinner conversation starters.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "fixedincome.help",
+"c": "Everyday help",
+"s": null,
+"a": 5.0,
+"p": "Idea: free budgeting tips for seniors.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "fraudcheck.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free AI that checks suspicious messages.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "goodbyeletters.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 5.0,
+"p": "Idea: free guided letter prompts.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "hmrlanguage.life",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Language.",
+"u": null,
+"m": "HMR family"
+},
+{
+"h": "microsaas.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 5.0,
+"p": "Build and run a tiny software business on your own, with AI as your team.",
+"u": "https://microsaas.ing/",
+"m": "Live"
+},
+{
+"h": "agentmonitor.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "The tools behind agent monitoring: dashboards, alerts, and audit trails for teams that run AI agents.",
+"u": "https://agentmonitor.tech/",
+"m": "Live"
+},
+{
+"h": "agingwell.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free home safety and wellbeing checklist.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "aiadjuster.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Faster, fairer insurance claim estimates with AI that shows its reasoning to both sides.",
+"u": "https://aiadjuster.tech/",
+"m": "Live"
+},
+{
+"h": "aibookkeeper.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "The bookkeeper that never sleeps, built for freelancers and small shops.",
+"u": "https://aibookkeeper.tech/",
+"m": "Live"
+},
+{
+"h": "aiclos.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Sales help for the last step: answer questions, remove doubt, and keep every promise honest.",
+"u": "https://aiclos.ing/",
+"m": "Live"
+},
+{
+"h": "aicontractor.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Software for contractors: quotes, schedules, and customer updates handled by AI.",
+"u": "https://aicontractor.tech/",
+"m": "Live"
+},
+{
+"h": "aielectrician.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Tools for electricians: estimates, code lookups, and job notes in one place.",
+"u": "https://aielectrician.tech/",
+"m": "Live"
+},
+{
+"h": "aiestimator.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "The estimating engine behind fair quotes for contractors and their customers.",
+"u": "https://aiestimator.tech/",
+"m": "Live"
+},
+{
+"h": "aiintake.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Friendly intake for law offices and clinics: the right questions, asked kindly, sorted well.",
+"u": "https://aiintake.tech/",
+"m": "Live"
+},
+{
+"h": "aileasing.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Help landlords and renters with listings, questions, and lease paperwork.",
+"u": "https://aileasing.tech/",
+"m": "Live"
+},
+{
+"h": "aiparalegal.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Paralegal help for small law firms: research, drafts, and deadlines, reviewed by a lawyer.",
+"u": "https://aiparalegal.tech/",
+"m": "Live"
+},
+{
+"h": "aiphotoedit.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Edit photos by describing what you want, and keep the original safe.",
+"u": "https://aiphotoedit.ing/",
+"m": "Live"
+},
+{
+"h": "aiplumber.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Software for plumbers: booking, dispatch, quotes, and follow-ups in one place.",
+"u": "https://aiplumber.tech/",
+"m": "Live"
+},
+{
+"h": "aiplumber.website",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "A ready-made website for plumbing businesses, set up in an afternoon.",
+"u": "https://aiplumber.website/",
+"m": "Live"
+},
+{
+"h": "aiproposal.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Write winning proposals faster, with every claim backed by a source.",
+"u": "https://aiproposal.tech/",
+"m": "Live"
+},
+{
+"h": "aiquot.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Quotes customers understand, sent the same day they ask.",
+"u": "https://aiquot.ing/",
+"m": "Live"
+},
+{
+"h": "airoofer.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Tools for roofers: measurements, estimates, and storm-season scheduling.",
+"u": "https://airoofer.tech/",
+"m": "Live"
+},
+{
+"h": "aitaxprep.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Tax prep help for freelancers and small businesses, reviewed by a person.",
+"u": "https://aitaxprep.tech/",
+"m": "Live"
+},
+{
+"h": "aiwebsite.click",
+"c": "Website building",
+"s": null,
+"a": 4.0,
+"p": "Describe your business, click once, and get a working website.",
+"u": "https://aiwebsite.click/",
+"m": "Live"
+},
+{
+"h": "allinoneai.help",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Idea: plain-English guide to AI tools.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "allinonehelp.help",
+"c": "Everyday help",
+"s": null,
+"a": 4.0,
+"p": "Idea: curated simple guides for common tasks.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "askmeai.help",
+"c": "AI agents and business",
+"s": null,
+"a": 4.0,
+"p": "Idea: simple AI Q&A box.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "crowdsource.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 4.0,
+"p": "Let the crowd find and vet good causes together, in the open.",
+"u": "https://crowdsource.charity/",
+"m": "Live"
+},
+{
+"h": "dailydevotional.help",
+"c": "Everyday help",
+"s": null,
+"a": 4.0,
+"p": "Idea: free daily reflection delivered by email and RSS.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "dreamsite.website",
+"c": "Website building",
+"s": null,
+"a": 4.0,
+"p": "Describe your dream website, and we help you build it.",
+"u": "https://dreamsite.website/",
+"m": "Live"
+},
+{
+"h": "elevat.ing",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "Elevating humanity: small daily actions that lift you and the people around you.",
+"u": "https://elevat.ing/",
+"m": "Live"
+},
+{
+"h": "endoflifeplan.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free checklist covering wishes, documents and conversations.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "finalwishes.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free guided prompts for writing down your wishes.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "firststepai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free guided first prompts.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "firststepsai.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free guided first prompts.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "goldensingles.help",
+"c": "AI help for seniors and families",
+"s": null,
+"a": 4.0,
+"p": "Idea: free tips for seniors online.",
+"u": null,
+"m": "Parked"
+},
+{
+"h": "goodguys.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 4.0,
+"p": "Stories of everyday people doing good, shared to inspire more of it.",
+"u": "https://goodguys.charity/",
+"m": "Live"
+},
+{
+"h": "hmruniverse.life",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Held for now.",
+"u": null,
+"m": "HMR family"
+},
+{
+"h": "philanthropic.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 4.0,
+"p": "A plain guide to giving: how to find causes that match your values and check that your money helps.",
+"u": "https://philanthropic.charity/",
+"m": "Live"
+},
+{
+"h": "sitefactory.tech",
+"c": "Website building",
+"s": null,
+"a": 4.0,
+"p": "Build many websites at once from one framework, the way we build ours.",
+"u": "https://sitefactory.tech/",
+"m": "Live"
+},
+{
+"h": "sitelaunch.ing",
+"c": "Website building",
+"s": null,
+"a": 4.0,
+"p": "Launch your site the right way: domain, security, speed, and the first visitors.",
+"u": "https://sitelaunch.ing/",
+"m": "Live"
+},
+{
+"h": "totallylegit.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 4.0,
+"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
+"u": "https://totallylegit.charity/",
+"m": "Live"
+},
+{
+"h": "whatis67.fyi",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "What 67 means, where it came from, and why kids keep saying it.",
+"u": "https://whatis67.fyi/",
+"m": "Live"
+},
+{
+"h": "agentbank.ing",
+"c": "AI agents and business",
+"s": null,
+"a": 3.0,
+"p": "Banking built for AI agents: safe spending limits, receipts, and a human who approves every big move.",
+"u": "https://agentbank.ing/",
+"m": "Live"
+},
+{
+"h": "aiclaims.tech",
+"c": "AI agents and business",
+"s": null,
+"a": 3.0,
+"p": "Help people file insurance claims clearly and completely, the first time.",
+"u": "https://aiclaims.tech/",
+"m": "Live"
+},
+{
+"h": "aiunderwriter.loan",
+"c": "Lending education",
+"s": null,
+"a": 3.0,
+"p": "An open look at automated underwriting: what it checks, where it can be unfair, and how to fix it. We do not offer loans.",
+"u": "https://aiunderwriter.loan/",
+"m": "Live"
+},
+{
+"h": "certified.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 3.0,
+"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
+"u": "https://certified.charity/",
+"m": "Live"
+},
+{
+"h": "hmrmath.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "HMR mathematics.",
+"u": "https://hmrmath.life/",
+"m": "HMR family"
+},
+{
+"h": "hmrphysics.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "HMR physics.",
+"u": "https://hmrphysics.life/",
+"m": "HMR family"
+},
+{
+"h": "hmrscience.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "The sciences beyond math and physics.",
+"u": "https://hmrscience.life/",
+"m": "HMR family"
+},
+{
+"h": "holy.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 3.0,
+"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
+"u": "https://holy.charity/",
+"m": "Live"
+},
+{
+"h": "renegade.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 3.0,
+"p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
+"u": "https://renegade.charity/",
+"m": "Live"
+},
+{
+"h": "virtuous.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 3.0,
+"p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
+"u": "https://virtuous.charity/",
+"m": "Live"
+},
+{
+"h": "wonderful.charity",
+"c": "Giving and trust",
+"s": null,
+"a": 3.0,
+"p": "Wonderful acts of giving, and how to check that a charity is wonderful before you give.",
+"u": "https://wonderful.charity/",
+"m": "Live"
+},
+{
+"h": "aiapproved.loan",
+"c": "Lending education",
+"s": null,
+"a": 2.0,
+"p": "An honest guide to how AI is used in lending decisions, and what you can ask a lender. We do not offer loans.",
+"u": "https://aiapproved.loan/",
+"m": "Live"
+},
+{
+"h": "ailoan.loan",
+"c": "Lending education",
+"s": null,
+"a": 2.0,
+"p": "Learn how AI reads a loan application and how to protect yourself. We do not offer loans.",
+"u": "https://ailoan.loan/",
+"m": "Live"
+},
+{
+"h": "botlender.loan",
+"c": "Lending education",
+"s": null,
+"a": 2.0,
+"p": "A watchdog guide to robot lending: what to look out for, and your rights. We do not offer loans.",
+"u": "https://botlender.loan/",
+"m": "Live"
+}
+]
+}

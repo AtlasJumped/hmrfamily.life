@@ -156,3 +156,10 @@ body.tour-open{overflow:hidden}
 .slide .copyok{margin-left:10px;font-weight:700;color:var(--accent)}
 .flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px;align-items:start}
 .flags>.fc{margin:0}
+
+.dfilters{display:grid;grid-template-columns:1fr;gap:10px;margin:8px 0 10px}
+.dfilters label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.9rem}
+.dfilters input,.dfilters select{font:inherit;font-weight:400;min-height:44px;padding:8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);width:100%;box-sizing:border-box}
+.dfilters .sbtn{justify-self:start}
+@media (min-width:720px){.dfilters{grid-template-columns:2fr 1fr 1fr 1fr 1fr auto;align-items:end}}
+.dl-c{color:var(--ink);font-size:.85rem}

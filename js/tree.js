@@ -84,148 +84,126 @@
     });
   }
 
-  /* ---------- the domain list ---------- */
-  var FAMILY_ROWS = [
-    ["hmrfamily.life", "https://hmrfamily.life/", "The hub of the HMR family of websites."],
-    ["personaldash.life", PERSONALDASH.url, "Flagship: your helping hand into the blossoming world of AI."],
-    ["claudebomb.com", CLAUDEBOMB.url, "Flagship: the prompt bank for every AI model."],
-    ["endgame.life", ENDGAME.url, "The vision, after both dashboards."],
-    ["hmrphysics.life", "https://hmrphysics.life/", "HMR physics."],
-    ["hmrmath.life", "https://hmrmath.life/", "HMR mathematics."],
-    ["hmrscience.life", "https://hmrscience.life/", "The sciences beyond math and physics."],
-    ["hmrfascia.life", null, "The body and connective tissue."],
-    ["hmrlanguage.life", null, "Language."],
-    ["reactionapp.life", "https://reactionapp.life/", "Record and share your reactions."],
-    ["funsies.fun", "https://funsies.fun/", "Toys and games, made for joy."],
-    ["workdash.life", null, "The work dash, the future V2 of the personal dash."]
-  ];
-  var HELD = ["hmruniverse.life", "chronomath.ai", "hmrfunsies.fun"];
+  /* ---------- the domain list (data: x/domains.json, every name we own) ---------- */
+  var HELD = ["hmruniverse.life", "hmrfunsies.fun"];
   var TOP = ["underthebed.monster", "overreact.ing", "dragonrid.ing", "elevat.ing", "fennsma.sh", "cosmicjoke.lol", "delulu.monster", "doomscroll.monster", "cosmicru.sh", "createjoy.art", "ilovedogs.dog"];
   var AI = ["aihir.ing", "aiautomat.ing", "aiintern.tech", "aiplann.ing", "aiphotoedit.ing", "aiquot.ing", "aitranslat.ing", "aivideoedit.ing", "aivoiceact.ing"];
-  var CHARITY = ["honorable", "virtuous", "holy", "wonderful", "philanthropic", "goodguys", "crowdsource", "certified", "renegade", "corrupt", "notascam", "totallylegit", "definitelyreal", "trustme"].map(function (n) { return n + ".charity"; });
-  var KIND_ORDER = ["fun", "mind", "hmr", "dogs", "show", "beer", "build", "biz", "loan"];
-  var CATS = [
-    ["fun", "Fun and games"], ["mind", "Ideas"], ["ing", "Ideas ending in .ing"], ["dogs", "Dogs"], ["charity", "Giving and trust"],
-    ["biz", "Business ideas"], ["build", "Website building"], ["show", "Live shows"], ["beer", "Brewing"], ["hmr", "Holistic Model of Reality"], ["loan", "Lending education"], ["family", "The HMR family"]
-  ];
-  var CATNAME = {}; CATS.forEach(function (c) { CATNAME[c[0]] = c[1]; });
+  var liveSet = {};
   function ending(h) { return "." + h.split(".").pop(); }
   function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
-
-  /* Coolness of the name itself (Leo, 2026-11-24 20:55). 10 is top. Names he did not rate score 3. */
-  var SCORE = {
-    "claudebomb.com": 10, "grubbing.money": 10, "ilovedogs": 9.8,
-    "funsies.fun": 9, "underthebed.monster": 9, "overreact.ing": 9, "cosmicjoke.lol": 9, "delulu.monster": 9, "discombobulat.ing": 9,
-    "dragonrid.ing": 8.5, "fennsma.sh": 8.5,
-    "mindru.sh": 8, "whatis67.wtf": 8, "whatisreality.wtf": 8, "honorable.charity": 8,
-    "doomscroll.monster": 7.5, "cosmicru.sh": 7.5, "dreamweav.ing": 7.5, "aiforecast.ing": 7.5,
-    "corrupt.charity": 7, "notascam.charity": 7, "trustme.charity": 7, "buildmysite.click": 7, "madebyai.website": 7, "aiestimat.ing": 7,
-    "endgame.life": 6.5, "agentorchestrat.ing": 6.5, "agentshopp.ing": 6.5, "agentstaff.ing": 6.5,
-    "aiaccount.ing": 6.5, "aibookkeep.ing": 6.5, "aibudget.ing": 6.5, "mcpstore.tech": 6.5, "aiauditor.tech": 6.5,
-    "reactionapp.life": 6, "personaldash.life": 6, "workdash.life": 6, "nailbit.ing": 6, "showstopp.ing": 6, "gravitydefy.ing": 6,
-    "lifeaffirm.ing": 6, "mindbend.ing": 6, "mindboggl.ing": 6, "pontificat.ing": 6, "rabblerous.ing": 6, "rekindl.ing": 6,
-    "rulebreak.ing": 6, "renegade.monster": 6, "vibecheck.monster": 6, "oneclicksite.click": 6, "moneygrubbing.money": 6,
-    "sitebuild.ing": 5.5, "startupbuild.ing": 5.5, "webbuild.ing": 5.5, "agentbuilt.website": 5.5, "agentbrows.ing": 5.5,
-    "agentmarket.ing": 5.5, "agentmonitor.ing": 5.5, "aihir.ing": 5.5, "aivideoedit.ing": 5.5,
-    "hornswoggl.ing": 5, "aiwebhost.ing": 5
-  };
-  function scoreOf(h) { return /^ilovedogs\./.test(h) ? SCORE.ilovedogs : (SCORE[h] || 3); }
-  function isTech(h) { return /^(ai|agent|bot|mcp|site|web|startup|build|oneclick|madebyai|dreamsite|craftai|brew|robo|vibebrew)/.test(h) || /\.(tech|website|click)$/.test(h); }
-  var rows = [], liveSet = {}, sortKey = "cool";
-  function build(db) {
-    (db.live || []).forEach(function (h) { liveSet[h] = 1; });
-    rows = FAMILY_ROWS.map(function (f, i) {
-      return { host: f[0], url: f[1], pitch: f[2], title: f[0], cat: "family", end: ending(f[0]), mark: "HMR family", rank: i, tier: -1 };
-    });
-    Object.keys(db.sites).forEach(function (h) {
-      var s = db.sites[h];
-      var isIng = /\.ing$/.test(h), cat = s.k;
-      if (isIng && s.k === "biz" && h !== "aiautomat.ing") cat = "ing";
-      var tier, sub;
-      if (TOP.indexOf(h) > -1) { tier = 0; sub = TOP.indexOf(h); }
-      else if (isIng && AI.indexOf(h) < 0) { tier = 1; sub = KIND_ORDER.indexOf(s.k) * 1000; }
-      else if (/\.charity$/.test(h)) { tier = 2; sub = CHARITY.indexOf(h); }
-      else if (AI.indexOf(h) > -1) { tier = 3; sub = AI.indexOf(h); }
-      else { tier = 4; sub = KIND_ORDER.indexOf(s.k) * 1000; }
-      var live = !!liveSet[h];
-      rows.push({ host: h, url: live ? "https://" + h + "/" : null, pitch: s.p, title: s.t, cat: cat, end: ending(h),
-        mark: live ? "Live" : "In progress", tier: tier, sub: sub });
-    });
-    /* bundle every ilovedogs domain into one row */
-    var dogs = rows.filter(function (r) { return /^ilovedogs\./.test(r.host); });
-    if (dogs.length) {
-      rows = rows.filter(function (r) { return !/^ilovedogs\./.test(r.host); });
-      rows.push({ host: "ilovedogs (" + dogs.length + " domains)", dogs: dogs, url: null, cat: "dogs", end: ".dog",
-        pitch: "We will not let these go to waste. We are working out how to make each one valuable.", mark: dogs.some(function (d) { return d.mark === "Live"; }) ? "Live" : "In progress" });
-    }
-    rows.forEach(function (r) { r.score = r.dogs ? SCORE.ilovedogs : scoreOf(r.host); r.tech = !r.dogs && isTech(r.host); });
-    rows.sort(function (a, b) { return b.score - a.score || cmp(a.host, b.host); });
-    rows.forEach(function (r, i) { r.n = i + 1; });
-    render();
-  }
-
-  function sorted() {
-    var r = rows.slice();
-    if (sortKey === "cool") return [{ rows: r }];
-    if (sortKey === "tech") return [{ head: "AI and web building (" + r.filter(function (x) { return x.tech; }).length + ")", rows: r.filter(function (x) { return x.tech; }) }];
-    var key = sortKey === "end" ? "end" : "cat", groups = {}, order = [];
-    r.forEach(function (x) { var k = x[key]; if (!groups[k]) { groups[k] = []; order.push(k); } groups[k].push(x); });
-    if (sortKey === "end") order.sort(function (a, b) { return groups[b].length - groups[a].length || cmp(a, b); });
-    else order.sort(function (a, b) { return CATS.map(function (c) { return c[0]; }).indexOf(a) - CATS.map(function (c) { return c[0]; }).indexOf(b); });
-    return order.map(function (k) {
-      groups[k].sort(function (a, b) { return cmp(a.host, b.host); });
-      return { head: (sortKey === "end" ? k : CATNAME[k]) + " (" + groups[k].length + ")", rows: groups[k] };
-    });
-  }
+  var all = [], st = { sort: "cool", q: "", cat: "", end: "", mark: "" };
   var box = document.getElementById("dlist");
+  var ctl = document.getElementById("dfilters");
+
+  function option(sel, v, t) { sel.appendChild(el("option", { value: v, text: t })); }
+  function counted(key) {
+    var c = {}; all.forEach(function (r) { c[r[key]] = (c[r[key]] || 0) + 1; }); return c;
+  }
+  function buildControls() {
+    if (!ctl) return;
+    ctl.textContent = "";
+    var q = el("input", { type: "search", id: "dq", placeholder: "Search names and ideas", "aria-label": "Search names and ideas", autocomplete: "off" });
+    q.addEventListener("input", function () { st.q = q.value.trim().toLowerCase(); render(); });
+    ctl.appendChild(el("label", { "class": "df-q", "for": "dq" }, [el("span", { text: "Search" }), q]));
+    function pick(id, label, key, opts) {
+      var s = el("select", { id: id });
+      opts.forEach(function (o) { option(s, o[0], o[1]); });
+      s.addEventListener("change", function () { st[key] = s.value; render(); });
+      ctl.appendChild(el("label", { "for": id }, [el("span", { text: label }), s]));
+    }
+    pick("dsort", "Order", "sort", [["cool", "Coolest first"], ["az", "A to Z"], ["cat", "Grouped by category"], ["end", "Grouped by ending"]]);
+    var cc = counted("c"), cats = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a] || cmp(a, b); });
+    pick("dcat", "Category", "cat", [["", "All categories (" + all.length + ")"]].concat(cats.map(function (k) { return [k, k + " (" + cc[k] + ")"]; })));
+    var ec = counted("e"), ends = Object.keys(ec).sort(function (a, b) { return ec[b] - ec[a] || cmp(a, b); });
+    pick("dend", "Ending", "end", [["", "All endings"]].concat(ends.map(function (k) { return [k, k + " (" + ec[k] + ")"]; })));
+    var mc = counted("m");
+    pick("dmark", "Status", "mark", [["", "Any status"]].concat(["HMR family", "Live", "Parked"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, k + " (" + mc[k] + ")"]; })));
+    var reset = el("button", { type: "button", "class": "sbtn", text: "Clear" });
+    reset.addEventListener("click", function () {
+      st = { sort: "cool", q: "", cat: "", end: "", mark: "" };
+      q.value = ""; ["dsort", "dcat", "dend", "dmark"].forEach(function (id) { var s = document.getElementById(id); s.selectedIndex = 0; });
+      render();
+    });
+    ctl.appendChild(reset);
+  }
+  function pass(r) {
+    if (st.cat && r.c !== st.cat) return false;
+    if (st.end && r.e !== st.end) return false;
+    if (st.mark && r.m !== st.mark) return false;
+    if (st.q && (r.h + " " + r.p + " " + r.c).toLowerCase().indexOf(st.q) < 0) return false;
+    return true;
+  }
+  /* bundle the ilovedogs names into one row wherever two or more show */
+  function bundleDogs(list) {
+    var dogs = list.filter(function (r) { return /^ilovedogs\./.test(r.h); });
+    if (dogs.length < 2) return list;
+    var first = list.indexOf(dogs[0]);
+    var rest = list.filter(function (r) { return !/^ilovedogs\./.test(r.h); });
+    rest.splice(Math.min(first, rest.length), 0, { h: "ilovedogs (" + dogs.length + " names)", dogs: dogs, c: "Dogs", e: ".dog", s: dogs[0].s, n: dogs[0].n,
+      m: dogs.some(function (d) { return d.m === "Live"; }) ? "Live" : "Parked",
+      p: "Free signal bands so every dog lover knows whether a dog wants to say hello. We will not let these names go to waste." });
+    return rest;
+  }
+  function groups() {
+    var r = all.filter(pass);
+    if (st.sort === "cool") return [{ rows: bundleDogs(r) }];
+    if (st.sort === "az") return [{ rows: bundleDogs(r.slice().sort(function (a, b) { return cmp(a.h, b.h); })) }];
+    var key = st.sort === "end" ? "e" : "c", g = {}, order = [];
+    r.forEach(function (x) { var k = x[key]; if (!g[k]) { g[k] = []; order.push(k); } g[k].push(x); });
+    order.sort(function (a, b) { return g[b].length - g[a].length || cmp(a, b); });
+    return order.map(function (k) { return { head: k + " (" + g[k].length + ")", rows: bundleDogs(g[k]) }; });
+  }
   function render() {
     if (!box) return;
     box.textContent = "";
-    sorted().forEach(function (g) {
+    var shown = 0;
+    groups().forEach(function (g) {
+      if (!g.rows.length) return;
       if (g.head) box.appendChild(el("h4", { "class": "dl-head", text: g.head }));
       var ul = el("ul", { "class": "dl" });
       g.rows.forEach(function (r) {
+        shown += r.dogs ? r.dogs.length : 1;
         var li = el("li", { "class": "dl-row" });
-        li.appendChild(el("span", { "class": "dl-n", text: sortKey === "cool" ? String(r.n) : "" }));
+        li.appendChild(el("span", { "class": "dl-n", title: "Rank by coolness", text: "#" + r.n }));
         var d = el("span", { "class": "dl-d" });
         if (r.dogs) {
-          var det = el("details", { "class": "dogs" }); det.appendChild(el("summary", { text: r.host }));
+          var det = el("details", { "class": "dogs" }); det.appendChild(el("summary", { text: r.h }));
           var dl = el("ul", { "class": "dogl" });
-          r.dogs.forEach(function (x) { var i2 = el("li"); if (x.url) i2.appendChild(ext(x.url, x.host)); else i2.textContent = x.host; dl.appendChild(i2); });
+          r.dogs.forEach(function (x) { var i2 = el("li"); if (x.u) i2.appendChild(ext(x.u, x.h)); else i2.textContent = x.h; dl.appendChild(i2); });
           det.appendChild(dl);
           det.appendChild(el("p", { "class": "dognote", text: "Want to make a case for owning one of these? We love dogs, and we are happy to partner with people who do too." }));
-          var ca = el("a", { href: "#", "class": "doglink", text: "Tell us (opens a note)" });
-          ca.addEventListener("click", function (e) { e.preventDefault(); try { if (window.HMRDock && HMRDock.openSpeak) { HMRDock.openSpeak(); setTimeout(function () { var t = document.querySelector(".hmr-dock textarea, [class*=speak] textarea"); if (t && !t.value) t.value = "We love dogs. "; }, 300); } } catch (_) {} });
-          det.appendChild(ca);
           d.appendChild(det);
-        } else if (r.url) d.appendChild(ext(r.url, r.host)); else d.textContent = r.host;
+        } else if (r.u) d.appendChild(ext(r.u, r.h)); else d.textContent = r.h;
         li.appendChild(d);
-        li.appendChild(el("span", { "class": "dl-m " + (r.mark === "Live" ? "live" : r.mark === "HMR family" ? "fam" : "wip"), text: r.mark }));
-        li.appendChild(el("span", { "class": "dl-p", text: r.pitch }));
+        li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: r.m }));
+        var meta = r.c + (r.s ? " · cool score " + r.s : "");
+        li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), document.createTextNode(r.p)]));
         ul.appendChild(li);
       });
       box.appendChild(ul);
     });
+    if (!shown) box.appendChild(el("p", { "class": "small", text: "No names match. Try fewer filters." }));
     var sum = document.getElementById("list-sum");
     if (sum) {
-      var live = rows.filter(function (r) { return r.mark === "Live"; }).length;
-      sum.textContent = (rows.length - FAMILY_ROWS.length) + " rows beyond the family, ranked by how cool the name is. " + live + " are live and linked. The rest are in progress, with new sites going live over the next few days.";
+      var rated = all.filter(function (r) { return r.s; }).length, live = all.filter(function (r) { return r.u; }).length;
+      sum.textContent = "Showing " + shown + " of " + all.length + " names. " + live + " have a site you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
     }
   }
-  var SORTS = [["cool", "Coolness"], ["end", "By ending"], ["cat", "By category"], ["tech", "AI and web building"]];
-  var sb = document.getElementById("sortbtns");
-  function setSort(k) {
-    sortKey = k; render();
-    Array.prototype.forEach.call(sb.children, function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-k") === k)); });
+  function buildList(data) {
+    var n = 0, dogN = 0;
+    all = (data.domains || []).map(function (r) {
+      r.e = ending(r.h);
+      if (/^ilovedogs\./.test(r.h)) { if (!dogN) dogN = ++n; r.n = dogN; } else r.n = ++n;
+      return r;
+    });
+    buildControls();
+    render();
   }
-  if (sb) SORTS.forEach(function (s) {
-    var b = el("button", { type: "button", "class": "sbtn", "data-k": s[0], "aria-pressed": String(s[0] === sortKey), text: s[1] });
-    b.addEventListener("click", function () { setSort(s[0]); });
-    sb.appendChild(b);
-  });
   var held = document.getElementById("held");
   if (held) held.textContent = "Held for now, on the back burner: " + HELD.join(", ") + ".";
-
+  function setSort(k) {
+    st.sort = k; var s = document.getElementById("dsort"); if (s) s.value = k; render();
+  }
   /* ---------- favorites ---------- */
   var fav = document.getElementById("fav");
   function chips(list, db) {
@@ -279,7 +257,12 @@
   x.open("GET", "x/sites.json");
   x.onload = function () {
     var db; try { db = JSON.parse(x.responseText); } catch (e) { return; }
-    build(db); favorites(db);
+    (db.live || []).forEach(function (h) { liveSet[h] = 1; });
+    favorites(db);
   };
   x.send();
+  var y = new XMLHttpRequest();
+  y.open("GET", "x/domains.json?v=20261126");
+  y.onload = function () { var d; try { d = JSON.parse(y.responseText); } catch (e) { return; } buildList(d); };
+  y.send();
 })();
