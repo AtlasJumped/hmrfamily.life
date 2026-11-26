@@ -374,7 +374,7 @@
   };
   x.send();
   var y = new XMLHttpRequest();
-  y.open("GET", "x/domains.json?v=20261126t");
+  y.open("GET", "x/domains.json?v=20261126u");
   y.onload = function () { var d; try { d = JSON.parse(y.responseText); } catch (e) { return; } buildList(d); };
   y.send();
 })();
