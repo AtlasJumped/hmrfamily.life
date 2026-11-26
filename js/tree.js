@@ -206,7 +206,13 @@
     ask.appendChild(document.createTextNode("."));
     saleBox.appendChild(ask);
     var q = el("input", { type: "search", id: "dq", placeholder: "Search names and ideas", "aria-label": "Search names and ideas", autocomplete: "off" });
-    q.addEventListener("input", function () { st.q = q.value.trim().toLowerCase(); render(); });
+    /* Read the box on every kind of change: typing, the mic (which fires change), the clear x, and Enter.
+       Dictation adds capitals and punctuation ("Grandma."), so the query is cleaned before matching. */
+    var qt = 0;
+    function readQ() { var v = q.value.toLowerCase().replace(/[^a-z0-9.\s-]+/g, " ").replace(/\.(\s|$)/g, " ").replace(/\s+/g, " ").trim(); if (v !== st.q) { st.q = v; render(); } }
+    ["input", "change", "search", "keyup"].forEach(function (ev) { q.addEventListener(ev, function () { clearTimeout(qt); qt = setTimeout(readQ, 60); }); });
+    setInterval(function () { if (document.activeElement === q || q.value) readQ(); }, 700);   // the mic can write without any event
+    q.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); readQ(); q.blur(); var t = document.getElementById("list-sum") || box; if (t) try { t.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (x) { t.scrollIntoView(); } } });
     ctl.appendChild(el("label", { "class": "df-q", "for": "dq" }, [el("span", { text: "Search" }), q]));
     function pick(id, label, key, opts) {
       var s = el("select", { id: id });
@@ -235,7 +241,13 @@
     if (st.end && r.e !== st.end) return false;
     if (st.mark && r.m !== st.mark) return false;
     if (Object.keys(st.sale).length && !st.sale[r.sale]) return false;
-    if (st.q && (r.h + " " + r.p + " " + r.c).toLowerCase().indexOf(st.q) < 0) return false;
+    if (st.q) {
+      var hay = (r.h + " " + r.p + " " + r.c).toLowerCase(), flat = hay.replace(/[^a-z0-9]+/g, "");
+      var whole = st.q.replace(/[^a-z0-9]+/g, "");
+      var words = st.q.split(" ").filter(function (w) { return w && !/^(a|an|the|and|or|of|to|on|in|dot|com)$/.test(w); });
+      var hit = (whole && flat.indexOf(whole) >= 0) || (words.length > 0 && words.every(function (w) { return hay.indexOf(w) >= 0 || flat.indexOf(w.replace(/[^a-z0-9]+/g, "")) >= 0; }));
+      if (!hit) return false;
+    }
     return true;
   }
   /* bundle the ilovedogs names into one row wherever two or more show */
@@ -293,7 +305,7 @@
       });
       box.appendChild(ul);
     });
-    if (!shown) box.appendChild(el("p", { "class": "small", text: "No names match. Try fewer filters." }));
+    if (!shown) box.appendChild(el("p", { "class": "small", text: st.q ? "No names match \u201c" + st.q + "\u201d. Try one word, like grandma, dogs or ai, or press Clear." : "No names match. Try fewer filters." }));
     var sum = document.getElementById("list-sum");
     if (sum) {
       var rated = all.filter(function (r) { return r.s; }).length, live = all.filter(function (r) { return r.u; }).length;
@@ -362,9 +374,37 @@
     cd.appendChild(sel);
     cd.appendChild(out);
     cd.appendChild(el("p", {}, [ext("https://discord.gg/gEnC8TpNc", "Tell us on Discord", "btn")]));
+    cd.appendChild(el("p", { "class": "ch-give", text: "Consider donating to us, or to the site that inspires us:" }));
+    cd.appendChild(el("p", {}, [el("button", { type: "button", "class": "btn", "data-wiki": "1", text: "Have you heard of Wikipedia?" })]));
     fav.appendChild(cd);
   }
 
+
+  /* "Have you heard of Wikipedia?": the same message as claudebomb.com/wikipedia/, shown in place each time it is pressed. */
+  function wikiDialog() {
+    var dg = document.getElementById("wiki-dlg");
+    if (!dg) {
+      dg = el("dialog", { id: "wiki-dlg", "class": "wiki-dlg", "aria-labelledby": "wiki-h" });
+      dg.appendChild(el("h3", { id: "wiki-h", text: "Have you heard of Wikipedia?" }));
+      dg.appendChild(el("p", { text: "We think Wikipedia is a better version of us. It inspires us. Its work has added a huge amount to humanity's productivity, and it has kept all of it free. We have never had to pay to read it, never had to hand anything over, and never seen an ad on it. It's great, and we have been taking part." }));
+      var tb = el("table", { "class": "wiki-t" }), rows = [["Year", "Gifts", "Total"], ["2021", "5 gifts of $4.50 (August to December)", "$22.50"], ["2022", "10 gifts of $4.50", "$45.00"], ["2023", "12 gifts of $4.50", "$54.00"], ["2024", "12 gifts of $4.50", "$54.00"], ["2025", "12 gifts of $4.50", "$54.00"], ["Since 2021", "51 monthly gifts", "$229.50"]];
+      rows.forEach(function (r, i) { var tr = el("tr"); r.forEach(function (c) { tr.appendChild(el(i ? "td" : "th", { text: c })); }); tb.appendChild(tr); });
+      dg.appendChild(tb);
+      dg.appendChild(el("p", { "class": "small", text: "From the yearly donation records the Wikimedia Foundation sent us for 2021 to 2025. Amounts in US dollars." }));
+      dg.appendChild(el("h4", { text: "Our ask" }));
+      dg.appendChild(el("p", { text: "If you're not already donating to Wikipedia, please donate to one of us." }));
+      dg.appendChild(el("p", { "class": "wiki-b" }, [ext("https://donate.wikimedia.org/", "Donate to Wikipedia", "btn"), document.createTextNode(" "), ext("https://claudebomb.com/donate/", "Donate to us", "btn")]));
+      dg.appendChild(el("p", { "class": "small", text: "Giving to us is not open yet. Until it is, Wikipedia is a great choice." }));
+      var cl = el("button", { type: "button", "class": "btn", text: "Close" }); cl.addEventListener("click", function () { dg.close(); });
+      dg.appendChild(el("p", {}, [cl]));
+      dg.addEventListener("click", function (e) { if (e.target === dg) dg.close(); });
+      var cs = el("style", { text: ".wiki-dlg{max-width:min(36rem,calc(100vw - 2rem));width:100%;border:2px solid currentColor;border-radius:14px;padding:1.1rem 1.1rem .6rem;max-height:85vh;overflow:auto}.wiki-dlg::backdrop{background:rgba(0,0,0,.45)}.wiki-t{width:100%;border-collapse:collapse;font-size:.92rem;margin:.4rem 0}.wiki-t th,.wiki-t td{text-align:left;padding:.3rem .4rem;border-bottom:1px solid rgba(0,0,0,.15)}.wiki-t tr:last-child td{font-weight:800}.wiki-b .btn{margin:.2rem .3rem .2rem 0}" });
+      document.head.appendChild(cs);
+      document.body.appendChild(dg);
+    }
+    if (dg.showModal) dg.showModal(); else location.href = "https://claudebomb.com/wikipedia/";
+  }
+  document.addEventListener("click", function (e) { var b = e.target.closest && e.target.closest("[data-wiki]"); if (b) { e.preventDefault(); wikiDialog(); } });
   var x = new XMLHttpRequest();
   x.open("GET", "x/sites.json");
   x.onload = function () {
