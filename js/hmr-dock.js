@@ -1,4 +1,4 @@
-/* HMR dock v6.8.1: the HMR joystick (rainbow HMR button with four curved arrows, tap and hold, drags as one), rainbow mic at bottom right, button layouts with a shuffle, wider dashboard and studio.
+/* HMR dock v6.8.2: the HMR joystick (rainbow HMR button with four curved arrows, tap and hold, drags as one), rainbow mic at bottom right, button layouts with a shuffle, wider dashboard and studio.
    (was HMR dock v6.7.2: drag any bar button anywhere (saved per visitor), Funsies lives in the HMR dashboard only, a mic at the top right of every text box.
    (was HMR dock v6.6.1: one shared bottom bar for all HMR sites.
    v6.6.1: the demo cards now show (v6.6.0 skipped every spot because the page's html tag carries hmr- classes).
@@ -3253,7 +3253,7 @@
     setCls();
 
     // ---- the arrow shape, in a 100 x 100 box centred on 0,0 (up arrow; the others are turned)
-    var R1 = 31, RA = 50, RC = 27, S = Math.sin(38 * Math.PI / 180) * R1, C = Math.cos(38 * Math.PI / 180) * R1;
+    var R1 = 31, RA = 50, RC = 44, S = Math.sin(40 * Math.PI / 180) * R1, C = Math.cos(40 * Math.PI / 180) * R1;
     var PATH = 'M' + (-S).toFixed(2) + ' ' + (-C).toFixed(2) + 'A' + R1 + ' ' + R1 + ' 0 0 1 ' + S.toFixed(2) + ' ' + (-C).toFixed(2) +
       'A' + RC + ' ' + RC + ' 0 0 1 0 ' + (-RA) + 'A' + RC + ' ' + RC + ' 0 0 1 ' + (-S).toFixed(2) + ' ' + (-C).toFixed(2) + 'Z';
     var DIRS = [
@@ -3273,7 +3273,7 @@
 
     var css = el('style'); css.id = 'hmr-v68-css';
     css.textContent = [
-      '.hmr-dock{--hmr-pw:108px}@media (max-width:480px){.hmr-dock{--hmr-pw:98px}}@media (max-width:374px){.hmr-dock{--hmr-pw:86px}}',
+      '.hmr-dock{--hmr-pw:116px}@media (max-width:480px){.hmr-dock{--hmr-pw:104px}}@media (max-width:374px){.hmr-dock{--hmr-pw:90px}}',
       // the row: Back, React | joystick | Forward, Mic
       'html.hmr-lay-joy .hmr-dock,html.hmr-lay-read .hmr-dock{grid-template-columns:auto auto minmax(0,1fr) auto minmax(0,1fr) auto auto!important}',
       'html.hmr-lay-joy .hmr-dock>#hmr-back{grid-column:1}html.hmr-lay-joy .hmr-dock>.hmr-rxbtn{grid-column:2}html.hmr-lay-joy .hmr-dock>.hmr-fzbtn{grid-column:2}html.hmr-lay-joy .hmr-dock>#hmr-pad{grid-column:4}html.hmr-lay-joy .hmr-dock>#hmr-fwd{grid-column:6}html.hmr-lay-joy .hmr-dock>#hmr-speak{grid-column:7}',
@@ -3299,9 +3299,9 @@
       '.hmr-dock>#hmr-speak[aria-expanded="true"]{background:linear-gradient(135deg,#dc2626,#7f1d1d)!important}',
       // panels open above the taller joystick
       'html:not(.hmr-lay-classic) .hmr-fbp,html:not(.hmr-lay-classic) .hmr-spk,html:not(.hmr-lay-classic) .hmr-fzm{bottom:calc(' + BASE + ' + var(--hmr-pw) + 8px)!important}',
-      'html:not(.hmr-lay-classic) .hmr-spacer{height:122px!important}',
+      'html:not(.hmr-lay-classic) .hmr-spacer{height:130px!important}',
       // wider dashboard and studio on wide screens
-      '@media (min-width:720px){.hmrd{width:min(680px,calc(100vw - 32px))!important}html:not(.hmr-lay-classic) .hmrd:not(.hmrd-moved){bottom:calc(' + BASE + ' + 124px)!important}html:not(.hmr-lay-classic) .hmrd-toast{bottom:calc(' + BASE + ' + 130px)!important}}',
+      '@media (min-width:720px){.hmrd{width:min(680px,calc(100vw - 32px))!important}html:not(.hmr-lay-classic) .hmrd:not(.hmrd-moved){bottom:calc(' + BASE + ' + 132px)!important}html:not(.hmr-lay-classic) .hmrd-toast{bottom:calc(' + BASE + ' + 138px)!important}}',
       '@media (min-width:760px){.hmrs{width:min(1040px,calc(100vw - 32px))!important;margin-left:calc(min(1040px,calc(100vw - 32px)) / -2)!important}}',
       '.hmrd-row:has(>[data-k="btn-shuffle"]){grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}',
       '@media (prefers-reduced-motion:reduce){.hmr-pa path{transition:none}}'
