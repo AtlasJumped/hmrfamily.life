@@ -8,7 +8,8 @@
 "a": 6.0,
 "p": "Flagship: the prompt bank for every AI model.",
 "u": "https://claudebomb.com/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "grubbing.money",
@@ -17,7 +18,8 @@
 "a": 4.0,
 "p": "An honest, funny look at money grabs, and how to spot them.",
 "u": "https://grubbing.money/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "ilovedogs.dog",
@@ -26,7 +28,8 @@
 "a": 8.0,
 "p": "Everything for people who love dogs.",
 "u": "https://ilovedogs.dog/",
-"m": "Live"
+"m": "Live",
+"sale": "keep"
 },
 {
 "h": "ilovedogs.live",
@@ -35,7 +38,8 @@
 "a": 6.0,
 "p": "Live dog cams and happy dog moments.",
 "u": "https://ilovedogs.live/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "ilovedogs.art",
@@ -44,7 +48,8 @@
 "a": 5.0,
 "p": "Dog art from people who love dogs. Share yours.",
 "u": "https://ilovedogs.art/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "ilovedogs.tech",
@@ -53,7 +58,8 @@
 "a": 5.0,
 "p": "Tech for dog lovers: trackers, health logs, and smart tools.",
 "u": "https://ilovedogs.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "ilovedogs.cloud",
@@ -62,7 +68,8 @@
 "a": 4.0,
 "p": "A home for every photo of every good dog.",
 "u": "https://ilovedogs.cloud/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "ilovedogs.space",
@@ -71,7 +78,8 @@
 "a": 4.0,
 "p": "A calm space for dog lovers to share and meet.",
 "u": "https://ilovedogs.space/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "funsies.fun",
@@ -80,7 +88,8 @@
 "a": 8.0,
 "p": "Toys and games, made for joy.",
 "u": "https://funsies.fun/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "underthebed.monster",
@@ -89,7 +98,8 @@
 "a": 7.0,
 "p": "Bedtime stories where the monster under the bed is your friend.",
 "u": "https://underthebed.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "delulu.monster",
@@ -98,7 +108,8 @@
 "a": 6.0,
 "p": "Dream big on purpose, then turn the dream into one small real step today.",
 "u": "https://delulu.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "discombobulat.ing",
@@ -107,7 +118,8 @@
 "a": 5.0,
 "p": "Puzzles and illusions that scramble your brain, in a good way.",
 "u": "https://discombobulat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "cosmicjoke.lol",
@@ -116,7 +128,8 @@
 "a": 4.0,
 "p": "The funniest true facts about the universe.",
 "u": "https://cosmicjoke.lol/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "overreact.ing",
@@ -125,7 +138,8 @@
 "a": 4.0,
 "p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
 "u": "https://overreact.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "dragonrid.ing",
@@ -134,7 +148,8 @@
 "a": 5.0,
 "p": "An adventure game where you ride dragons across worlds.",
 "u": "https://dragonrid.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "fennsma.sh",
@@ -143,7 +158,8 @@
 "a": 2.0,
 "p": "Smash things in a game made for joy and stress relief.",
 "u": "https://fennsma.sh/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "whatisreality.wtf",
@@ -152,7 +168,8 @@
 "a": 6.0,
 "p": "The big question, answered as best we can, with links to the Holistic Model of Reality.",
 "u": "https://whatisreality.wtf/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "honorable.charity",
@@ -161,7 +178,8 @@
 "a": 4.0,
 "p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
 "u": "https://honorable.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "mindru.sh",
@@ -170,7 +188,8 @@
 "a": 4.0,
 "p": "Quick brain games for a rush of focus.",
 "u": "https://mindru.sh/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "whatis67.wtf",
@@ -179,7 +198,8 @@
 "a": 3.0,
 "p": "The 67 meme explained for confused parents and teachers.",
 "u": "https://whatis67.wtf/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "doomscroll.monster",
@@ -188,7 +208,8 @@
 "a": 6.0,
 "p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
 "u": "https://doomscroll.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "aiforecast.ing",
@@ -197,7 +218,8 @@
 "a": 5.0,
 "p": "Forecasts for small businesses that say what they know, what they guess, and how sure they are.",
 "u": "https://aiforecast.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "dreamweav.ing",
@@ -206,7 +228,8 @@
 "a": 5.0,
 "p": "Weave your dreams into stories, art, and plans.",
 "u": "https://dreamweav.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "cosmicru.sh",
@@ -215,7 +238,8 @@
 "a": 4.0,
 "p": "A fast space game for one quick break.",
 "u": "https://cosmicru.sh/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "madebyai.website",
@@ -224,7 +248,8 @@
 "a": 5.0,
 "p": "A badge and gallery for websites made by AI, with how each one was built.",
 "u": "https://madebyai.website/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "notascam.charity",
@@ -233,7 +258,8 @@
 "a": 5.0,
 "p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
 "u": "https://notascam.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "aiestimat.ing",
@@ -242,7 +268,8 @@
 "a": 4.0,
 "p": "Fast, clear job estimates for trades and services, with every number explained.",
 "u": "https://aiestimat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "buildmysite.click",
@@ -251,7 +278,8 @@
 "a": 4.0,
 "p": "Click, answer a few questions, and get a site that is yours to keep.",
 "u": "https://buildmysite.click/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "trustme.charity",
@@ -260,7 +288,8 @@
 "a": 4.0,
 "p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
 "u": "https://trustme.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "corrupt.charity",
@@ -269,7 +298,8 @@
 "a": 3.0,
 "p": "We spend it however we want. At least we are honest about it. Donations open soon.",
 "u": "https://corrupt.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "agentstaff.ing",
@@ -278,7 +308,8 @@
 "a": 7.0,
 "p": "Find the right AI agent for a job the way you would hire a person: skills, references, and a trial run.",
 "u": "https://agentstaff.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "maybe"
 },
 {
 "h": "mcpstore.tech",
@@ -287,7 +318,8 @@
 "a": 7.0,
 "p": "A directory of MCP tools that connect AI assistants to apps, with honest ratings.",
 "u": "https://mcpstore.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "agentorchestrat.ing",
@@ -296,7 +328,8 @@
 "a": 5.0,
 "p": "Many AI agents working as one team, each with a clear job, a shared plan, and a human conductor.",
 "u": "https://agentorchestrat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "feat"
 },
 {
 "h": "agentshopp.ing",
@@ -305,7 +338,8 @@
 "a": 5.0,
 "p": "An AI agent that finds the best deal, compares honestly, and asks you before it buys anything.",
 "u": "https://agentshopp.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiaccount.ing",
@@ -314,7 +348,8 @@
 "a": 5.0,
 "p": "Accounting help for small businesses, with AI doing the sorting and a person signing off.",
 "u": "https://aiaccount.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiauditor.tech",
@@ -323,7 +358,8 @@
 "a": 5.0,
 "p": "Audit help that checks every line, flags what looks wrong, and explains why.",
 "u": "https://aiauditor.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aibudget.ing",
@@ -332,7 +368,8 @@
 "a": 5.0,
 "p": "A budget that builds itself from your real spending and talks to you in plain words.",
 "u": "https://aibudget.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "endgame.life",
@@ -341,7 +378,8 @@
 "a": 5.0,
 "p": "The vision, after both dashboards.",
 "u": "https://endgame.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "aibookkeep.ing",
@@ -350,7 +388,8 @@
 "a": 4.0,
 "p": "Bookkeeping for small businesses: receipts in, clean books out, a person checks the result.",
 "u": "https://aibookkeep.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "rekindl.ing",
@@ -359,7 +398,8 @@
 "a": 7.0,
 "p": "Rekindle old friendships, old hobbies, and old joys.",
 "u": "https://rekindl.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "vibecheck.monster",
@@ -368,7 +408,8 @@
 "a": 6.0,
 "p": "A quick, friendly vibe check for you and your friends.",
 "u": "https://vibecheck.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "gravitydefy.ing",
@@ -377,7 +418,8 @@
 "a": 5.0,
 "p": "Physics that seems to defy gravity, explained simply.",
 "u": "https://gravitydefy.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "lifeaffirm.ing",
@@ -386,7 +428,8 @@
 "a": 5.0,
 "p": "A daily dose of things that make life feel worth it.",
 "u": "https://lifeaffirm.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "mindbend.ing",
@@ -395,7 +438,8 @@
 "a": 5.0,
 "p": "Ideas that bend your mind, tested against reality.",
 "u": "https://mindbend.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "personaldash.life",
@@ -404,7 +448,8 @@
 "a": 5.0,
 "p": "Flagship: your helping hand into the blossoming world of AI.",
 "u": "https://personaldash.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "pontificat.ing",
@@ -413,7 +458,8 @@
 "a": 5.0,
 "p": "Big opinions, kindly delivered, with every claim tied to something you can check.",
 "u": "https://pontificat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "reactionapp.life",
@@ -422,7 +468,8 @@
 "a": 5.0,
 "p": "Record and share your reactions.",
 "u": "https://reactionapp.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "renegade.monster",
@@ -431,7 +478,8 @@
 "a": 5.0,
 "p": "A monster that breaks the rules for fun. Quick to try, easy to share.",
 "u": "https://renegade.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "showstopp.ing",
@@ -440,7 +488,8 @@
 "a": 5.0,
 "p": "Make something so good it stops the show.",
 "u": "https://showstopp.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "workdash.life",
@@ -449,7 +498,8 @@
 "a": 5.0,
 "p": "The work dash, the future V2 of the personal dash.",
 "u": null,
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "mindboggl.ing",
@@ -458,7 +508,8 @@
 "a": 4.0,
 "p": "The most mind boggling true facts, each with a source.",
 "u": "https://mindboggl.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "moneygrubbing.money",
@@ -467,7 +518,8 @@
 "a": 4.0,
 "p": "Satire about greed, and the real cost of chasing money over joy.",
 "u": "https://moneygrubbing.money/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "nailbit.ing",
@@ -476,7 +528,8 @@
 "a": 4.0,
 "p": "The most nail biting moments, stories, and games.",
 "u": "https://nailbit.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "oneclicksite.click",
@@ -485,7 +538,8 @@
 "a": 4.0,
 "p": "One click to a working website for your small business.",
 "u": "https://oneclicksite.click/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "rabblerous.ing",
@@ -494,7 +548,8 @@
 "a": 4.0,
 "p": "Make noise for good causes, peacefully and honestly.",
 "u": "https://rabblerous.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "rulebreak.ing",
@@ -503,7 +558,8 @@
 "a": 4.0,
 "p": "Break the rules that should be broken, and keep the ones that protect people.",
 "u": "https://rulebreak.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentbuilt.website",
@@ -512,7 +568,8 @@
 "a": 6.0,
 "p": "A showcase of websites built end to end by AI agents, with the prompts and the process shown in the open.",
 "u": "https://agentbuilt.website/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentmarket.ing",
@@ -521,7 +578,8 @@
 "a": 6.0,
 "p": "Marketing run with AI agents: plans, posts, and reports, with a person checking every step.",
 "u": "https://agentmarket.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aihir.ing",
@@ -530,7 +588,8 @@
 "a": 6.0,
 "p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
 "u": "https://aihir.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentmonitor.ing",
@@ -539,7 +598,8 @@
 "a": 5.0,
 "p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
 "u": "https://agentmonitor.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aivideoedit.ing",
@@ -548,7 +608,8 @@
 "a": 5.0,
 "p": "Cut, caption, and polish video by describing what you want.",
 "u": "https://aivideoedit.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "startupbuild.ing",
@@ -557,7 +618,8 @@
 "a": 5.0,
 "p": "Build a startup with AI from idea to first customer, in the open.",
 "u": "https://startupbuild.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentbrows.ing",
@@ -566,7 +628,8 @@
 "a": 4.0,
 "p": "Teach an AI agent to browse the web for you, and see every page it visits and every click it makes.",
 "u": "https://agentbrows.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "sitebuild.ing",
@@ -575,7 +638,8 @@
 "a": 4.0,
 "p": "Build a website with AI, step by step, and learn as you go.",
 "u": "https://sitebuild.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "webbuild.ing",
@@ -584,7 +648,8 @@
 "a": 4.0,
 "p": "Learn to build websites with AI, from your first page to your first business.",
 "u": "https://webbuild.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "hornswoggl.ing",
@@ -593,7 +658,8 @@
 "a": 5.0,
 "p": "Learn the classic cons and scams, so no one can hornswoggle you.",
 "u": "https://hornswoggl.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiwebhost.ing",
@@ -602,7 +668,8 @@
 "a": 4.0,
 "p": "Hosting that sets itself up, watches itself, and tells you in plain words when something is wrong.",
 "u": "https://aiwebhost.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiforgrandparents.help",
@@ -611,7 +678,8 @@
 "a": 8.0,
 "p": "Idea: a free starter guide to AI for grandparents.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "maybe"
 },
 {
 "h": "grandkids.life",
@@ -620,7 +688,8 @@
 "a": 8.0,
 "p": "Idea: free grandparent activity ideas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askgrandma.fun",
@@ -629,7 +698,8 @@
 "a": 7.0,
 "p": "Idea: one wise tip per day.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aurafarm.monster",
@@ -638,7 +708,8 @@
 "a": 7.0,
 "p": "A playful place to collect good moments and share them, no likes needed.",
 "u": "https://aurafarm.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "callgrandma.help",
@@ -647,7 +718,8 @@
 "a": 7.0,
 "p": "Idea: nudges to call grandma.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "downsizing.help",
@@ -656,7 +728,8 @@
 "a": 7.0,
 "p": "Idea: step-by-step guide with AI helper deciding what to keep.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "elderhelp.help",
@@ -665,7 +738,8 @@
 "a": 7.0,
 "p": "Idea: free resource hub on common elder concerns.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familyalbum.help",
@@ -674,7 +748,8 @@
 "a": 7.0,
 "p": "Idea: free AI helper sorting and captioning photos.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familycall.help",
@@ -683,7 +758,8 @@
 "a": 7.0,
 "p": "Idea: free step-by-step video call tutorials.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familyrecipes.help",
@@ -692,7 +768,8 @@
 "a": 7.0,
 "p": "Idea: free chat that digitises handwritten recipes.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "frontporchai.help",
@@ -701,7 +778,8 @@
 "a": 7.0,
 "p": "Idea: free storytelling prompts.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "gentleai.help",
@@ -710,7 +788,8 @@
 "a": 7.0,
 "p": "Idea: free large-print guide.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "goldenyearsai.help",
@@ -719,7 +798,8 @@
 "a": 7.0,
 "p": "Idea: free large-print primers.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "gramps.help",
@@ -728,7 +808,8 @@
 "a": 7.0,
 "p": "Idea: free tech guides for grandpas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "hmr.family",
@@ -737,7 +818,8 @@
 "a": 7.0,
 "p": "A second address for this hub.",
 "u": "https://hmr.family/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "hmrfamily.life",
@@ -746,7 +828,8 @@
 "a": 7.0,
 "p": "The hub of the HMR family of websites.",
 "u": "https://hmrfamily.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "mygrandma.life",
@@ -755,7 +838,8 @@
 "a": 7.0,
 "p": "Idea: free gentle AI companion explaining tech to seniors.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "maybe"
 },
 {
 "h": "agentbrew.beer",
@@ -764,7 +848,8 @@
 "a": 6.0,
 "p": "An AI brewing assistant that plans recipes, tracks fermentation, and keeps a brew log for home and craft brewers.",
 "u": "https://agentbrew.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiautomat.ing",
@@ -773,7 +858,8 @@
 "a": 6.0,
 "p": "Turn the boring, repeated parts of your work into automations you understand and control.",
 "u": "https://aiautomat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aibrew.beer",
@@ -782,7 +868,8 @@
 "a": 6.0,
 "p": "Brew better beer at home with an AI guide for every step, from grain to glass.",
 "u": "https://aibrew.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "maybe"
 },
 {
 "h": "aicomedy.live",
@@ -791,7 +878,8 @@
 "a": 6.0,
 "p": "Live comedy where people and AI trade jokes in real time, and the audience decides who wins.",
 "u": "https://aicomedy.live/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aifollowup.tech",
@@ -800,7 +888,8 @@
 "a": 6.0,
 "p": "Never forget to follow up: AI reminds, drafts, and tracks every customer conversation.",
 "u": "https://aifollowup.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiforgrandma.help",
@@ -809,7 +898,8 @@
 "a": 6.0,
 "p": "Idea: a free, gentle demo of AI made for grandmas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiforgrandpa.help",
@@ -818,7 +908,8 @@
 "a": 6.0,
 "p": "Idea: a free, gentle demo of AI made for grandpas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aigameshow.live",
@@ -827,7 +918,8 @@
 "a": 6.0,
 "p": "A game show where people play against and alongside AI, streamed live.",
 "u": "https://aigameshow.live/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aigrantwrit.ing",
@@ -836,7 +928,8 @@
 "a": 6.0,
 "p": "Help nonprofits find grants and write strong, honest applications.",
 "u": "https://aigrantwrit.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiillustrat.ing",
@@ -845,7 +938,8 @@
 "a": 6.0,
 "p": "Illustration with AI as a partner to human artists, with credit where credit is due.",
 "u": "https://aiillustrat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiintern.tech",
@@ -854,7 +948,8 @@
 "a": 6.0,
 "p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
 "u": "https://aiintern.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiinvoic.ing",
@@ -863,7 +958,8 @@
 "a": 6.0,
 "p": "Invoices that send themselves, follow up politely, and keep your cash flow clear.",
 "u": "https://aiinvoic.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aimadesimple.help",
@@ -872,7 +968,8 @@
 "a": 6.0,
 "p": "Idea: a free chat that explains AI in plain words.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiporch.help",
@@ -881,7 +978,8 @@
 "a": 6.0,
 "p": "Idea: simple big-button AI chat for seniors, no signup.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aipropertymanager.tech",
@@ -890,7 +988,8 @@
 "a": 6.0,
 "p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
 "u": "https://aipropertymanager.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aitranslat.ing",
@@ -899,7 +998,8 @@
 "a": 6.0,
 "p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
 "u": "https://aitranslat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiwithgrandma.help",
@@ -908,7 +1008,8 @@
 "a": 6.0,
 "p": "Idea: simple video and chat intro to AI for grandmas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiwithnana.help",
@@ -917,7 +1018,8 @@
 "a": 6.0,
 "p": "Idea: first steps with AI in plain language.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askgrandma.help",
@@ -926,7 +1028,8 @@
 "a": 6.0,
 "p": "Idea: practical tips in a friendly voice.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askgrandpa.help",
@@ -935,7 +1038,8 @@
 "a": 6.0,
 "p": "Idea: DIY tips in friendly voice.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "boomerai.help",
@@ -944,7 +1048,8 @@
 "a": 6.0,
 "p": "Idea: simple intro pages to AI.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "boomerhelper.help",
@@ -953,7 +1058,8 @@
 "a": 6.0,
 "p": "Idea: step-by-step phone and AI guides.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "botbattle.live",
@@ -962,7 +1068,8 @@
 "a": 6.0,
 "p": "Watch AI bots compete live in games, puzzles, and debates.",
 "u": "https://botbattle.live/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "brewagent.beer",
@@ -971,7 +1078,8 @@
 "a": 6.0,
 "p": "An AI agent for brewers that orders supplies, tracks batches, and never forgets a step.",
 "u": "https://brewagent.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "brewbot.beer",
@@ -980,7 +1088,8 @@
 "a": 6.0,
 "p": "A friendly brewing bot that answers any homebrew question.",
 "u": "https://brewbot.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "caregiverai.help",
@@ -989,7 +1098,8 @@
 "a": 6.0,
 "p": "Idea: a starter checklist for new caregivers.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "caregivers.help",
@@ -998,7 +1108,8 @@
 "a": 6.0,
 "p": "Idea: checklists and guides.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "carenotes.help",
@@ -1007,7 +1118,8 @@
 "a": 6.0,
 "p": "Idea: a shared, simple care notebook.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "comfortai.help",
@@ -1016,7 +1128,8 @@
 "a": 6.0,
 "p": "Idea: short calming exercises.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "cozyai.help",
@@ -1025,7 +1138,8 @@
 "a": 6.0,
 "p": "Idea: free printable first-week guides to using AI without stress.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "dragonrider.quest",
@@ -1034,7 +1148,8 @@
 "a": 6.0,
 "p": "Quests and challenges for would-be dragon riders of every age.",
 "u": "https://dragonrider.quest/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "easyai.help",
@@ -1043,7 +1158,8 @@
 "a": 6.0,
 "p": "Idea: free step-by-step first lessons.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "eldersai.help",
@@ -1052,7 +1168,8 @@
 "a": 6.0,
 "p": "Idea: free large-print guide.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familyhistory.help",
@@ -1061,7 +1178,8 @@
 "a": 6.0,
 "p": "Idea: free interview guide and chat helper.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "friendlyai.help",
@@ -1070,7 +1188,8 @@
 "a": 6.0,
 "p": "Idea: a free first tutorial on AI.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "glitterbomb.monster",
@@ -1079,7 +1198,8 @@
 "a": 6.0,
 "p": "Send a friend a surprise burst of digital glitter and joy.",
 "u": "https://glitterbomb.monster/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "goldenhelper.help",
@@ -1088,7 +1208,8 @@
 "a": 6.0,
 "p": "Idea: a free hub of helpers.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "gramps.life",
@@ -1097,7 +1218,8 @@
 "a": 6.0,
 "p": "Idea: free storytelling prompts.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "grandmas.life",
@@ -1106,7 +1228,8 @@
 "a": 6.0,
 "p": "Idea: free story hub.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "hmrfascia.life",
@@ -1115,7 +1238,8 @@
 "a": 6.0,
 "p": "The body and connective tissue (often called fascia).",
 "u": null,
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "hmrfunsies.fun",
@@ -1124,7 +1248,8 @@
 "a": 6.0,
 "p": "Held for now.",
 "u": null,
-"m": "HMR family"
+"m": "HMR family",
+"sale": "maybe"
 },
 {
 "h": "maincharacter.quest",
@@ -1133,7 +1258,8 @@
 "a": 6.0,
 "p": "Quests that help you live like the main character of your own story, kindly.",
 "u": "https://maincharacter.quest/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "robobrew.beer",
@@ -1142,7 +1268,8 @@
 "a": 6.0,
 "p": "Robots and AI in the brewery: automation for small brewers.",
 "u": "https://robobrew.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "vibebrew.beer",
@@ -1151,7 +1278,8 @@
 "a": 6.0,
 "p": "Find a beer that matches your vibe.",
 "u": "https://vibebrew.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "65plus.help",
@@ -1160,7 +1288,8 @@
 "a": 5.0,
 "p": "Idea: free plain-language chat assistant for seniors' tech and daily questions.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "agewell.help",
@@ -1169,7 +1298,8 @@
 "a": 5.0,
 "p": "Idea: free daily tips for older adults.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiathome.help",
@@ -1178,7 +1308,8 @@
 "a": 5.0,
 "p": "Idea: free daily how-to cards.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aibartender.beer",
@@ -1187,7 +1318,8 @@
 "a": 5.0,
 "p": "Tell it what you like and it suggests a beer or a drink, and teaches you why it fits.",
 "u": "https://aibartender.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aibasics.help",
@@ -1196,7 +1328,8 @@
 "a": 5.0,
 "p": "Idea: free glossary and walkthroughs.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aibrewery.beer",
@@ -1205,7 +1338,8 @@
 "a": 5.0,
 "p": "Tools that help small breweries plan batches, track stock, and tell their story.",
 "u": "https://aibrewery.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aicorner.help",
@@ -1214,7 +1348,8 @@
 "a": 5.0,
 "p": "Idea: free assistant for daily tech questions.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiforboomers.help",
@@ -1223,7 +1358,8 @@
 "a": 5.0,
 "p": "Idea: free ten-minute AI intro.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiforelders.help",
@@ -1232,7 +1368,8 @@
 "a": 5.0,
 "p": "Idea: a free chat that answers everyday tech questions.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aigrantwriter.tech",
@@ -1241,7 +1378,8 @@
 "a": 5.0,
 "p": "The grant writer for small nonprofits that cannot afford one.",
 "u": "https://aigrantwriter.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiisfriendly.help",
@@ -1250,7 +1388,8 @@
 "a": 5.0,
 "p": "Idea: a free demo for first-time AI users.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiissafe.help",
@@ -1259,7 +1398,8 @@
 "a": 5.0,
 "p": "Idea: paste a message you are unsure about, and get a plain answer on whether it looks like a scam.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aimadesafe.help",
@@ -1268,7 +1408,8 @@
 "a": 5.0,
 "p": "Idea: a free checker for web pages that look suspicious.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiparlor.help",
@@ -1277,7 +1418,8 @@
 "a": 5.0,
 "p": "Idea: a free, friendly daily chat.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiplann.ing",
@@ -1286,7 +1428,8 @@
 "a": 5.0,
 "p": "Plans for projects, trips, and weeks that adjust when life happens.",
 "u": "https://aiplann.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aisalesrep.tech",
@@ -1295,7 +1438,8 @@
 "a": 5.0,
 "p": "An AI sales rep that answers questions honestly, books calls, and hands off to a person.",
 "u": "https://aisalesrep.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aisetter.tech",
@@ -1304,7 +1448,8 @@
 "a": 5.0,
 "p": "Book appointments around the clock without double bookings or pushy scripts.",
 "u": "https://aisetter.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aitaxfil.ing",
@@ -1313,7 +1458,8 @@
 "a": 5.0,
 "p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
 "u": "https://aitaxfil.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aivoiceact.ing",
@@ -1322,7 +1468,8 @@
 "a": 5.0,
 "p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
 "u": "https://aivoiceact.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiwithgrandpa.help",
@@ -1331,7 +1478,8 @@
 "a": 5.0,
 "p": "Idea: simple intro to AI for grandpas.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askbox.help",
@@ -1340,7 +1488,8 @@
 "a": 5.0,
 "p": "Idea: free anonymous Q&A for groups.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askgranny.help",
@@ -1349,7 +1498,8 @@
 "a": 5.0,
 "p": "Idea: daily tips with a granny's wisdom.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "asknana.help",
@@ -1358,7 +1508,8 @@
 "a": 5.0,
 "p": "Idea: encouraging daily message.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askpapa.help",
@@ -1367,7 +1518,8 @@
 "a": 5.0,
 "p": "Idea: daily dad-style tips.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askthenurse.help",
@@ -1376,7 +1528,8 @@
 "a": 5.0,
 "p": "Idea: help writing down what to ask your clinician.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "billhelper.help",
@@ -1385,7 +1538,8 @@
 "a": 5.0,
 "p": "Idea: upload a bill, get plain-English summary.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "boomershelper.help",
@@ -1394,7 +1548,8 @@
 "a": 5.0,
 "p": "Idea: a simple FAQ for everyday tech.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "builtbyai.website",
@@ -1403,7 +1558,8 @@
 "a": 5.0,
 "p": "A badge and directory for websites built with AI, with honest notes on how each was made.",
 "u": "https://builtbyai.website/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "callgrandpa.help",
@@ -1412,7 +1568,8 @@
 "a": 5.0,
 "p": "Idea: nudges to call grandpa.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "caregiverhelp.help",
@@ -1421,7 +1578,8 @@
 "a": 5.0,
 "p": "Idea: curated links and guides.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "caregiverhub.help",
@@ -1430,7 +1588,8 @@
 "a": 5.0,
 "p": "Idea: shared notes for a family's caregivers.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "celebrationoflife.help",
@@ -1439,7 +1598,8 @@
 "a": 5.0,
 "p": "Idea: helps draft a tribute.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "churchfamily.help",
@@ -1448,7 +1608,8 @@
 "a": 5.0,
 "p": "Idea: free templates for church groups.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "craftai.beer",
@@ -1457,7 +1618,8 @@
 "a": 5.0,
 "p": "Where craft brewing meets AI: recipe ideas, label art, and brewer stories.",
 "u": "https://craftai.beer/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "createjoy.art",
@@ -1466,7 +1628,8 @@
 "a": 5.0,
 "p": "Make something that brings joy, share it, and inspire someone else to make something too.",
 "u": "https://createjoy.art/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "definitelyreal.charity",
@@ -1475,7 +1638,8 @@
 "a": 5.0,
 "p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
 "u": "https://definitelyreal.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "doctornotes.help",
@@ -1484,7 +1648,8 @@
 "a": 5.0,
 "p": "Idea: free tool turning symptoms into a question list for appointments.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familychat.help",
@@ -1493,7 +1658,8 @@
 "a": 5.0,
 "p": "Idea: free guide to family group chats.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familystories.help",
@@ -1502,7 +1668,8 @@
 "a": 5.0,
 "p": "Idea: free weekly prompt list.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "familytableai.help",
@@ -1511,7 +1678,8 @@
 "a": 5.0,
 "p": "Idea: free dinner conversation starters.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "fixedincome.help",
@@ -1520,7 +1688,8 @@
 "a": 5.0,
 "p": "Idea: free budgeting tips for seniors.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "fraudcheck.help",
@@ -1529,7 +1698,8 @@
 "a": 5.0,
 "p": "Idea: free AI that checks suspicious messages.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "goodbyeletters.help",
@@ -1538,7 +1708,8 @@
 "a": 5.0,
 "p": "Idea: free guided letter prompts.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "hmrlanguage.life",
@@ -1547,7 +1718,8 @@
 "a": 5.0,
 "p": "Language.",
 "u": null,
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "microsaas.ing",
@@ -1556,7 +1728,8 @@
 "a": 5.0,
 "p": "Build and run a tiny software business on your own, with AI as your team.",
 "u": "https://microsaas.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentmonitor.tech",
@@ -1565,7 +1738,8 @@
 "a": 4.0,
 "p": "The tools behind agent monitoring: dashboards, alerts, and audit trails for teams that run AI agents.",
 "u": "https://agentmonitor.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agingwell.help",
@@ -1574,7 +1748,8 @@
 "a": 4.0,
 "p": "Idea: free home safety and wellbeing checklist.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "aiadjuster.tech",
@@ -1583,7 +1758,8 @@
 "a": 4.0,
 "p": "Faster, fairer insurance claim estimates with AI that shows its reasoning to both sides.",
 "u": "https://aiadjuster.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aibookkeeper.tech",
@@ -1592,7 +1768,8 @@
 "a": 4.0,
 "p": "The bookkeeper that never sleeps, built for freelancers and small shops.",
 "u": "https://aibookkeeper.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiclos.ing",
@@ -1601,7 +1778,8 @@
 "a": 4.0,
 "p": "Sales help for the last step: answer questions, remove doubt, and keep every promise honest.",
 "u": "https://aiclos.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aicontractor.tech",
@@ -1610,7 +1788,8 @@
 "a": 4.0,
 "p": "Software for contractors: quotes, schedules, and customer updates handled by AI.",
 "u": "https://aicontractor.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aielectrician.tech",
@@ -1619,7 +1798,8 @@
 "a": 4.0,
 "p": "Tools for electricians: estimates, code lookups, and job notes in one place.",
 "u": "https://aielectrician.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiestimator.tech",
@@ -1628,7 +1808,8 @@
 "a": 4.0,
 "p": "The estimating engine behind fair quotes for contractors and their customers.",
 "u": "https://aiestimator.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiintake.tech",
@@ -1637,7 +1818,8 @@
 "a": 4.0,
 "p": "Friendly intake for law offices and clinics: the right questions, asked kindly, sorted well.",
 "u": "https://aiintake.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aileasing.tech",
@@ -1646,7 +1828,8 @@
 "a": 4.0,
 "p": "Help landlords and renters with listings, questions, and lease paperwork.",
 "u": "https://aileasing.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiparalegal.tech",
@@ -1655,7 +1838,8 @@
 "a": 4.0,
 "p": "Paralegal help for small law firms: research, drafts, and deadlines, reviewed by a lawyer.",
 "u": "https://aiparalegal.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiphotoedit.ing",
@@ -1664,7 +1848,8 @@
 "a": 4.0,
 "p": "Edit photos by describing what you want, and keep the original safe.",
 "u": "https://aiphotoedit.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiplumber.tech",
@@ -1673,7 +1858,8 @@
 "a": 4.0,
 "p": "Software for plumbers: booking, dispatch, quotes, and follow-ups in one place.",
 "u": "https://aiplumber.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiplumber.website",
@@ -1682,7 +1868,8 @@
 "a": 4.0,
 "p": "A ready-made website for plumbing businesses, set up in an afternoon.",
 "u": "https://aiplumber.website/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiproposal.tech",
@@ -1691,7 +1878,8 @@
 "a": 4.0,
 "p": "Write winning proposals faster, with every claim backed by a source.",
 "u": "https://aiproposal.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiquot.ing",
@@ -1700,7 +1888,8 @@
 "a": 4.0,
 "p": "Quotes customers understand, sent the same day they ask.",
 "u": "https://aiquot.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "airoofer.tech",
@@ -1709,7 +1898,8 @@
 "a": 4.0,
 "p": "Tools for roofers: measurements, estimates, and storm-season scheduling.",
 "u": "https://airoofer.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aitaxprep.tech",
@@ -1718,7 +1908,8 @@
 "a": 4.0,
 "p": "Tax prep help for freelancers and small businesses, reviewed by a person.",
 "u": "https://aitaxprep.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiwebsite.click",
@@ -1727,7 +1918,8 @@
 "a": 4.0,
 "p": "Describe your business, click once, and get a working website.",
 "u": "https://aiwebsite.click/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "allinoneai.help",
@@ -1736,7 +1928,8 @@
 "a": 4.0,
 "p": "Idea: plain-English guide to AI tools.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "allinonehelp.help",
@@ -1745,7 +1938,8 @@
 "a": 4.0,
 "p": "Idea: curated simple guides for common tasks.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "askmeai.help",
@@ -1754,7 +1948,8 @@
 "a": 4.0,
 "p": "Idea: simple AI Q&A box.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "crowdsource.charity",
@@ -1763,7 +1958,8 @@
 "a": 4.0,
 "p": "Let the crowd find and vet good causes together, in the open.",
 "u": "https://crowdsource.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "dailydevotional.help",
@@ -1772,7 +1968,8 @@
 "a": 4.0,
 "p": "Idea: free daily reflection delivered by email and RSS.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "dreamsite.website",
@@ -1781,7 +1978,8 @@
 "a": 4.0,
 "p": "Describe your dream website, and we help you build it.",
 "u": "https://dreamsite.website/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "elevat.ing",
@@ -1790,7 +1988,8 @@
 "a": 4.0,
 "p": "Elevating humanity: small daily actions that lift you and the people around you.",
 "u": "https://elevat.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "endoflifeplan.help",
@@ -1799,7 +1998,8 @@
 "a": 4.0,
 "p": "Idea: free checklist covering wishes, documents and conversations.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "finalwishes.help",
@@ -1808,7 +2008,8 @@
 "a": 4.0,
 "p": "Idea: free guided prompts for writing down your wishes.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "firststepai.help",
@@ -1817,7 +2018,8 @@
 "a": 4.0,
 "p": "Idea: free guided first prompts.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "firststepsai.help",
@@ -1826,7 +2028,8 @@
 "a": 4.0,
 "p": "Idea: free guided first prompts.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "goldensingles.help",
@@ -1835,7 +2038,8 @@
 "a": 4.0,
 "p": "Idea: free tips for seniors online.",
 "u": null,
-"m": "Parked"
+"m": "Parked",
+"sale": "sale"
 },
 {
 "h": "goodguys.charity",
@@ -1844,7 +2048,8 @@
 "a": 4.0,
 "p": "Stories of everyday people doing good, shared to inspire more of it.",
 "u": "https://goodguys.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "hmruniverse.life",
@@ -1853,7 +2058,8 @@
 "a": 4.0,
 "p": "Held for now.",
 "u": null,
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "philanthropic.charity",
@@ -1862,7 +2068,8 @@
 "a": 4.0,
 "p": "A plain guide to giving: how to find causes that match your values and check that your money helps.",
 "u": "https://philanthropic.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "sitefactory.tech",
@@ -1871,7 +2078,8 @@
 "a": 4.0,
 "p": "Build many websites at once from one framework, the way we build ours.",
 "u": "https://sitefactory.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "maybe"
 },
 {
 "h": "sitelaunch.ing",
@@ -1880,7 +2088,8 @@
 "a": 4.0,
 "p": "Launch your site the right way: domain, security, speed, and the first visitors.",
 "u": "https://sitelaunch.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "totallylegit.charity",
@@ -1889,7 +2098,8 @@
 "a": 4.0,
 "p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
 "u": "https://totallylegit.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "whatis67.fyi",
@@ -1898,7 +2108,8 @@
 "a": 4.0,
 "p": "What 67 means, where it came from, and why kids keep saying it.",
 "u": "https://whatis67.fyi/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentbank.ing",
@@ -1907,7 +2118,8 @@
 "a": 3.0,
 "p": "Banking built for AI agents: safe spending limits, receipts, and a human who approves every big move.",
 "u": "https://agentbank.ing/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiclaims.tech",
@@ -1916,7 +2128,8 @@
 "a": 3.0,
 "p": "Help people file insurance claims clearly and completely, the first time.",
 "u": "https://aiclaims.tech/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "aiunderwriter.loan",
@@ -1925,7 +2138,8 @@
 "a": 3.0,
 "p": "An open look at automated underwriting: what it checks, where it can be unfair, and how to fix it. We do not offer loans.",
 "u": "https://aiunderwriter.loan/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "certified.charity",
@@ -1934,7 +2148,8 @@
 "a": 3.0,
 "p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
 "u": "https://certified.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "hmrmath.life",
@@ -1943,7 +2158,8 @@
 "a": 3.0,
 "p": "HMR mathematics.",
 "u": "https://hmrmath.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "hmrphysics.life",
@@ -1952,7 +2168,8 @@
 "a": 3.0,
 "p": "HMR physics.",
 "u": "https://hmrphysics.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "hmrscience.life",
@@ -1961,7 +2178,8 @@
 "a": 3.0,
 "p": "The sciences beyond math and physics.",
 "u": "https://hmrscience.life/",
-"m": "HMR family"
+"m": "HMR family",
+"sale": "keep"
 },
 {
 "h": "holy.charity",
@@ -1970,7 +2188,8 @@
 "a": 3.0,
 "p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
 "u": "https://holy.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "renegade.charity",
@@ -1979,7 +2198,8 @@
 "a": 3.0,
 "p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
 "u": "https://renegade.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "virtuous.charity",
@@ -1988,7 +2208,8 @@
 "a": 3.0,
 "p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
 "u": "https://virtuous.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "wonderful.charity",
@@ -1997,7 +2218,8 @@
 "a": 3.0,
 "p": "Wonderful acts of giving, and how to check that a charity is wonderful before you give.",
 "u": "https://wonderful.charity/",
-"m": "Live"
+"m": "Live",
+"sale": "free"
 },
 {
 "h": "aiapproved.loan",
@@ -2006,7 +2228,8 @@
 "a": 2.0,
 "p": "An honest guide to how AI is used in lending decisions, and what you can ask a lender. We do not offer loans.",
 "u": "https://aiapproved.loan/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "ailoan.loan",
@@ -2015,7 +2238,8 @@
 "a": 2.0,
 "p": "Learn how AI reads a loan application and how to protect yourself. We do not offer loans.",
 "u": "https://ailoan.loan/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "botlender.loan",
@@ -2024,7 +2248,28 @@
 "a": 2.0,
 "p": "A watchdog guide to robot lending: what to look out for, and your rights. We do not offer loans.",
 "u": "https://botlender.loan/",
-"m": "Live"
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "universemodel.ai",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "The closest source of truth for HMR, the holistic model of reality.",
+"u": "https://universemodel.ai/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "universemodel.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "Points to universemodel.ai.",
+"u": null,
+"m": "HMR family",
+"sale": "keep"
 }
 ]
 }

@@ -172,7 +172,10 @@
   var liveSet = {};
   function ending(h) { return "." + h.split(".").pop(); }
   function cmp(a, b) { return a < b ? -1 : a > b ? 1 : 0; }
-  var all = [], st = { sort: "cool", q: "", cat: "", end: "", mark: "" };
+  var SALE = [["feat", "Featured for sale"], ["sale", "For sale"], ["maybe", "Probably not for sale"], ["keep", "Not for sale"], ["free", "Free for the right person"]];
+  var SALEN = {}; SALE.forEach(function (x) { SALEN[x[0]] = x[1]; });
+  var all = [], st = { sort: "cool", q: "", cat: "", end: "", mark: "", sale: {} };
+  var saleBox = null;
   var box = document.getElementById("dlist");
   var ctl = document.getElementById("dfilters");
 
@@ -183,6 +186,25 @@
   function buildControls() {
     if (!ctl) return;
     ctl.textContent = "";
+    /* sale-status buttons: stack them; each one adds its names to what shows */
+    if (!saleBox) { saleBox = el("div", { "class": "dsale", role: "group", "aria-label": "Show names by sale status" }); ctl.parentNode.insertBefore(saleBox, ctl); }
+    saleBox.textContent = "";
+    saleBox.appendChild(el("p", { "class": "dsale-h", text: "For sale? Tap one or more:" }));
+    var sc = counted("sale"), row = el("div", { "class": "dsale-row" });
+    SALE.forEach(function (x) {
+      var b = el("button", { type: "button", "class": "sb " + x[0], "aria-pressed": "false", "data-sale": x[0], text: x[1] + " (" + (sc[x[0]] || 0) + ")" });
+      b.addEventListener("click", function () {
+        if (st.sale[x[0]]) delete st.sale[x[0]]; else st.sale[x[0]] = 1;
+        b.setAttribute("aria-pressed", String(!!st.sale[x[0]])); render();
+      });
+      row.appendChild(b);
+    });
+    saleBox.appendChild(row);
+    var ask = el("p", { "class": "small dsale-note" });
+    ask.appendChild(document.createTextNode("Want a name, or have a good use for a free one? "));
+    ask.appendChild(ext("https://discord.gg/gEnC8TpNc", "Tell us on Discord"));
+    ask.appendChild(document.createTextNode("."));
+    saleBox.appendChild(ask);
     var q = el("input", { type: "search", id: "dq", placeholder: "Search names and ideas", "aria-label": "Search names and ideas", autocomplete: "off" });
     q.addEventListener("input", function () { st.q = q.value.trim().toLowerCase(); render(); });
     ctl.appendChild(el("label", { "class": "df-q", "for": "dq" }, [el("span", { text: "Search" }), q]));
@@ -192,7 +214,7 @@
       s.addEventListener("change", function () { st[key] = s.value; render(); });
       ctl.appendChild(el("label", { "for": id }, [el("span", { text: label }), s]));
     }
-    pick("dsort", "Order", "sort", [["cool", "Coolest first"], ["az", "A to Z"], ["cat", "Grouped by category"], ["end", "Grouped by ending"]]);
+    pick("dsort", "Order", "sort", [["cool", "By coolness"], ["az", "Alphabetical"], ["end", "By domain ending"], ["sale", "By sale status"], ["cat", "By category"]]);
     var cc = counted("c"), cats = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a] || cmp(a, b); });
     pick("dcat", "Category", "cat", [["", "All categories (" + all.length + ")"]].concat(cats.map(function (k) { return [k, k + " (" + cc[k] + ")"]; })));
     var ec = counted("e"), ends = Object.keys(ec).sort(function (a, b) { return ec[b] - ec[a] || cmp(a, b); });
@@ -201,7 +223,8 @@
     pick("dmark", "Where it stands", "mark", [["", "Any stage"]].concat(["HMR family", "Live", "Parked"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, STAGE[k] + " (" + mc[k] + ")"]; })));
     var reset = el("button", { type: "button", "class": "sbtn", text: "Clear" });
     reset.addEventListener("click", function () {
-      st = { sort: "cool", q: "", cat: "", end: "", mark: "" };
+      st = { sort: "cool", q: "", cat: "", end: "", mark: "", sale: {} };
+      var bs = saleBox ? saleBox.querySelectorAll("button") : [], i; for (i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", "false");
       q.value = ""; ["dsort", "dcat", "dend", "dmark"].forEach(function (id) { var s = document.getElementById(id); s.selectedIndex = 0; });
       render();
     });
@@ -211,16 +234,18 @@
     if (st.cat && r.c !== st.cat) return false;
     if (st.end && r.e !== st.end) return false;
     if (st.mark && r.m !== st.mark) return false;
+    if (Object.keys(st.sale).length && !st.sale[r.sale]) return false;
     if (st.q && (r.h + " " + r.p + " " + r.c).toLowerCase().indexOf(st.q) < 0) return false;
     return true;
   }
   /* bundle the ilovedogs names into one row wherever two or more show */
   function bundleDogs(list) {
-    var dogs = list.filter(function (r) { return /^ilovedogs\./.test(r.h); });
+    var isDog = function (r) { return /^ilovedogs\./.test(r.h) && r.h !== "ilovedogs.dog"; };
+    var dogs = list.filter(isDog);
     if (dogs.length < 2) return list;
     var first = list.indexOf(dogs[0]);
-    var rest = list.filter(function (r) { return !/^ilovedogs\./.test(r.h); });
-    rest.splice(Math.min(first, rest.length), 0, { h: "ilovedogs (" + dogs.length + " names)", dogs: dogs, c: "Dogs", e: ".dog", s: dogs[0].s, n: dogs[0].n,
+    var rest = list.filter(function (r) { return !isDog(r); });
+    rest.splice(Math.min(first, rest.length), 0, { h: "ilovedogs (" + dogs.length + " more names)", dogs: dogs, c: "Dogs", e: "." + dogs[0].h.split(".").pop(), s: dogs[0].s, n: dogs[0].n, sale: "free",
       m: dogs.some(function (d) { return d.m === "Live"; }) ? "Live" : "Parked",
       p: "Free signal bands so every dog lover knows whether a dog wants to say hello. We will not let these names go to waste." });
     return rest;
@@ -229,10 +254,11 @@
     var r = all.filter(pass);
     if (st.sort === "cool") return [{ rows: bundleDogs(r) }];
     if (st.sort === "az") return [{ rows: bundleDogs(r.slice().sort(function (a, b) { return cmp(a.h, b.h); })) }];
-    var key = st.sort === "end" ? "e" : "c", g = {}, order = [];
+    var key = st.sort === "end" ? "e" : st.sort === "sale" ? "sale" : "c", g = {}, order = [];
     r.forEach(function (x) { var k = x[key]; if (!g[k]) { g[k] = []; order.push(k); } g[k].push(x); });
-    order.sort(function (a, b) { return g[b].length - g[a].length || cmp(a, b); });
-    return order.map(function (k) { return { head: k + " (" + g[k].length + ")", rows: bundleDogs(g[k]) }; });
+    if (key === "sale") order.sort(function (a, b) { return SALE.map(function (x) { return x[0]; }).indexOf(a) - SALE.map(function (x) { return x[0]; }).indexOf(b); });
+    else order.sort(function (a, b) { return g[b].length - g[a].length || cmp(a, b); });
+    return order.map(function (k) { return { head: (key === "sale" ? SALEN[k] : k) + " (" + g[k].length + ")", rows: bundleDogs(g[k]) }; });
   }
   function render() {
     if (!box) return;
@@ -257,6 +283,7 @@
         } else if (r.u) d.appendChild(ext(r.u, r.h)); else d.textContent = r.h;
         li.appendChild(d);
         li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: STAGE[r.m] || r.m }));
+        if (r.sale) li.appendChild(el("span", { "class": "dl-s " + r.sale, text: SALEN[r.sale] }));
         var meta = r.c + (r.s ? " · cool score " + r.s : "");
         li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), el("b", { "class": "dl-plan", text: "The plan: " }), document.createTextNode(r.p)]));
         var vh = el("div", { "class": "dl-v" });
@@ -270,17 +297,15 @@
     var sum = document.getElementById("list-sum");
     if (sum) {
       var rated = all.filter(function (r) { return r.s; }).length, live = all.filter(function (r) { return r.u; }).length;
-      sum.textContent = "Showing " + shown + " of " + all.length + " names still to build or finish. " + live + " have a page you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
+      sum.textContent = "Showing " + shown + " of " + all.length + " names we own. " + live + " have a page you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
     }
   }
   function buildList(data) {
     var n = 0, dogN = 0;
-    // Flagships and Done sites have their own cards above; the list is the inventory still to build.
-    var shown = {}; [PERSONALDASH, CLAUDEBOMB].concat(DONE).forEach(function (x) { if (x.host !== "ilovedogs.dog") shown[x.host] = 1; });
-    shown["hmrfamily.life"] = 1;
-    all = (data.domains || []).filter(function (r) { return !shown[r.h]; }).map(function (r) {
+    // Every name we own, flagships included, so the sale-status buttons cover all of them.
+    all = (data.domains || []).map(function (r) {
       r.e = ending(r.h);
-      if (/^ilovedogs\./.test(r.h)) { if (!dogN) dogN = ++n; r.n = dogN; } else r.n = ++n;
+      if (/^ilovedogs\./.test(r.h) && r.h !== "ilovedogs.dog") { if (!dogN) dogN = ++n; r.n = dogN; } else r.n = ++n;
       return r;
     });
     buildControls();
@@ -349,7 +374,7 @@
   };
   x.send();
   var y = new XMLHttpRequest();
-  y.open("GET", "x/domains.json?v=20261126");
+  y.open("GET", "x/domains.json?v=20261126s");
   y.onload = function () { var d; try { d = JSON.parse(y.responseText); } catch (e) { return; } buildList(d); };
   y.send();
 })();
