@@ -8,29 +8,110 @@
   }
   function ext(href, text, cls) { return el("a", { href: href, target: "_blank", rel: "noopener", "class": cls || "", text: text }); }
 
+  /* ---------- voice box: feedback, a different vision, support, or help building one site ---------- */
+  var KINDS = [["feedback", "Feedback on the plan"], ["vision", "A different vision"], ["support", "Offer support"], ["build", "Help build it"]];
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var vbN = 0;
+  function voiceBox(host) {
+    var id = "vb" + (++vbN);
+    var box = el("div", { "class": "vb", id: id, role: "group", "aria-label": "Your voice on " + host });
+    box.appendChild(el("p", { "class": "vb-h", text: "Your voice on " + host }));
+    var kinds = el("div", { "class": "vb-kinds", role: "radiogroup", "aria-label": "What kind" });
+    var kind = "feedback";
+    KINDS.forEach(function (k, i) {
+      var inp = el("input", { type: "radio", name: id + "-k", value: k[0], id: id + "-" + k[0] });
+      if (!i) inp.checked = true;
+      inp.addEventListener("change", function () { kind = k[0]; });
+      kinds.appendChild(el("label", { "for": id + "-" + k[0] }, [inp, document.createTextNode(" " + k[1])]));
+    });
+    box.appendChild(kinds);
+    var ta = el("textarea", { id: id + "-t", rows: "4", maxlength: "4000", placeholder: "Say what you think. Press the mic and talk, or type." });
+    box.appendChild(el("label", { "class": "vb-l", "for": id + "-t", text: "Your words" }));
+    var row = el("div", { "class": "vb-row" });
+    row.appendChild(ta);
+    var mic = null, rec = null, on = false, base = "";
+    if (SR) {
+      mic = el("button", { type: "button", "class": "vb-mic", "aria-pressed": "false", "aria-label": "Start recording", text: "🎙" });
+      mic.addEventListener("click", function () {
+        if (on) { try { rec.stop(); } catch (e) {} return; }
+        try {
+          rec = new SR(); rec.continuous = true; rec.interimResults = true; rec.lang = document.documentElement.lang || "en-US";
+          base = ta.value ? ta.value.replace(/\s*$/, " ") : "";
+          rec.onresult = function (e) { var t = "", i; for (i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; ta.value = base + t; };
+          rec.onend = function () { on = false; mic.setAttribute("aria-pressed", "false"); mic.setAttribute("aria-label", "Start recording"); mic.classList.remove("rec"); say("Stopped. Edit the words if you like, then send."); };
+          rec.onerror = function (e) { say(e && e.error === "not-allowed" ? "Your browser blocked the microphone. Allow it for this site, or type instead." : "The mic stopped. You can type instead."); };
+          rec.start(); on = true; mic.setAttribute("aria-pressed", "true"); mic.setAttribute("aria-label", "Stop recording"); mic.classList.add("rec"); say("Listening. Talk as long as you like, then press the mic again.");
+        } catch (e) { say("The mic could not start here. You can type instead."); }
+      });
+      row.appendChild(mic);
+    }
+    box.appendChild(row);
+    var em = el("input", { type: "email", id: id + "-e", autocomplete: "email", placeholder: "Your email, if you want a reply (optional)" });
+    box.appendChild(el("label", { "class": "vb-l", "for": id + "-e", text: "Email (optional)" }));
+    box.appendChild(em);
+    var send = el("button", { type: "button", "class": "btn primary", text: "Send" });
+    var out = el("p", { "class": "vb-out", role: "status", "aria-live": "polite" });
+    function say(t) { out.textContent = t; }
+    send.addEventListener("click", function () {
+      var msg = ta.value.trim();
+      if (!msg) { say("Add a few words first."); ta.focus(); return; }
+      if (on) { try { rec.stop(); } catch (e) {} }
+      var label = KINDS.filter(function (k) { return k[0] === kind; })[0][1];
+      if (!window.HMRDock || !window.HMRDock.send) { say("Sending isn't ready yet. Use the Speak button at the bottom of the page, and mention " + host + "."); return; }
+      send.disabled = true; say("Sending...");
+      window.HMRDock.send({ kind: "future site", subject: "hmrfamily.life, " + label + ": " + host, message: label + " for " + host + ":\n\n" + msg, email: em.value.trim() || undefined, details: { site: host, type: kind } })
+        .then(function (r) {
+          send.disabled = false;
+          if (r && r.ok) { ta.value = ""; say("Sent. Thank you. Every message is read."); }
+          else say("Your email app should have opened with your message. Your words are still here.");
+        }, function () { send.disabled = false; say("That didn't send. Your words are still here; try again."); });
+    });
+    box.appendChild(el("div", { "class": "vb-act" }, [send]));
+    box.appendChild(out);
+    return box;
+  }
+  function voiceToggle(host, holder) {
+    var b = el("button", { type: "button", "class": "vb-open", "aria-expanded": "false", text: "Add your voice" });
+    b.setAttribute("aria-label", "Add your voice on " + host);
+    var box = null;
+    b.addEventListener("click", function () {
+      if (!box) { box = voiceBox(host); holder.appendChild(box); b.setAttribute("aria-controls", box.id); }
+      var open = b.getAttribute("aria-expanded") !== "true";
+      box.hidden = !open; b.setAttribute("aria-expanded", String(open));
+      if (open) { var r = box.querySelector("input[type=radio]:checked"); if (r) r.focus(); }
+    });
+    return b;
+  }
+
   /* ---------- the family, as cards ---------- */
   // url: null means shown without a link until the site is secure.
   var PERSONALDASH = { host: "personaldash.life", url: "https://personaldash.life", status: "Live", tag: "Flagship",
     text: "Your helping hand into the blossoming world of AI. A free personal dashboard and AI introduction kit in one piece of text." };
   var CLAUDEBOMB = { host: "claudebomb.com", url: "https://claudebomb.com", tour: "claudebomb", status: "Live", tag: "Flagship",
-    text: "The prompt bank for every AI model, not just Claude. Free forever, with no ads." };
+    text: "The prompt bank for every AI model, not just Claude. Free forever, with no ads. Your free-forever login lives here." };
   var PRODUCTS = [
     { name: "Personal dash", state: "Available now", text: "Free forever. Copy it, paste it into your AI assistant, and start today.", on: true },
     { name: "Work dash", state: "The future, V2", text: "Planned for mid to late 2027. The personal dash paves the way. Not built yet.", on: false }
   ];
   var ENDGAME = { host: "endgame.life", url: "https://endgame.life", tour: "endgame", status: "In progress", tag: "The vision",
     text: "Where the dashboards lead once both exist: a picture of life around 2036, with personal AI that works for you." };
-  var MEMBERS = [
+  // Done: built and live.
+  var DONE = [
+    { host: "ilovedogs.dog", url: "https://ilovedogs.dog", status: "Live", tag: "Dogs", text: "Free signal bands so every dog lover knows whether a dog wants to say hello, and a plan to get them into enough hands to work." },
     { host: "hmrphysics.life", url: "https://hmrphysics.life", tour: "physics", status: "Live", tag: "Physics", text: "HMR keeps every equation physics has confirmed and reads them in a new framework. Every claim is labeled as established, HMR's view, or open." },
-    { host: "hmrmath.life", url: "https://hmrmath.life", tour: "math", status: "In progress", tag: "Mathematics", text: "Why the universe obeys equations, in HMR's account." },
     { host: "hmrscience.life", url: "https://hmrscience.life", tour: "science", status: "Live", tag: "Science", text: "The sciences beyond math and physics: where HMR hooks into them, and a chain of claims you can inspect." },
-    { host: "hmrfascia.life", url: null, status: "In progress", tag: "The body", text: "The body as a biotensegrity, with connective tissue first." },
-    { host: "hmrlanguage.life", url: null, status: "In progress", tag: "Language", text: "Language, seen from the whole." },
-    { host: "reactionapp.life", url: "https://reactionapp.life", tour: "reaction", status: "In progress", tag: "Reactions", text: "Record your reactions while you watch, keep the best moments, and share them with friends." },
     { host: "funsies.fun", url: "https://funsies.fun", tour: "funsies", status: "Live", tag: "Joy", text: "Toys and games, made for joy. Everything here exists to have fun." }
   ];
+  // Being built now: family sites that are started but not finished.
+  var BUILDING = [
+    { host: "reactionapp.life", url: "https://reactionapp.life", tour: "reaction", status: "In progress", tag: "Reactions", text: "Record your reactions while you watch, keep the best moments, and share them with friends." },
+    { host: "hmrmath.life", url: "https://hmrmath.life", tour: "math", status: "In progress", tag: "Mathematics", text: "Why the universe obeys equations, in HMR's account." },
+    { host: "hmrfascia.life", url: null, status: "In progress", tag: "The body", text: "The body as a biotensegrity, with connective tissue first." },
+    { host: "hmrlanguage.life", url: null, status: "In progress", tag: "Language", text: "Language, seen from the whole." }
+  ];
+  var MEMBERS = DONE.concat(BUILDING);
   function pill(s) { return el("span", { "class": "pill " + (s === "In progress" ? "wip" : "live"), text: s }); }
-  function card(s, cls, kids) {
+  function card(s, cls, kids, voice) {
     var c = el("article", { "class": "fc " + (cls || "") });
     var top = el("div", { "class": "fc-top" }, [el("span", { "class": "fc-tag", text: s.tag }), pill(s.status)]);
     c.appendChild(top);
@@ -48,17 +129,12 @@
     }
     if (s.url) { var v = ext(s.url, "Visit", "btn"); v.setAttribute("aria-label", "Visit " + s.host + " (opens in a new tab)"); act.appendChild(v); }
     else act.appendChild(el("span", { "class": "fc-soon", text: "Not linked yet" }));
+    if (voice) act.appendChild(voiceToggle(s.host, c));
     c.appendChild(act);
     return c;
   }
-  var fam = document.getElementById("fam");
-  if (fam) {
-    fam.appendChild(el("div", { "class": "hub" }, [
-      el("span", { "class": "star", "aria-hidden": "true", text: "★" }),
-      el("b", { text: "hmrfamily.life" }),
-      el("span", { text: "The hub. You are here." })
-    ]));
-    fam.appendChild(el("p", { "class": "lvl", text: "The two flagships" }));
+  var flagsBox = document.getElementById("flags");
+  if (flagsBox) {
     var prods = el("div", { "class": "prods" });
     PRODUCTS.forEach(function (p) {
       prods.appendChild(el("div", { "class": "prod" + (p.on ? " on" : "") }, [
@@ -66,14 +142,18 @@
         el("h4", { text: p.name }), el("p", { text: p.text })
       ]));
     });
-    fam.appendChild(el("div", { "class": "flags" }, [card(PERSONALDASH, "flag", [prods]), card(CLAUDEBOMB, "flag")]));
-    fam.appendChild(el("p", { "class": "then", "aria-hidden": "true", text: "after both, the vision" }));
-    fam.appendChild(card(ENDGAME, "vision"));
-    fam.appendChild(el("p", { "class": "lvl", text: "The family" }));
-    var g = el("div", { "class": "fgrid" });
-    MEMBERS.forEach(function (m) { g.appendChild(card(m)); });
-    fam.appendChild(g);
+    flagsBox.appendChild(el("div", { "class": "flags" }, [card(PERSONALDASH, "flag", [prods]), card(CLAUDEBOMB, "flag")]));
+    flagsBox.appendChild(el("p", { "class": "then", "aria-hidden": "true", text: "after both, the vision" }));
+    flagsBox.appendChild(card(ENDGAME, "vision", null, true));
   }
+  function grid(id, list, voice) {
+    var box = document.getElementById(id); if (!box) return;
+    var g = el("div", { "class": "fgrid" });
+    list.forEach(function (m) { g.appendChild(card(m, "", null, voice)); });
+    box.appendChild(g);
+  }
+  grid("done", DONE, false);
+  grid("building", BUILDING, true);
 
   /* footer links: every linked family site */
   var foot = document.getElementById("footlinks");
@@ -85,6 +165,7 @@
   }
 
   /* ---------- the domain list (data: x/domains.json, every name we own) ---------- */
+  var STAGE = { "HMR family": "Family site", "Live": "Starter page", "Parked": "Plan only" };
   var HELD = ["hmruniverse.life", "hmrfunsies.fun"];
   var TOP = ["underthebed.monster", "overreact.ing", "dragonrid.ing", "elevat.ing", "fennsma.sh", "cosmicjoke.lol", "delulu.monster", "doomscroll.monster", "cosmicru.sh", "createjoy.art", "ilovedogs.dog"];
   var AI = ["aihir.ing", "aiautomat.ing", "aiintern.tech", "aiplann.ing", "aiphotoedit.ing", "aiquot.ing", "aitranslat.ing", "aivideoedit.ing", "aivoiceact.ing"];
@@ -117,7 +198,7 @@
     var ec = counted("e"), ends = Object.keys(ec).sort(function (a, b) { return ec[b] - ec[a] || cmp(a, b); });
     pick("dend", "Ending", "end", [["", "All endings"]].concat(ends.map(function (k) { return [k, k + " (" + ec[k] + ")"]; })));
     var mc = counted("m");
-    pick("dmark", "Status", "mark", [["", "Any status"]].concat(["HMR family", "Live", "Parked"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, k + " (" + mc[k] + ")"]; })));
+    pick("dmark", "Where it stands", "mark", [["", "Any stage"]].concat(["HMR family", "Live", "Parked"].filter(function (k) { return mc[k]; }).map(function (k) { return [k, STAGE[k] + " (" + mc[k] + ")"]; })));
     var reset = el("button", { type: "button", "class": "sbtn", text: "Clear" });
     reset.addEventListener("click", function () {
       st = { sort: "cool", q: "", cat: "", end: "", mark: "" };
@@ -175,9 +256,12 @@
           d.appendChild(det);
         } else if (r.u) d.appendChild(ext(r.u, r.h)); else d.textContent = r.h;
         li.appendChild(d);
-        li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: r.m }));
+        li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: STAGE[r.m] || r.m }));
         var meta = r.c + (r.s ? " · cool score " + r.s : "");
-        li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), document.createTextNode(r.p)]));
+        li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), el("b", { "class": "dl-plan", text: "The plan: " }), document.createTextNode(r.p)]));
+        var vh = el("div", { "class": "dl-v" });
+        vh.appendChild(voiceToggle(r.dogs ? "ilovedogs.dog" : r.h, vh));
+        li.appendChild(vh);
         ul.appendChild(li);
       });
       box.appendChild(ul);
@@ -186,7 +270,7 @@
     var sum = document.getElementById("list-sum");
     if (sum) {
       var rated = all.filter(function (r) { return r.s; }).length, live = all.filter(function (r) { return r.u; }).length;
-      sum.textContent = "Showing " + shown + " of " + all.length + " names. " + live + " have a site you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
+      sum.textContent = "Showing " + shown + " of " + all.length + " names. " + live + " have a page you can open now. Coolest first puts the " + rated + " names we have scored at the top (10 is the coolest); the rest follow, best ideas first.";
     }
   }
   function buildList(data) {
