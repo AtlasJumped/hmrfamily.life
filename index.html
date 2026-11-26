@@ -11,7 +11,7 @@
 <meta property="og:description" content="Free sites that solve real problems, built with AI. Free forever, with no ads.">
 <meta property="og:url" content="https://hmrfamily.life/">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="css/style.css?v=20261126b">
+<link rel="stylesheet" href="css/style.css?v=20261126c">
 <style>header.hero{position:relative}header.hero .hlogin{position:absolute;top:12px;right:12px;z-index:2;min-height:44px;padding:0 16px;border-radius:99px;border:1px solid currentColor;background:transparent;color:inherit;font:inherit;font-weight:700;font-size:.9rem;cursor:pointer;opacity:.9}header.hero .hlogin:hover{opacity:1}</style>
 </head>
 <body>
@@ -53,6 +53,9 @@
     <p>This site is here to show that one person with AI can have a deep impact.</p>
     <h3>On the dangers of AI</h3>
     <p>Many people worry that AI is dangerous. I share that concern. My answer is to put all my energy into being a force for good, and to show that AI in the hands of good people does far more good than harm.</p>
+    <h3 id="safety">Safety and responsibility</h3>
+    <p>While we value innovation, we also value not breaking things. All standard security protocols are in place: every page is served over a secure connection, forms send only what you choose to type, and your data is never sold.</p>
+    <p class="resonate">If this resonates with you, <a href="collaborators/">engage with us here</a>.</p>
   </section>
 
   <section class="wrap sec" id="flagships" aria-labelledby="flags-h">
@@ -81,7 +84,7 @@
   <section class="wrap sec" id="future" aria-labelledby="future-h">
     <p class="secnum" aria-hidden="true">4</p>
     <h2 id="future-h">The future</h2>
-    <p>Every name below is a plan. You can see where each one stands and what I plan to build there, and you can shape it. Press <b>Add your voice</b> on any name to give feedback, suggest a different vision, offer support, or help build it. Talk into the mic or type.</p>
+    <p>These names are empty canvases, waiting to be painted by us, by artificial intelligence, and by your new talents and skills. Every name below is a plan. You can see where each one stands and what I plan to build there, and you can shape it. Press <b>Add your voice</b> on any name to give feedback, suggest a different vision, offer support, or help build it. Talk into the mic or type.</p>
     <h3>Being built now</h3>
     <div id="building"></div>
     <h3 id="list-h" class="list-h">Every name I own, and the plan for each</h3>
@@ -99,6 +102,7 @@
     <ul class="join">
       <li><b>Add your voice.</b> Use <b>Add your voice</b> on any name above, or <b>Speak here</b> at the bottom of any of our pages. Send it with your email or anonymously. Every message is read.</li>
       <li><b>Log in, free for life.</b> Make your login on <a href="https://claudebomb.com" target="_blank" rel="noopener">claudebomb.com</a>. It will never cost anything.</li>
+      <li><b>Become a collaborator.</b> See <a href="collaborators/">who is building and testing this with us</a>, where help is needed most, and how to add your name.</li>
       <li><b>Join the conversation.</b> <a href="https://discord.gg/gEnC8TpNc" target="_blank" rel="noopener">Join us on Discord</a>.</li>
       <li><b>Share.</b> Send a site you like to someone it would help.</li>
       <li><b>Give.</b> <a href="https://claudebomb.com/donate/" target="_blank" rel="noopener">Giving to us is not open yet</a>. Until it is, consider <a href="https://claudebomb.com/wikipedia/" target="_blank" rel="noopener">Wikipedia</a>, which has stayed free for everyone.</li>
@@ -106,22 +110,25 @@
     </ul>
     <details class="bar">
       <summary>What the buttons along the bottom do</summary>
+      <p>Every HMR family site has the same bar along the bottom, so once you learn it on one site, you know it on all of them.</p>
       <ul>
         <li><b>Back</b> and <b>Forward</b>, far left and far right, work like your browser's buttons.</li>
-        <li><b>Design</b> rebuilds the page in a new style. Shuffle, go back, rate each design, or switch to text only.</li>
-        <li><b>Funsies</b>, in the middle, is a button for joy: toys, games, and ways to wreck the page for fun.</li>
-        <li><b>Speak here</b> opens a box where you can talk. Press record and speak.</li>
+        <li><b>Funsies</b> is a button for joy: toys, games, and ways to wreck the page for fun.</li>
+        <li><b>HMR</b>, in the middle, opens your dashboard: quick actions, a studio for colors, type and layout (Design lives here; it rebuilds the page in a new style you can rate), and ways to improve the site.</li>
+        <li><b>Speak here</b>, the microphone, opens a small recorder. Press record and talk.</li>
         <li><b>React</b> lets you pick a feeling and point at the exact spot on the page that caused it.</li>
       </ul>
       <p>You can also select any text to highlight it, then share it, send feedback, or email it to yourself.</p>
+      <p>Would you like buttons like these on every website you visit? Tell us with <b>Speak here</b>.</p>
     </details>
-    <p class="small">Safety: every page is served over a secure connection, forms send only what you choose to type, and your data is never sold.</p>
+    <p class="small">Safety: every page is served over a secure connection, and your data is never sold. <a href="#safety">More on safety</a>.</p>
   </section>
 </main>
 <footer>
   <div class="wrap">
     <h2 class="foot-h">All our sites</h2>
     <ul id="footlinks" class="foot"></ul>
+    <p><a class="foot-gold" href="collaborators/">Collaborators</a></p>
     <p><a class="btn primary" href="https://discord.gg/gEnC8TpNc" target="_blank" rel="noopener">Join us on Discord</a></p>
     <p class="small">Always free, forever.</p>
   </div>
@@ -134,5 +141,6 @@
 <script>/* hmr-card fallback: if the card player never loads, demo buttons open a still picture */(function(){var d=document,w=window,up=0;if(!d.addEventListener)return;w.addEventListener("load",function(){up=1},false);d.addEventListener("click",function(e){if(!up||w.HMRCard)return;var t=e.target;while(t&&t.getAttribute&&!t.getAttribute("data-hmr-card"))t=t.parentNode;if(t&&t.getAttribute){e.preventDefault();w.location.href="hmr-card/still.html"}},false)})();</script>
 <script src="hmr-card/hmr-card.js?v=4" defer></script>
 <script src="x/hmr-aud.js?v=1" defer></script>
+<script src="js/collab-nudge.js?v=1" defer></script>
 </body>
 </html>

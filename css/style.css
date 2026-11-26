@@ -210,3 +210,14 @@ details.bar summary{cursor:pointer;font-weight:700;min-height:32px}
   .then-now>div{grid-template-columns:1.3fr .9fr .7fr;font-size:.9rem;padding:8px 10px}
   .dl-v{grid-column:1/-1}
 }
+/* Nov 26 plaud pass: card hover, safety, collaborators */
+.fc{transition:transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s ease,border-color .25s ease}
+@media (hover:hover){.fc:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 2px 4px rgba(58,42,34,.08),0 16px 36px rgba(58,42,34,.14)}.fc:hover::before{height:7px}}
+.resonate{font-weight:700}
+.foot-gold{display:inline-block;font-weight:700;text-decoration:none;color:#5a3f00;background:linear-gradient(90deg,#f6d365,#e8b923,#f6d365);background-size:200% 100%;border-radius:999px;padding:8px 18px;min-height:44px;line-height:28px;animation:goldflash 2.4s ease-in-out infinite}
+.foot-gold:hover{filter:brightness(1.05)}
+@keyframes goldflash{0%,100%{background-position:0 0;box-shadow:0 0 0 rgba(232,185,35,0)}50%{background-position:100% 0;box-shadow:0 0 14px rgba(232,185,35,.75)}}
+@media (prefers-reduced-motion:reduce){.fc,.fc:hover{transition:none;transform:none}.foot-gold{animation:none}}
+.nudge{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:9500;width:min(92vw,420px);background:var(--card);color:var(--ink);border:2px solid var(--accent);border-radius:var(--radius);padding:16px 18px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.nudge p{margin:0 0 12px;font-family:var(--head);font-size:1.1rem;line-height:1.35}
+.nudge .row{display:flex;gap:10px;flex-wrap:wrap}
