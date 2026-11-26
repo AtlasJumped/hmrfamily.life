@@ -169,7 +169,7 @@
 "p": "For the goodest boys (and girls).",
 "u": null,
 "m": "Parked",
-"sale": "feat"
+"sale": "maybe"
 },
 {
 "h": "itworkedonmymachine.pro",
@@ -299,7 +299,7 @@
 "p": "A dad joke a day.",
 "u": null,
 "m": "Parked",
-"sale": "sale"
+"sale": "feat"
 },
 {
 "h": "excusegenerator.pro",
@@ -317,6 +317,16 @@
 "s": 7.5,
 "a": 5.0,
 "p": "Man's best friend.",
+"u": null,
+"m": "Parked",
+"sale": "maybe"
+},
+{
+"h": "hallucinate.pro",
+"c": "Pros and personas",
+"s": 7.5,
+"a": 5.0,
+"p": "For pros at making things up: spot AI hallucinations and laugh at the best ones.",
 "u": null,
 "m": "Parked",
 "sale": "sale"
@@ -619,7 +629,7 @@
 "p": "Humanity's best friend.",
 "u": null,
 "m": "Parked",
-"sale": "sale"
+"sale": "maybe"
 },
 {
 "h": "kindapro.pro",
@@ -849,7 +859,7 @@
 "p": "AI tools for dog owners: training plans, health notes, walk logs.",
 "u": null,
 "m": "Parked",
-"sale": "sale"
+"sale": "maybe"
 },
 {
 "h": "humanity.feedback",
@@ -1017,6 +1027,16 @@
 "s": 6.5,
 "a": 4.0,
 "p": "For total amateurs.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "hallucination.pro",
+"c": "Pros and personas",
+"s": 6.5,
+"a": 4.0,
+"p": "A field guide to AI hallucinations: what they are and how to catch them.",
 "u": null,
 "m": "Parked",
 "sale": "sale"
@@ -1327,6 +1347,16 @@
 "s": 6.0,
 "a": 4.0,
 "p": "For worriers.",
+"u": null,
+"m": "Parked",
+"sale": "sale"
+},
+{
+"h": "hallucinations.pro",
+"c": "Pros and personas",
+"s": 6.0,
+"a": 4.0,
+"p": "A gallery of the funniest AI hallucinations, collected and checked.",
 "u": null,
 "m": "Parked",
 "sale": "sale"
@@ -2089,7 +2119,7 @@
 "p": "Our mission, elevating humanity, in one place.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "ilovedogs.app",
@@ -2709,7 +2739,7 @@
 "p": "Coaching for healthy connective tissue (often called fascia).",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "freeforever.pro",
@@ -2719,7 +2749,7 @@
 "p": "Our promise: free forever.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "grandkids.tech",
@@ -2789,7 +2819,7 @@
 "p": "Points to claudebomb.com.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "retiredpro.pro",
@@ -3479,7 +3509,7 @@
 "p": "Points to elevatehumanity.life.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "eli5.college",
@@ -4019,7 +4049,7 @@
 "p": "Points to elevatehumanity.life.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "elevatehumanity.us",
@@ -4029,7 +4059,7 @@
 "p": "Points to elevatehumanity.life.",
 "u": null,
 "m": "Parked",
-"sale": "maybe"
+"sale": "sale"
 },
 {
 "h": "eli5.consulting",
