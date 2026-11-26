@@ -3253,7 +3253,7 @@
     setCls();
 
     // ---- the arrow shape, in a 100 x 100 box centred on 0,0 (up arrow; the others are turned)
-    var R1 = 30, RA = 49, RC = 30, S = Math.sin(Math.PI / 6) * R1, C = Math.cos(Math.PI / 6) * R1;
+    var R1 = 31, RA = 50, RC = 27, S = Math.sin(38 * Math.PI / 180) * R1, C = Math.cos(38 * Math.PI / 180) * R1;
     var PATH = 'M' + (-S).toFixed(2) + ' ' + (-C).toFixed(2) + 'A' + R1 + ' ' + R1 + ' 0 0 1 ' + S.toFixed(2) + ' ' + (-C).toFixed(2) +
       'A' + RC + ' ' + RC + ' 0 0 1 0 ' + (-RA) + 'A' + RC + ' ' + RC + ' 0 0 1 ' + (-S).toFixed(2) + ' ' + (-C).toFixed(2) + 'Z';
     var DIRS = [
@@ -3284,6 +3284,7 @@
       'html.hmr-lay-lt .hmr-dock{grid-template-columns:auto auto auto auto auto minmax(0,1fr)!important}html.hmr-lay-lt .hmr-dock>#hmr-pad{grid-column:1}html.hmr-lay-lt .hmr-dock>#hmr-speak{grid-column:2}html.hmr-lay-lt .hmr-dock>#hmr-back{grid-column:3}html.hmr-lay-lt .hmr-dock>.hmr-rxbtn,html.hmr-lay-lt .hmr-dock>.hmr-fzbtn{grid-column:4}html.hmr-lay-lt .hmr-dock>#hmr-fwd{grid-column:5}',
       // classic: the v6.5 row, plain HMR button
       'html.hmr-lay-classic .hmr-dock>#hmr-pad{grid-column:4}html.hmr-lay-classic .hmr-pa{display:none!important}html.hmr-lay-classic .hmr-dock{--hmr-pw:var(--hmr-hw)}',
+      '.hmr-dock>#hmr-back,.hmr-dock>.hmr-fzbtn,.hmr-dock>#hmr-pad,.hmr-dock>#hmr-speak,.hmr-dock>.hmr-rxbtn,.hmr-dock>#hmr-fwd{grid-row:1}',
       '.hmr-dock>#hmr-pad{position:relative!important;left:auto;right:auto;bottom:auto;top:auto;margin:0!important}',
       '.hmr-pad{pointer-events:none;width:var(--hmr-pw);height:var(--hmr-pw);touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}',
       '.hmr-pad>#hmr-hmr{position:absolute!important;left:50%!important;top:50%!important;right:auto!important;bottom:auto!important;margin:calc(var(--hmr-hw) / -2) 0 0 calc(var(--hmr-hw) / -2)!important;z-index:2}',
