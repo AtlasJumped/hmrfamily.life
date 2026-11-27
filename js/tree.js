@@ -186,25 +186,12 @@
   function buildControls() {
     if (!ctl) return;
     ctl.textContent = "";
-    /* sale-status buttons: stack them; each one adds its names to what shows */
-    if (!saleBox) { saleBox = el("div", { "class": "dsale", role: "group", "aria-label": "Show names by sale status" }); ctl.parentNode.insertBefore(saleBox, ctl); }
+    /* No sale wording anywhere: everything here is free. One line invites ideas for any name. */
+    if (!saleBox) { saleBox = el("p", { "class": "small dsale-note" }); ctl.parentNode.insertBefore(saleBox, ctl); }
     saleBox.textContent = "";
-    saleBox.appendChild(el("p", { "class": "dsale-h", text: "For sale? Tap one or more:" }));
-    var sc = counted("sale"), row = el("div", { "class": "dsale-row" });
-    SALE.forEach(function (x) {
-      var b = el("button", { type: "button", "class": "sb s-" + x[0], "aria-pressed": "false", "data-sale": x[0], text: x[1] + " (" + (sc[x[0]] || 0) + ")" });
-      b.addEventListener("click", function () {
-        if (st.sale[x[0]]) delete st.sale[x[0]]; else st.sale[x[0]] = 1;
-        b.setAttribute("aria-pressed", String(!!st.sale[x[0]])); render();
-      });
-      row.appendChild(b);
-    });
-    saleBox.appendChild(row);
-    var ask = el("p", { "class": "small dsale-note" });
-    ask.appendChild(document.createTextNode("Want a name, or have a good use for a free one? "));
-    ask.appendChild(ext("https://discord.gg/gEnC8TpNc", "Tell us on Discord"));
-    ask.appendChild(document.createTextNode("."));
-    saleBox.appendChild(ask);
+    saleBox.appendChild(document.createTextNode("Have a good use for one of these names? "));
+    saleBox.appendChild(ext("https://discord.gg/gEnC8TpNc", "Tell us on Discord"));
+    saleBox.appendChild(document.createTextNode("."));
     var q = el("input", { type: "search", id: "dq", placeholder: "Search names and ideas", "aria-label": "Search names and ideas", autocomplete: "off" });
     /* Read the box on every kind of change: typing, the mic (which fires change), the clear x, and Enter.
        Dictation adds capitals and punctuation ("Grandma."), so the query is cleaned before matching. */
@@ -214,13 +201,16 @@
     setInterval(function () { if (document.activeElement === q || q.value) readQ(); }, 700);   // the mic can write without any event
     q.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); readQ(); q.blur(); var t = document.getElementById("list-sum") || box; if (t) try { t.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (x) { t.scrollIntoView(); } } });
     ctl.appendChild(el("label", { "class": "df-q", "for": "dq" }, [el("span", { text: "Search" }), q]));
+    var go = el("button", { type: "button", "class": "sbtn primary", text: "Search" });
+    go.addEventListener("click", function () { readQ(); var t = document.getElementById("list-sum") || box; if (t) try { t.scrollIntoView({ behavior: "smooth", block: "start" }); } catch (x) { t.scrollIntoView(); } });
+    ctl.appendChild(go);
     function pick(id, label, key, opts) {
       var s = el("select", { id: id });
       opts.forEach(function (o) { option(s, o[0], o[1]); });
       s.addEventListener("change", function () { st[key] = s.value; render(); });
       ctl.appendChild(el("label", { "for": id }, [el("span", { text: label }), s]));
     }
-    pick("dsort", "Order", "sort", [["cool", "By coolness"], ["az", "Alphabetical"], ["end", "By domain ending"], ["sale", "By sale status"], ["cat", "By category"]]);
+    pick("dsort", "Order", "sort", [["cool", "By coolness"], ["az", "Alphabetical"], ["end", "By domain ending"], ["cat", "By category"]]);
     var cc = counted("c"), cats = Object.keys(cc).sort(function (a, b) { return cc[b] - cc[a] || cmp(a, b); });
     pick("dcat", "Category", "cat", [["", "All categories (" + all.length + ")"]].concat(cats.map(function (k) { return [k, k + " (" + cc[k] + ")"]; })));
     var ec = counted("e"), ends = Object.keys(ec).sort(function (a, b) { return ec[b] - ec[a] || cmp(a, b); });
@@ -230,7 +220,7 @@
     var reset = el("button", { type: "button", "class": "sbtn", text: "Clear" });
     reset.addEventListener("click", function () {
       st = { sort: "cool", q: "", cat: "", end: "", mark: "", sale: {} };
-      var bs = saleBox ? saleBox.querySelectorAll("button") : [], i; for (i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", "false");
+      var bs = saleBox ? saleBox.querySelectorAll("button[aria-pressed]") : [], i; for (i = 0; i < bs.length; i++) bs[i].setAttribute("aria-pressed", "false");
       q.value = ""; ["dsort", "dcat", "dend", "dmark"].forEach(function (id) { var s = document.getElementById(id); s.selectedIndex = 0; });
       render();
     });
@@ -295,7 +285,6 @@
         } else if (r.u) d.appendChild(ext(r.u, r.h)); else d.textContent = r.h;
         li.appendChild(d);
         li.appendChild(el("span", { "class": "dl-m " + (r.m === "Live" ? "live" : r.m === "HMR family" ? "fam" : "wip"), text: STAGE[r.m] || r.m }));
-        if (r.sale) li.appendChild(el("span", { "class": "dl-s s-" + r.sale, text: SALEN[r.sale] }));
         var meta = r.c + (r.s ? " · cool score " + r.s : "");
         li.appendChild(el("span", { "class": "dl-p" }, [el("span", { "class": "dl-c", text: meta + ". " }), el("b", { "class": "dl-plan", text: "The plan: " }), document.createTextNode(r.p)]));
         var vh = el("div", { "class": "dl-v" });
