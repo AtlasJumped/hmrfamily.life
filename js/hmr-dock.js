@@ -1,4 +1,4 @@
-/* ELV8 dock v6.10.1 (Nov 27, Leo's 17:57Z review, his latest word): ONE button standard on every site: React on the left, ELV8 in the middle, the mic on the right;
+/* ELV8 dock v6.10.2 (Nov 27, Leo's 17:57Z review, his latest word): ONE button standard on every site: React on the left, ELV8 in the middle, the mic on the right;
    no browser back / forward buttons and no layout choices or Shuffle. No "always free" line under the ribbon or in the mic window.
    React panel: no "How does this make you feel?", no "two-way deal" line, no "Send my rating"; the slider stays and its value goes with the reaction;
    reactions grouped positive then negative, last row a full-width "Burn it all" in darker red; about half the height on phones.
@@ -131,7 +131,7 @@
         ds.split(',').join('[hidden],') + '[hidden]{display:none!important}' +
         ds.split(',').join(' svg,') + ' svg{width:20px!important;height:20px!important}' : '') +
     (ps ? ps + '{position:fixed!important;left:' + LEFT + '!important;right:auto!important;top:auto!important;bottom:calc(' + BASE + ' + var(--hmr-c) + 10px)!important;z-index:99991!important;max-width:calc(100vw - 24px)!important;max-height:calc(100vh - 110px)!important;overflow:auto!important;margin:0!important}' : '') +
-    '@media (max-width:600px){.hmr-rxp{left:' + LEFT + ';right:' + RIGHT + ';width:auto;max-height:max(150px,min(24vh,calc(100vh - 110px)))}.hmr-rxp .grid .chip{flex:1 1 calc(33.333% - 5px);min-height:32px;font-size:12px}}' +
+    '@media (max-width:600px){.hmr-rxp{left:' + LEFT + ';right:' + RIGHT + ';width:auto;max-height:max(150px,min(24vh,calc(100vh - 110px)))}.hmr-rxp .grid .chip{flex:1 1 calc(33.333% - 5px);min-height:32px;font-size:12px}.hmr-rxp{padding:7px 9px}.hmr-rxp .hd{position:absolute;top:4px;right:4px;z-index:1}.hmr-rxp .st{margin:0 0 4px;padding-right:34px;font-size:11.5px;line-height:1.25}}' +
     '.rx-bar{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important}';
 
   function cursorURL() {
