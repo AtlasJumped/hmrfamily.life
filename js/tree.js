@@ -62,7 +62,7 @@
       window.HMRDock.send({ kind: "future site", subject: "hmrfamily.life, " + label + ": " + host, message: label + " for " + host + ":\n\n" + msg, email: em.value.trim() || undefined, details: { site: host, type: kind } })
         .then(function (r) {
           send.disabled = false;
-          if (r && r.ok) { ta.value = ""; say("Sent. Thank you. Every message is read."); }
+          if (r && r.ok) { ta.value = ""; say("Sent. Thank you. Every message is read."); if (box.onSent) setTimeout(box.onSent, 1600); }
           else say("Your email app should have opened with your message. Your words are still here.");
         }, function () { send.disabled = false; say("That didn't send. Your words are still here; try again."); });
     });
@@ -75,7 +75,7 @@
     b.setAttribute("aria-label", "Add your voice on " + host);
     var box = null;
     b.addEventListener("click", function () {
-      if (!box) { box = voiceBox(host); holder.appendChild(box); b.setAttribute("aria-controls", box.id); }
+      if (!box) { box = voiceBox(host); holder.appendChild(box); b.setAttribute("aria-controls", box.id); box.onSent = function () { box.hidden = true; b.setAttribute("aria-expanded", "false"); b.textContent = "Sent. Add more?"; b.focus(); }; }
       var open = b.getAttribute("aria-expanded") !== "true";
       box.hidden = !open; b.setAttribute("aria-expanded", String(open));
       if (open) { var r = box.querySelector("input[type=radio]:checked"); if (r) r.focus(); }
@@ -86,31 +86,34 @@
   /* ---------- the family, as cards ---------- */
   // url: null means shown without a link until the site is secure.
   var PERSONALDASH = { host: "personaldash.life", url: "https://personaldash.life", status: "Live", tag: "Flagship",
-    text: "Your helping hand into the blossoming world of AI. A free personal dashboard and AI introduction kit in one piece of text." };
+    text: "Your helping hand into the blossoming world of AI. A free personal dashboard and AI introduction kit in one piece of text.",
+    faq: [["What is it?", "A free personal dashboard. Copy the text, paste it into your AI assistant, and it sets your dashboard up for you."], ["What does it cost?", "Nothing. Free forever, with no ads."], ["Do I need to know AI already?", "No. It starts by asking whether you are new to AI, use it some, or are a super user, and shapes itself to you."]] };
   var CLAUDEBOMB = { host: "claudebomb.com", url: "https://claudebomb.com", tour: "claudebomb", status: "Live", tag: "Flagship",
-    text: "The prompt bank for every AI model, not just Claude. Free forever, with no ads. Your free-forever login lives here." };
+    text: "The prompt bank for every AI model, not just Claude. Free forever, with no ads. Your free-forever login lives here.",
+    faq: [["What is it?", "The best place on the internet for prompts for any AI, not just Claude. Search for a prompt, ask for one that isn't there, and help make them all better."], ["What does it cost?", "Nothing, ever. No ads."], ["What is the login for?", "Your free-for-life login for our sites. It will never cost anything."]] };
   var PRODUCTS = [
     { name: "Personal dash", state: "Available now", text: "Free forever. Copy it, paste it into your AI assistant, and start today.", on: true },
     { name: "Work dash", state: "The future, V2", text: "Planned for mid to late 2027. The personal dash paves the way. Not built yet.", on: false }
   ];
   var ENDGAME = { host: "endgame.life", url: "https://endgame.life", tour: "endgame", status: "In progress", tag: "The vision",
-    text: "Where the dashboards lead once both exist: a picture of life around 2036, with personal AI that works for you." };
+    text: "Where the dashboards lead once both exist: a picture of life around 2036, with personal AI that works for you.",
+    faq: [["What is it?", "A day in 2036, told in nine moments, each labeled for what works today and what is still a hope."], ["Is it finished?", "Not yet. It is in progress."]] };
   // Done: built and live.
   var DONE = [
-    { host: "ilovedogs.dog", url: "https://ilovedogs.dog", status: "Live", tag: "Dogs", text: "Free signal bands so every dog lover knows whether a dog wants to say hello, and a plan to get them into enough hands to work." },
-    { host: "hmrphysics.life", url: "https://hmrphysics.life", tour: "physics", status: "Live", tag: "Physics", text: "HMR keeps every equation physics has confirmed and reads them in a new framework. Every claim is labeled as established, HMR's view, or open." },
-    { host: "hmrscience.life", url: "https://hmrscience.life", tour: "science", status: "Live", tag: "Science", text: "The sciences beyond math and physics: where HMR hooks into them, and a chain of claims you can inspect." },
-    { host: "funsies.fun", url: "https://funsies.fun", tour: "funsies", status: "Live", tag: "Joy", text: "Toys and games, made for joy. Everything here exists to have fun." }
+    { host: "ilovedogs.dog", url: "https://ilovedogs.dog", status: "Live", tag: "Dogs", text: "Free signal bands so every dog lover knows whether a dog wants to say hello, and a plan to get them into enough hands to work.",
+      faq: [["What is it?", "Uniting dogs and humans: a colour code, so every dog lover knows at a glance whether a dog wants to say hello."], ["What does it cost?", "Nothing to use, ever."]] },
+    { host: "funsies.fun", url: "https://funsies.fun", tour: "funsies", status: "Live", tag: "Joy", text: "Toys and games, made for joy. Everything here exists to have fun.",
+      faq: [["What is there to play?", "Fennsmash, the smash game, a reaction test, and a button that wrecks the page and then puts it back."], ["Do I need to sign up?", "No. Press play."]] }
   ];
   // Being built now: family sites that are started but not finished.
   var BUILDING = [
-    { host: "reactionapp.life", url: "https://reactionapp.life", tour: "reaction", status: "In progress", tag: "Reactions", text: "Record your reactions while you watch, keep the best moments, and share them with friends." },
-    { host: "hmrmath.life", url: "https://hmrmath.life", tour: "math", status: "In progress", tag: "Mathematics", text: "Why the universe obeys equations, in HMR's account." },
-    { host: "hmrfascia.life", url: null, status: "In progress", tag: "The body", text: "The body as a biotensegrity, with connective tissue first." },
-    { host: "hmrlanguage.life", url: null, status: "In progress", tag: "Language", text: "Language, seen from the whole." }
+    { host: "reactionapp.life", url: "https://reactionapp.life", tour: "reaction", status: "In progress", tag: "Reactions", text: "Record your reactions while you watch, keep the best moments, and share them with friends.",
+      faq: [["Can I try it?", "Yes. A prototype runs in your browser, and nothing is uploaded."], ["Is it finished?", "Not yet. It is in progress."]] },
+    { host: "workdash.life", url: "https://workdash.life", status: "Planned", tag: "Work", text: "The work version of the dashboard. The free personal dashboard comes first and paves the way.",
+      faq: [["Can I use it now?", "Not yet. It is planned, and nothing on the site is available yet. You can tell us how you work."]] }
   ];
   var MEMBERS = DONE.concat(BUILDING);
-  function pill(s) { return el("span", { "class": "pill " + (s === "In progress" ? "wip" : "live"), text: s }); }
+  function pill(s) { return el("span", { "class": "pill " + (s === "Live" ? "live" : "wip"), text: s }); }
   function card(s, cls, kids, voice) {
     var c = el("article", { "class": "fc " + (cls || "") });
     var top = el("div", { "class": "fc-top" }, [el("span", { "class": "fc-tag", text: s.tag }), pill(s.status)]);
@@ -119,6 +122,11 @@
     if (s.url) h.appendChild(ext(s.url, s.host)); else h.textContent = s.host;
     c.appendChild(h);
     c.appendChild(el("p", { "class": "fc-text", text: s.text }));
+    if (s.faq) {
+      var fq = el("details", { "class": "fc-faq" }, [el("summary", { text: "Questions" })]), dl = el("dl");
+      s.faq.forEach(function (x) { dl.appendChild(el("dt", { text: x[0] })); dl.appendChild(el("dd", { text: x[1] })); });
+      fq.appendChild(dl); c.appendChild(fq);
+    }
     (kids || []).forEach(function (k) { c.appendChild(k); });
     var act = el("div", { "class": "fc-act" });
     if (s.tour) {
@@ -155,18 +163,21 @@
   grid("done", DONE, false);
   grid("building", BUILDING, true);
 
-  /* footer links: every linked family site */
+  /* footer: every working family site, as cards with one line each */
   var foot = document.getElementById("footlinks");
   if (foot) {
-    [{ host: "hmrfamily.life", url: "https://hmrfamily.life/" }, PERSONALDASH, CLAUDEBOMB, ENDGAME].concat(MEMBERS).forEach(function (s) {
+    [{ host: "elevat.ing", url: "https://elevat.ing/", line: "Our main site: every idea, every plan, every name." }, { host: "hmrfamily.life", url: "https://hmrfamily.life/", line: "This page." },
+     { host: PERSONALDASH.host, url: PERSONALDASH.url, line: "Your free personal AI dashboard." }, { host: CLAUDEBOMB.host, url: CLAUDEBOMB.url, line: "The prompt bank for every AI model." },
+     { host: ENDGAME.host, url: ENDGAME.url, line: "A day in 2036." }].concat(MEMBERS.map(function (m) { return { host: m.host, url: m.url, line: m.text.split(". ")[0].replace(/\.$/, "") + "." }; })).forEach(function (s) {
       if (!s.url) return;
-      var li = el("li"); li.appendChild(s.host === "hmrfamily.life" ? el("a", { href: s.url, text: s.host }) : ext(s.url, s.host)); foot.appendChild(li);
+      var li = el("li"); li.appendChild(s.host === "hmrfamily.life" ? el("a", { href: s.url, text: s.host }) : ext(s.url, s.host));
+      li.appendChild(el("span", { text: s.line })); foot.appendChild(li);
     });
   }
 
   /* ---------- the domain list (data: x/domains.json, every name we own) ---------- */
-  var STAGE = { "HMR family": "Family site", "Live": "Starter page", "Parked": "Plan only" };
-  var HELD = ["hmruniverse.life", "hmrfunsies.fun"];
+  var STAGE = { "HMR family": "Main site", "Live": "Starter page", "Parked": "Plan only" };
+  var HIDE = /^(hmr|universemodel\.|universalintelligence\.|biotensegrit)/;   // not listed for now
   var TOP = ["underthebed.monster", "overreact.ing", "dragonrid.ing", "elevat.ing", "fennsma.sh", "cosmicjoke.lol", "delulu.monster", "doomscroll.monster", "cosmicru.sh", "createjoy.art", "ilovedogs.dog"];
   var AI = ["aihir.ing", "aiautomat.ing", "aiintern.tech", "aiplann.ing", "aiphotoedit.ing", "aiquot.ing", "aitranslat.ing", "aivideoedit.ing", "aivoiceact.ing"];
   var liveSet = {};
@@ -304,7 +315,8 @@
   function buildList(data) {
     var n = 0, dogN = 0;
     // Every name we own, flagships included, so the sale-status buttons cover all of them.
-    all = (data.domains || []).map(function (r) {
+    all = (data.domains || []).filter(function (r) { return !HIDE.test(r.h); }).map(function (r) {
+      if (r.c === "HMR family") r.c = "Our main sites";
       r.e = ending(r.h);
       if (/^ilovedogs\./.test(r.h) && r.h !== "ilovedogs.dog") { if (!dogN) dogN = ++n; r.n = dogN; } else r.n = ++n;
       return r;
@@ -312,8 +324,6 @@
     buildControls();
     render();
   }
-  var held = document.getElementById("held");
-  if (held) held.textContent = "Held for now, on the back burner: " + HELD.join(", ") + ".";
   function setSort(k) {
     st.sort = k; var s = document.getElementById("dsort"); if (s) s.value = k; render();
   }
@@ -346,7 +356,7 @@
     fav.appendChild(more);
     var cd = el("div", { "class": "charity" });
     cd.appendChild(el("h4", { "class": "fav-h", text: "The .charity names" }));
-    cd.appendChild(el("p", { text: "Have a real need for one of these? Tell us what you would use it for, and we will consider giving it to you free." }));
+    cd.appendChild(el("p", { text: "Do you actually have a need for one of these websites? Send us a message about what you would use it for, and we'll consider giving it to you for free." }));
     var sel = el("select", { id: "ch-sel" });
     sel.appendChild(el("option", { value: "", text: "Choose a .charity name" }));
     var chs = Object.keys(db.sites).filter(function (h) { return /\.charity$/.test(h); }).sort();
@@ -363,7 +373,7 @@
     cd.appendChild(sel);
     cd.appendChild(out);
     cd.appendChild(el("p", {}, [ext("https://discord.gg/gEnC8TpNc", "Tell us on Discord", "btn")]));
-    cd.appendChild(el("p", { "class": "ch-give", text: "Consider donating to us, or to the site that inspires us:" }));
+    cd.appendChild(el("p", { "class": "ch-give", text: "The site that inspires us:" }));
     cd.appendChild(el("p", {}, [el("button", { type: "button", "class": "btn", "data-wiki": "1", text: "Have you heard of Wikipedia?" })]));
     fav.appendChild(cd);
   }
@@ -380,10 +390,8 @@
       rows.forEach(function (r, i) { var tr = el("tr"); r.forEach(function (c) { tr.appendChild(el(i ? "td" : "th", { text: c })); }); tb.appendChild(tr); });
       dg.appendChild(tb);
       dg.appendChild(el("p", { "class": "small", text: "From the yearly donation records the Wikimedia Foundation sent us for 2021 to 2025. Amounts in US dollars." }));
-      dg.appendChild(el("h4", { text: "Our ask" }));
-      dg.appendChild(el("p", { text: "If you're not already donating to Wikipedia, please donate to one of us." }));
-      dg.appendChild(el("p", { "class": "wiki-b" }, [ext("https://donate.wikimedia.org/", "Donate to Wikipedia", "btn"), document.createTextNode(" "), ext("https://claudebomb.com/donate/", "Donate to us", "btn")]));
-      dg.appendChild(el("p", { "class": "small", text: "Giving to us is not open yet. Until it is, Wikipedia is a great choice." }));
+      dg.appendChild(el("p", { text: "We are not asking you for anything. Nothing in our family of websites will ever ask you for money. We just want you to know who inspires us." }));
+      dg.appendChild(el("p", { "class": "wiki-b" }, [ext("https://www.wikipedia.org/", "Visit Wikipedia", "btn")]));
       var cl = el("button", { type: "button", "class": "btn", text: "Close" }); cl.addEventListener("click", function () { dg.close(); });
       dg.appendChild(el("p", {}, [cl]));
       dg.addEventListener("click", function (e) { if (e.target === dg) dg.close(); });
