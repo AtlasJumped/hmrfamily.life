@@ -332,12 +332,12 @@
   },
   "certified.charity": {
    "t": "Certified Charity",
-   "p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
+   "p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Planned.",
    "k": "charity"
   },
   "corrupt.charity": {
    "t": "Corrupt Charity",
-   "p": "We spend it however we want. At least we are honest about it. Donations open soon.",
+   "p": "Satire: a charity that is honest about being dishonest. Planned.",
    "k": "charity"
   },
   "cosmicjoke.lol": {
@@ -367,7 +367,7 @@
   },
   "definitelyreal.charity": {
    "t": "Definitely Real Charity",
-   "p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
+   "p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Planned.",
    "k": "charity"
   },
   "delulu.monster": {
@@ -437,12 +437,12 @@
   },
   "holy.charity": {
    "t": "Holy Charity",
-   "p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
+   "p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Planned.",
    "k": "charity"
   },
   "honorable.charity": {
    "t": "Honorable Charity",
-   "p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
+   "p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Planned.",
    "k": "charity"
   },
   "hornswoggl.ing": {
@@ -532,7 +532,7 @@
   },
   "notascam.charity": {
    "t": "Not a Scam Charity",
-   "p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
+   "p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Planned.",
    "k": "charity"
   },
   "oneclicksite.click": {
@@ -562,7 +562,7 @@
   },
   "renegade.charity": {
    "t": "Renegade Charity",
-   "p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
+   "p": "Satire: the charity that tells you up front it is all for itself. Planned.",
    "k": "charity"
   },
   "robobrew.beer": {
@@ -602,12 +602,12 @@
   },
   "totallylegit.charity": {
    "t": "Totally Legit Charity",
-   "p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
+   "p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Planned.",
    "k": "charity"
   },
   "trustme.charity": {
    "t": "Trust Me Charity",
-   "p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
+   "p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Planned.",
    "k": "charity"
   },
   "underthebed.monster": {
@@ -627,7 +627,7 @@
   },
   "virtuous.charity": {
    "t": "Virtuous Charity",
-   "p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
+   "p": "Giving as a practice of good character, sincere and plain. Planned.",
    "k": "charity"
   },
   "webbuild.ing": {
@@ -694,7 +694,7 @@
   "charity": {
    "sub": "A giving and trust idea in the elevat.ing family",
    "b": [
-    "Donations open soon.",
+    "Planned.",
     "Learn to check any charity before you give: look up its public records and how it spends money.",
     "Real charities welcome questions. Pressure and secrecy are red flags."
    ]

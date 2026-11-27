@@ -403,7 +403,7 @@
   }
   document.addEventListener("click", function (e) { var b = e.target.closest && e.target.closest("[data-wiki]"); if (b) { e.preventDefault(); wikiDialog(); } });
   var x = new XMLHttpRequest();
-  x.open("GET", "x/sites.json");
+  x.open("GET", "x/sites.json?v=20261127p2");
   x.onload = function () {
     var db; try { db = JSON.parse(x.responseText); } catch (e) { return; }
     (db.live || []).forEach(function (h) { liveSet[h] = 1; });
@@ -411,7 +411,7 @@
   };
   x.send();
   var y = new XMLHttpRequest();
-  y.open("GET", "x/domains.json?v=20261127b");
+  y.open("GET", "x/domains.json?v=20261127p2");
   y.onload = function () { var d; try { d = JSON.parse(y.responseText); } catch (e) { return; } buildList(d); };
   y.send();
 })();

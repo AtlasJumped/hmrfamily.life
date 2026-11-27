@@ -266,7 +266,7 @@
 "c": "Giving and trust",
 "s": 8.0,
 "a": 4.0,
-"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Donations open soon.",
+"p": "A sincere home for honorable giving: give with care, and honor the people who do right by others. Planned.",
 "u": "https://honorable.charity/",
 "m": "Live",
 "sale": "free"
@@ -446,7 +446,7 @@
 "c": "Giving and trust",
 "s": 7.0,
 "a": 5.0,
-"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Donations open soon.",
+"p": "This is not a scam. We know that is exactly what a scam would say, and we say it anyway. Planned.",
 "u": "https://notascam.charity/",
 "m": "Live",
 "sale": "free"
@@ -576,7 +576,7 @@
 "c": "Giving and trust",
 "s": 7.0,
 "a": 4.0,
-"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Donations open soon.",
+"p": "Trust us. Yes, we know that is what a scam says too. It is still not a scam. Planned.",
 "u": "https://trustme.charity/",
 "m": "Live",
 "sale": "free"
@@ -756,7 +756,7 @@
 "c": "Giving and trust",
 "s": 7.0,
 "a": 3.0,
-"p": "We spend it however we want. At least we are honest about it. Donations open soon.",
+"p": "Satire: a charity that is honest about being dishonest. Planned.",
 "u": "https://corrupt.charity/",
 "m": "Live",
 "sale": "free"
@@ -2456,7 +2456,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 5.0,
-"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Donations open soon.",
+"p": "Definitely real. Very real. The realest. We can tell this sounds like a scam, and it is not one. Planned.",
 "u": "https://definitelyreal.charity/",
 "m": "Live",
 "sale": "free"
@@ -3116,7 +3116,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 4.0,
-"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Donations open soon.",
+"p": "Totally legit. Completely, entirely, one hundred percent legit. Please do not look into it. Okay, you can look into it. Planned.",
 "u": "https://totallylegit.charity/",
 "m": "Live",
 "sale": "free"
@@ -3816,7 +3816,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 3.0,
-"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Donations open soon.",
+"p": "Certified by us, which we admit does not count for much. It looks like a scam and it is not one. Planned.",
 "u": "https://certified.charity/",
 "m": "Live",
 "sale": "free"
@@ -3826,7 +3826,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 3.0,
-"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Donations open soon.",
+"p": "Giving as a sacred act, in the spirit of the great traditions. Sincere and plain. Planned.",
 "u": "https://holy.charity/",
 "m": "Live",
 "sale": "free"
@@ -3836,7 +3836,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 3.0,
-"p": "Gifts here go toward a personal gift for the builder. We are telling you up front. Donations open soon.",
+"p": "Satire: the charity that tells you up front it is all for itself. Planned.",
 "u": "https://renegade.charity/",
 "m": "Live",
 "sale": "free"
@@ -3846,7 +3846,7 @@
 "c": "Giving and trust",
 "s": null,
 "a": 3.0,
-"p": "Giving as a practice of good character, sincere and plain. Donations open soon.",
+"p": "Giving as a practice of good character, sincere and plain. Planned.",
 "u": "https://virtuous.charity/",
 "m": "Live",
 "sale": "free"
