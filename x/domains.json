@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-26",
+"updated": "2026-11-27",
 "domains": [
 {
 "h": "claudebomb.com",
@@ -10,6 +10,96 @@
 "u": "https://claudebomb.com/",
 "m": "HMR family",
 "sale": "keep"
+},
+{
+"h": "underthebed.monster",
+"c": "Fun and games",
+"s": 10.0,
+"a": 7.0,
+"p": "Bedtime stories where the monster under the bed is your friend.",
+"u": "https://underthebed.monster/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "fennsma.sh",
+"c": "Fun and games",
+"s": 10.0,
+"a": 2.0,
+"p": "Smash things in a game made for joy and stress relief.",
+"u": "https://fennsma.sh/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "delulu.monster",
+"c": "Fun and games",
+"s": 9.5,
+"a": 6.0,
+"p": "Dream big on purpose, then turn the dream into one small real step today.",
+"u": "https://delulu.monster/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "cosmicjoke.lol",
+"c": "Fun and games",
+"s": 9.5,
+"a": 4.0,
+"p": "The funniest true facts about the universe.",
+"u": "https://cosmicjoke.lol/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "overreact.ing",
+"c": "Fun and games",
+"s": 9.5,
+"a": 4.0,
+"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
+"u": "https://overreact.ing/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "dragonrid.ing",
+"c": "Fun and games",
+"s": 9.5,
+"a": 5.0,
+"p": "An adventure game where you ride dragons across worlds.",
+"u": "https://dragonrid.ing/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "doomscroll.monster",
+"c": "Fun and games",
+"s": 9.0,
+"a": 6.0,
+"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
+"u": "https://doomscroll.monster/",
+"m": "Live",
+"sale": "feat"
+},
+{
+"h": "cosmicru.sh",
+"c": "Fun and games",
+"s": 9.0,
+"a": 4.0,
+"p": "A fast space game for one quick break.",
+"u": "https://cosmicru.sh/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "createjoy.art",
+"c": "Fun and games",
+"s": 9.0,
+"a": 5.0,
+"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
+"u": "https://createjoy.art/",
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "grubbing.money",
@@ -92,62 +182,12 @@
 "sale": "keep"
 },
 {
-"h": "underthebed.monster",
-"c": "Fun and games",
-"s": 9.0,
-"a": 7.0,
-"p": "Bedtime stories where the monster under the bed is your friend.",
-"u": "https://underthebed.monster/",
-"m": "Live",
-"sale": "feat"
-},
-{
-"h": "delulu.monster",
-"c": "Fun and games",
-"s": 9.0,
-"a": 6.0,
-"p": "Dream big on purpose, then turn the dream into one small real step today.",
-"u": "https://delulu.monster/",
-"m": "Live",
-"sale": "feat"
-},
-{
 "h": "discombobulat.ing",
 "c": "Fun and games",
 "s": 9.0,
 "a": 5.0,
 "p": "Puzzles and illusions that scramble your brain, in a good way.",
 "u": "https://discombobulat.ing/",
-"m": "Live",
-"sale": "feat"
-},
-{
-"h": "cosmicjoke.lol",
-"c": "Fun and games",
-"s": 9.0,
-"a": 4.0,
-"p": "The funniest true facts about the universe.",
-"u": "https://cosmicjoke.lol/",
-"m": "Live",
-"sale": "feat"
-},
-{
-"h": "overreact.ing",
-"c": "Fun and games",
-"s": 9.0,
-"a": 4.0,
-"p": "Express your reaction, then laugh at it. Part of the Reaction App family.",
-"u": "https://overreact.ing/",
-"m": "Live",
-"sale": "feat"
-},
-{
-"h": "dragonrid.ing",
-"c": "Fun and games",
-"s": 8.5,
-"a": 5.0,
-"p": "An adventure game where you ride dragons across worlds.",
-"u": "https://dragonrid.ing/",
 "m": "Live",
 "sale": "feat"
 },
@@ -179,16 +219,6 @@
 "p": "For every coder who said it worked on my machine.",
 "u": null,
 "m": "Parked",
-"sale": "feat"
-},
-{
-"h": "fennsma.sh",
-"c": "Fun and games",
-"s": 8.5,
-"a": 2.0,
-"p": "Smash things in a game made for joy and stress relief.",
-"u": "https://fennsma.sh/",
-"m": "Live",
 "sale": "feat"
 },
 {
@@ -262,16 +292,6 @@
 "sale": "feat"
 },
 {
-"h": "doomscroll.monster",
-"c": "Fun and games",
-"s": 7.5,
-"a": 6.0,
-"p": "Catch the doomscroll monster and trade endless scrolling for something that feels good.",
-"u": "https://doomscroll.monster/",
-"m": "Live",
-"sale": "feat"
-},
-{
 "h": "aiforecast.ing",
 "c": "AI agents and business",
 "s": 7.5,
@@ -329,16 +349,6 @@
 "p": "For pros at making things up: spot AI hallucinations and laugh at the best ones.",
 "u": null,
 "m": "Parked",
-"sale": "sale"
-},
-{
-"h": "cosmicru.sh",
-"c": "Fun and games",
-"s": 7.5,
-"a": 4.0,
-"p": "A fast space game for one quick break.",
-"u": "https://cosmicru.sh/",
-"m": "Live",
 "sale": "sale"
 },
 {
@@ -750,6 +760,96 @@
 "u": "https://corrupt.charity/",
 "m": "Live",
 "sale": "free"
+},
+{
+"h": "aihir.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 6.0,
+"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
+"u": "https://aihir.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aiautomat.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 6.0,
+"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
+"u": "https://aiautomat.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aiplann.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 5.0,
+"p": "Plans for projects, trips, and weeks that adjust when life happens.",
+"u": "https://aiplann.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aiintern.tech",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 6.0,
+"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
+"u": "https://aiintern.tech/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aiphotoedit.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 4.0,
+"p": "Edit photos by describing what you want, and keep the original safe.",
+"u": "https://aiphotoedit.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aiquot.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 4.0,
+"p": "Quotes customers understand, sent the same day they ask.",
+"u": "https://aiquot.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aitranslat.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 6.0,
+"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
+"u": "https://aitranslat.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aivideoedit.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 5.0,
+"p": "Cut, caption, and polish video by describing what you want.",
+"u": "https://aivideoedit.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "aivoiceact.ing",
+"c": "AI agents and business",
+"s": 7.0,
+"a": 5.0,
+"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
+"u": "https://aivoiceact.ing/",
+"m": "Live",
+"sale": "sale"
 },
 {
 "h": "agentstaff.ing",
@@ -1382,32 +1482,12 @@
 "sale": "sale"
 },
 {
-"h": "aihir.ing",
-"c": "AI agents and business",
-"s": 5.5,
-"a": 6.0,
-"p": "Fairer hiring with AI that explains every recommendation and checks itself for bias.",
-"u": "https://aihir.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "agentmonitor.ing",
 "c": "AI agents and business",
 "s": 5.5,
 "a": 5.0,
 "p": "Watch what your AI agents do, catch mistakes early, and keep a clear record of every action.",
 "u": "https://agentmonitor.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
-"h": "aivideoedit.ing",
-"c": "AI agents and business",
-"s": 5.5,
-"a": 5.0,
-"p": "Cut, caption, and polish video by describing what you want.",
-"u": "https://aivideoedit.ing/",
 "m": "Live",
 "sale": "sale"
 },
@@ -1612,26 +1692,6 @@
 "sale": "sale"
 },
 {
-"h": "hmr.family",
-"c": "HMR family",
-"s": null,
-"a": 7.0,
-"p": "A second address for this hub.",
-"u": "https://hmr.family/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
-"h": "hmrfamily.life",
-"c": "HMR family",
-"s": null,
-"a": 7.0,
-"p": "The hub of the HMR family of websites.",
-"u": "https://hmrfamily.life/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
 "h": "mygrandma.life",
 "c": "AI help for seniors and families",
 "s": null,
@@ -1642,32 +1702,12 @@
 "sale": "maybe"
 },
 {
-"h": "universemodel.ai",
-"c": "HMR family",
-"s": null,
-"a": 7.0,
-"p": "The closest source of truth for HMR, the holistic model of reality.",
-"u": "https://universemodel.ai/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
 "h": "agentbrew.beer",
 "c": "Brewing",
 "s": null,
 "a": 6.0,
 "p": "An AI brewing assistant that plans recipes, tracks fermentation, and keeps a brew log for home and craft brewers.",
 "u": "https://agentbrew.beer/",
-"m": "Live",
-"sale": "sale"
-},
-{
-"h": "aiautomat.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 6.0,
-"p": "Turn the boring, repeated parts of your work into automations you understand and control.",
-"u": "https://aiautomat.ing/",
 "m": "Live",
 "sale": "sale"
 },
@@ -1752,16 +1792,6 @@
 "sale": "sale"
 },
 {
-"h": "aiintern.tech",
-"c": "AI agents and business",
-"s": null,
-"a": 6.0,
-"p": "An AI intern for small teams: research, drafts, and busywork, checked by a person.",
-"u": "https://aiintern.tech/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "aiinvoic.ing",
 "c": "AI agents and business",
 "s": null,
@@ -1798,16 +1828,6 @@
 "a": 6.0,
 "p": "Property management help for small landlords: tenants, repairs, and rent in one calm place.",
 "u": "https://aipropertymanager.tech/",
-"m": "Live",
-"sale": "sale"
-},
-{
-"h": "aitranslat.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 6.0,
-"p": "Translation with AI and a human check, for businesses that need to be understood everywhere.",
-"u": "https://aitranslat.ing/",
 "m": "Live",
 "sale": "sale"
 },
@@ -2042,26 +2062,6 @@
 "sale": "sale"
 },
 {
-"h": "hmrfascia.life",
-"c": "HMR family",
-"s": null,
-"a": 6.0,
-"p": "The body and connective tissue (often called fascia).",
-"u": null,
-"m": "HMR family",
-"sale": "keep"
-},
-{
-"h": "hmrfunsies.fun",
-"c": "HMR family",
-"s": null,
-"a": 6.0,
-"p": "Held for now.",
-"u": null,
-"m": "HMR family",
-"sale": "maybe"
-},
-{
 "h": "maincharacter.quest",
 "c": "Fun and games",
 "s": null,
@@ -2130,16 +2130,6 @@
 "u": null,
 "m": "Parked",
 "sale": "free"
-},
-{
-"h": "universalintelligence.pro",
-"c": "HMR family",
-"s": null,
-"a": 6.0,
-"p": "Universal intelligence, HMR's first layer.",
-"u": null,
-"m": "Parked",
-"sale": "keep"
 },
 {
 "h": "65plus.help",
@@ -2282,16 +2272,6 @@
 "sale": "sale"
 },
 {
-"h": "aiplann.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 5.0,
-"p": "Plans for projects, trips, and weeks that adjust when life happens.",
-"u": "https://aiplann.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "aisalesrep.tech",
 "c": "AI agents and business",
 "s": null,
@@ -2318,16 +2298,6 @@
 "a": 5.0,
 "p": "Understand your taxes in plain words before you file, and know what to ask a professional.",
 "u": "https://aitaxfil.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
-"h": "aivoiceact.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 5.0,
-"p": "Voice acting with AI, built with consent and fair pay for the human voices behind it.",
-"u": "https://aivoiceact.ing/",
 "m": "Live",
 "sale": "sale"
 },
@@ -2482,16 +2452,6 @@
 "sale": "sale"
 },
 {
-"h": "createjoy.art",
-"c": "Fun and games",
-"s": null,
-"a": 5.0,
-"p": "Make something that brings joy, share it, and inspire someone else to make something too.",
-"u": "https://createjoy.art/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "definitelyreal.charity",
 "c": "Giving and trust",
 "s": null,
@@ -2572,16 +2532,6 @@
 "sale": "sale"
 },
 {
-"h": "hmrlanguage.life",
-"c": "HMR family",
-"s": null,
-"a": 5.0,
-"p": "Language.",
-"u": null,
-"m": "HMR family",
-"sale": "keep"
-},
-{
 "h": "microsaas.ing",
 "c": "AI agents and business",
 "s": null,
@@ -2620,26 +2570,6 @@
 "u": null,
 "m": "Parked",
 "sale": "sale"
-},
-{
-"h": "biotensegrities.pro",
-"c": "HMR family",
-"s": null,
-"a": 5.0,
-"p": "HMR's word for living bodies: biotensegrities.",
-"u": null,
-"m": "Parked",
-"sale": "keep"
-},
-{
-"h": "biotensegrity.pro",
-"c": "HMR family",
-"s": null,
-"a": 5.0,
-"p": "The body as a biotensegrity, explained simply.",
-"u": null,
-"m": "Parked",
-"sale": "keep"
 },
 {
 "h": "bodyworker.pro",
@@ -2832,16 +2762,6 @@
 "sale": "sale"
 },
 {
-"h": "universemodel.app",
-"c": "HMR family",
-"s": null,
-"a": 5.0,
-"p": "Points to universemodel.ai.",
-"u": null,
-"m": "Parked",
-"sale": "keep"
-},
-{
 "h": "wholebody.pro",
 "c": "Body and movement",
 "s": null,
@@ -2982,16 +2902,6 @@
 "sale": "sale"
 },
 {
-"h": "aiphotoedit.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 4.0,
-"p": "Edit photos by describing what you want, and keep the original safe.",
-"u": "https://aiphotoedit.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "aiplumber.tech",
 "c": "AI agents and business",
 "s": null,
@@ -3018,16 +2928,6 @@
 "a": 4.0,
 "p": "Write winning proposals faster, with every claim backed by a source.",
 "u": "https://aiproposal.tech/",
-"m": "Live",
-"sale": "sale"
-},
-{
-"h": "aiquot.ing",
-"c": "AI agents and business",
-"s": null,
-"a": 4.0,
-"p": "Quotes customers understand, sent the same day they ask.",
-"u": "https://aiquot.ing/",
 "m": "Live",
 "sale": "sale"
 },
@@ -3122,16 +3022,6 @@
 "sale": "sale"
 },
 {
-"h": "elevat.ing",
-"c": "Fun and games",
-"s": null,
-"a": 4.0,
-"p": "Elevating humanity: small daily actions that lift you and the people around you.",
-"u": "https://elevat.ing/",
-"m": "Live",
-"sale": "sale"
-},
-{
 "h": "endoflifeplan.help",
 "c": "AI help for seniors and families",
 "s": null,
@@ -3190,16 +3080,6 @@
 "u": "https://goodguys.charity/",
 "m": "Live",
 "sale": "free"
-},
-{
-"h": "hmruniverse.life",
-"c": "HMR family",
-"s": null,
-"a": 4.0,
-"p": "Held for now.",
-"u": null,
-"m": "HMR family",
-"sale": "keep"
 },
 {
 "h": "philanthropic.charity",
@@ -3942,36 +3822,6 @@
 "sale": "free"
 },
 {
-"h": "hmrmath.life",
-"c": "HMR family",
-"s": null,
-"a": 3.0,
-"p": "HMR mathematics.",
-"u": "https://hmrmath.life/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
-"h": "hmrphysics.life",
-"c": "HMR family",
-"s": null,
-"a": 3.0,
-"p": "HMR physics.",
-"u": "https://hmrphysics.life/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
-"h": "hmrscience.life",
-"c": "HMR family",
-"s": null,
-"a": 3.0,
-"p": "The sciences beyond math and physics.",
-"u": "https://hmrscience.life/",
-"m": "HMR family",
-"sale": "keep"
-},
-{
 "h": "holy.charity",
 "c": "Giving and trust",
 "s": null,
@@ -4010,16 +3860,6 @@
 "u": "https://wonderful.charity/",
 "m": "Live",
 "sale": "free"
-},
-{
-"h": "universemodel.life",
-"c": "HMR family",
-"s": null,
-"a": 3.0,
-"p": "Points to universemodel.ai.",
-"u": null,
-"m": "HMR family",
-"sale": "keep"
 },
 {
 "h": "couchadvice.pro",
@@ -4110,6 +3950,166 @@
 "u": "https://botlender.loan/",
 "m": "Live",
 "sale": "sale"
+},
+{
+"h": "hmr.family",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "A second address for this hub.",
+"u": "https://hmr.family/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrfamily.life",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "The hub of the HMR family of websites.",
+"u": "https://hmrfamily.life/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "universemodel.ai",
+"c": "HMR family",
+"s": null,
+"a": 7.0,
+"p": "The closest source of truth for HMR, the holistic model of reality.",
+"u": "https://universemodel.ai/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrfascia.life",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "The body and connective tissue (often called fascia).",
+"u": null,
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrfunsies.fun",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Held for now.",
+"u": null,
+"m": "HMR family",
+"sale": "maybe"
+},
+{
+"h": "universalintelligence.pro",
+"c": "HMR family",
+"s": null,
+"a": 6.0,
+"p": "Universal intelligence, HMR's first layer.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "hmrlanguage.life",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Language.",
+"u": null,
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "biotensegrities.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "HMR's word for living bodies: biotensegrities.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "biotensegrity.pro",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "The body as a biotensegrity, explained simply.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "universemodel.app",
+"c": "HMR family",
+"s": null,
+"a": 5.0,
+"p": "Points to universemodel.ai.",
+"u": null,
+"m": "Parked",
+"sale": "keep"
+},
+{
+"h": "elevat.ing",
+"c": "Fun and games",
+"s": null,
+"a": 4.0,
+"p": "Elevating humanity: small daily actions that lift you and the people around you.",
+"u": "https://elevat.ing/",
+"m": "Live",
+"sale": "sale"
+},
+{
+"h": "hmruniverse.life",
+"c": "HMR family",
+"s": null,
+"a": 4.0,
+"p": "Held for now.",
+"u": null,
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrmath.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "HMR mathematics.",
+"u": "https://hmrmath.life/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrphysics.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "HMR physics.",
+"u": "https://hmrphysics.life/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "hmrscience.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "The sciences beyond math and physics.",
+"u": "https://hmrscience.life/",
+"m": "HMR family",
+"sale": "keep"
+},
+{
+"h": "universemodel.life",
+"c": "HMR family",
+"s": null,
+"a": 3.0,
+"p": "Points to universemodel.ai.",
+"u": null,
+"m": "HMR family",
+"sale": "keep"
 }
 ]
 }
