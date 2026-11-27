@@ -1,4 +1,4 @@
-/* ELV8 dock v6.10.0 (Nov 27, Leo's 17:57Z review, his latest word): ONE button standard on every site: React on the left, ELV8 in the middle, the mic on the right;
+/* ELV8 dock v6.10.1 (Nov 27, Leo's 17:57Z review, his latest word): ONE button standard on every site: React on the left, ELV8 in the middle, the mic on the right;
    no browser back / forward buttons and no layout choices or Shuffle. No "always free" line under the ribbon or in the mic window.
    React panel: no "How does this make you feel?", no "two-way deal" line, no "Send my rating"; the slider stays and its value goes with the reaction;
    reactions grouped positive then negative, last row a full-width "Burn it all" in darker red; about half the height on phones.
@@ -3349,7 +3349,7 @@
 
     var css = el('style'); css.id = 'hmr-v68-css';
     css.textContent = [
-      '.hmr-dock{--hmr-pw:116px}@media (max-width:480px){.hmr-dock{--hmr-pw:104px}}@media (max-width:374px){.hmr-dock{--hmr-pw:90px}}',
+      'html,.hmr-dock{--hmr-pw:116px}@media (max-width:480px){html,.hmr-dock{--hmr-pw:104px}}@media (max-width:374px){html,.hmr-dock{--hmr-pw:90px}}',
       // joystick (default): [space] ELV8 with four arrows [space] Mic; no back, forward or React. Equal side columns keep ELV8 centred.
       'html.hmr-lay-joy .hmr-dock,html.hmr-lay-joyr .hmr-dock{grid-template-columns:var(--hmr-c) minmax(0,1fr) auto minmax(0,1fr) var(--hmr-c)!important}',
       'html.hmr-lay-joy .hmr-dock>#hmr-pad,html.hmr-lay-joyr .hmr-dock>#hmr-pad{grid-column:3}html.hmr-lay-joy .hmr-dock>#hmr-speak,html.hmr-lay-joyr .hmr-dock>#hmr-speak{grid-column:5}',
@@ -3379,7 +3379,7 @@
       '.hmr-dock>#hmr-speak{width:var(--hmr-c)!important;height:var(--hmr-c)!important;background:conic-gradient(from 210deg,#e0307a,#f59e0b,#22c55e,#06b6d4,#8b5cf6,#e0307a)!important}.hmr-dock>#hmr-speak svg{width:24px;height:24px}',
       '.hmr-dock>#hmr-speak[aria-expanded="true"]{background:linear-gradient(135deg,#dc2626,#7f1d1d)!important}',
       // panels open above the taller joystick
-      'html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-rxp,html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-fbp,html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-spk,html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-fzm{bottom:calc(' + BASE + ' + var(--hmr-pw) + 8px)!important}',
+      'html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-rxp,html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-fbp,html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-fzm{bottom:calc(' + BASE + ' + var(--hmr-pw) + 8px)!important}@media (min-width:720px){html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-spk{bottom:calc(' + BASE + ' + var(--hmr-pw) + 8px)!important}}',
       'html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmr-spacer{height:130px!important}',
       // wider dashboard and studio on wide screens
       '@media (min-width:720px){.hmrd{width:min(680px,calc(100vw - 32px))!important}html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmrd:not(.hmrd-moved){bottom:calc(' + BASE + ' + 132px)!important}html:is(.hmr-lay-joy,.hmr-lay-joyr) .hmrd-toast{bottom:calc(' + BASE + ' + 138px)!important}}',
