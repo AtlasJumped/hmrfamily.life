@@ -16,7 +16,7 @@
 })();
 (function(){if(document.querySelector('script[src*="hmr-aud.js"]'))return;var a=document.createElement('script');a.src='https://hmrfamily.life/x/hmr-aud.js?v=1';a.defer=true;document.head.appendChild(a);})();
 
-/* elevat.ing family: the ownership caption at the top (with the Thanksgiving welcome), and the "who we are" text without HMR or any sale wording. */
+/* elevat.ing family: the ownership caption at the top, and the "who we are" text without HMR or any sale wording. */
 (function(){
   var d=document,b=d.body; if(!b) return;
   var host=location.hostname.replace(/^www\./,'');
@@ -25,18 +25,14 @@
     c.style.cssText="font:13px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;text-align:center;padding:6px 12px;background:#fffdf8;color:#4a4760;border-bottom:1px solid #e8e3d6;position:relative;z-index:30";
     c.appendChild(d.createTextNode('This website is owned by the person who owns this website. '));
     var a=d.createElement('a'); a.href='https://elevat.ing/'; a.textContent='elevat.ing'; a.style.cssText='color:inherit;font-weight:700'; c.appendChild(a);
-    var t=d.createElement('span'); t.style.cssText='display:block;margin-top:2px';
-    var tb=d.createElement('b'); tb.textContent='Happy Thanksgiving 2026.'; t.appendChild(tb);
-    t.appendChild(d.createTextNode(' Our goal is to take all of the best content from across the internet and consolidate it into one always free, ad-free hub of human innovation.'));
-    c.appendChild(t);
     var sk=d.querySelector('a.skip'); if(sk&&sk.parentNode===b) b.insertBefore(c,sk.nextSibling); else b.insertBefore(c,b.firstChild);
   }
   var w=d.querySelector('.f-d2'), p=w&&w.parentNode;
   if(p&&p.tagName==='P'){
     p.textContent='';
-    p.appendChild(d.createTextNode(host+' is one of our system of elevating websites: ideas we are testing in the open, built with AI. Every site in the '));
+    p.appendChild(d.createTextNode(host+' is one of our system of elevating websites: ideas we are testing in the open, built with AI. Part of the '));
     var e=d.createElement('a'); e.href='https://elevat.ing/'; e.textContent='elevat.ing family of websites'; p.appendChild(e);
-    p.appendChild(d.createTextNode(' is always free, forever, with no ads. Nothing here will ever ask you for money.'));
+    p.appendChild(d.createTextNode('.'));
   }
   [].forEach.call(d.querySelectorAll('a[href="https://hmrfamily.life/"]'),function(x){ if(/see all our sites/i.test(x.textContent)) x.href='https://elevat.ing/'; });
 })();
