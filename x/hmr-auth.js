@@ -1,7 +1,7 @@
 /* HMR family accounts: one account for every HMR family site (Supabase project "HMR Family").
    The key below is the publishable key, which is meant to be public in web pages. Row level security
    protects every table. Each site keeps its own session: log in on each site with the same email and password.
-   Shared copy: hmrfamily.life/x/hmr-auth.js (keep the two files the same). */
+   Shared file: one identical copy sits next to hmr-dash.js on every site (dock v6.9 / dash v1.9); keep them all the same. */
 (function () {
   if (window.HMRAuth) return;
   var URL_ = 'https://tudawxduevejltgmyrqm.supabase.co';

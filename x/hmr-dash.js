@@ -1,4 +1,9 @@
-/* HMR dash v1.7 (Nov 26): Log in is live. One HMR family account (email and password, Supabase via hmr-auth.js next to this file) works on every HMR site; the optional questions stay below it.
+/* ELV8 dash v1.9 (Nov 27, Leo's Nov 26 asks): title "Your elevating family experience dashboard" with a line on what it is; the header mark reads ELV8
+   and opens elevat.ing; only "Don't show this again" on the intro; "Your look is on" sits next to a "Switch to our look" button; Bigger text steps
+   100, 125, 140, 160% and enlarges the page text behind the dashboard; "Go back" after Back to top reopens the dashboard; Places lists the
+   elevat.ing family of websites (no HMR sites outside the HMR sites); "I'm having trouble" help; "Request a button"; a red "Are you sure?" reset;
+   a tap outside never closes it; Log in is live on every site (hmr-auth.js sits next to this file on every site).
+   HMR dash v1.7 (Nov 26): Log in is live. One HMR family account (email and password, Supabase via hmr-auth.js next to this file) works on every HMR site; the optional questions stay below it.
    HMR dash v1.6 (Nov 26, Leo): Log in asks a few optional questions (stored on this device); sharing enough and saying yes to new ideas about reality reveals a hidden invitation.
    HMR dash v1.5 (Nov 25, Leo's feedback): the dashboard can be dragged anywhere on the screen by its top bar, with a one-time hint.
    HMR dash v1.4: the HMR family experience dashboard, opened by the round HMR button in the center of the shared bottom bar (hmr-dock.js v6.5+).
@@ -20,7 +25,11 @@
 (function () {
   'use strict';
   if (window.HMRDash && window.HMRDash.version >= 1) return;
-  var doc = document, root = doc.documentElement, VERSION = 1.8;
+  var doc = document, root = doc.documentElement, VERSION = 1.9;
+  // v1.9 (Leo, Nov 26): the family name on every site is "the elevat.ing family of websites". HMR is not named on claudebomb.com or elevat.ing,
+  //   so there the account is the elevat.ing family account; the HMR sites keep their account name until he picks one.
+  var HIDEHMR = /(^|\.)(claudebomb\.com|elevat\.ing)$/i.test(location.hostname), HMRHOST = /(^|\.)(universemodel\.ai|hmrfamily\.life|hmrfascia\.life|hmr\.family|chronomath\.ai)$/i.test(location.hostname);
+  var FAM = 'elevat.ing family', ACCT = HIDEHMR ? 'elevat.ing family account' : 'HMR family account', ACSITES = HIDEHMR ? 'elevat.ing family site' : 'HMR family site';
   var SKIN_URL = 'https://hmrfamily.life/hmr-kit/skin.json';
   var AUTHSRC = (function () { try { var u = new URL(doc.currentScript.src, location.href); u.pathname = u.pathname.replace(/[^\/]*$/, 'hmr-auth.js'); u.search = '?v=1'; u.hash = ''; return u.toString(); } catch (e) { return 'https://hmrfamily.life/x/hmr-auth.js?v=1'; } })();
   var DRAG_KEY = 'hmr-dash-drag-hint', KEY = 'hmr-studio-v1', INTRO_KEY = 'hmr-dash-intro-off', SKIN_CACHE = 'hmr-skin-v1';
@@ -33,10 +42,11 @@
   function rm() { try { return matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } }
   function dock() { return window.HMRDock || {}; }
   function host() { return location.hostname.replace(/^www\./, ''); }
+  var TOUCHY = (function () { try { return matchMedia('(hover: none)').matches; } catch (e) { return false; } })();
 
   // ------------------------------------------------------------------ palettes (designed sets; each maps every color on a page to a role)
   var PALETTES = /*PALETTES*/[{"id":"midnight-tide","name":"Midnight Tide","mood":"Deep navy water with lantern light on the waves","dark":true,"bg":"#08152b","surface":"#0f2039","surface2":"#172c4a","line":"#2f476b","text":"#e8f1fb","muted":"#9db3cf","accent":"#4fd6c8","accent2":"#ffb36b","accent3":"#a9b8ff","onAccent":"#06121f","link":"#74dcd2","band":"#f3e6cc","onBand":"#0e1d33","grad":["#0b2a52","#0e4a5e","#2a2f78"],"onGrad":"#f2fbff","select":"#1f4f7a"},{"id":"nebula-nursery","name":"Nebula Nursery","mood":"Violet star clouds where new suns are born","dark":true,"bg":"#150f2b","surface":"#1e1640","surface2":"#2a1f55","line":"#4a3c80","text":"#efe9ff","muted":"#b5a9dc","accent":"#ff8ac2","accent2":"#7fd8ff","accent3":"#ffd670","onAccent":"#1a0f2e","link":"#c9a8ff","band":"#ffd9ec","onBand":"#2a1238","grad":["#2b1466","#6a1f7a","#143a7a"],"onGrad":"#ffffff","select":"#4a2f8a"},{"id":"forest-floor","name":"Forest Floor","mood":"Moss, lichen and mushrooms after rain","dark":true,"bg":"#121a12","surface":"#1a2519","surface2":"#233223","line":"#3d5239","text":"#ebf0df","muted":"#a9b79a","accent":"#c9e265","accent2":"#e89a5b","accent3":"#7fd1a8","onAccent":"#131a0c","link":"#b8dd7a","band":"#e9dfc3","onBand":"#1c2414","grad":["#1d3a22","#3a4a1c","#5a3b1c"],"onGrad":"#fbfbe9","select":"#3b5a2a"},{"id":"ink-and-gold","name":"Ink and Gold","mood":"Old manuscripts lit by gold leaf","dark":true,"bg":"#0d0e16","surface":"#161722","surface2":"#20222f","line":"#3b3d4f","text":"#f3ecd9","muted":"#b5ab94","accent":"#e3b34a","accent2":"#d98a7a","accent3":"#a9bfd6","onAccent":"#14110a","link":"#f0c868","band":"#e3b34a","onBand":"#14110a","grad":["#1c1a2b","#3a2c10","#5b4313"],"onGrad":"#fff6dc","select":"#4a3b12"},{"id":"oxblood-library","name":"Oxblood Library","mood":"Leather chairs, brass lamps, quiet reading","dark":true,"bg":"#240c10","surface":"#301218","surface2":"#3e1a21","line":"#683039","text":"#fbe9e4","muted":"#d0a9a6","accent":"#f08f84","accent2":"#a8cfa4","accent3":"#e8b96a","onAccent":"#260c0e","link":"#f2c488","band":"#efe0c4","onBand":"#33100f","grad":["#5a1420","#7a2a1a","#4a1838"],"onGrad":"#fff1ea","select":"#70242e"},{"id":"verdigris-copper","name":"Verdigris Copper","mood":"Aged copper roofs turning sea green","dark":true,"bg":"#0c2422","surface":"#12302d","surface2":"#1a3d39","line":"#33605a","text":"#e6f5ef","muted":"#9cc2b8","accent":"#e99a62","accent2":"#7fe0c4","accent3":"#f0d27a","onAccent":"#0d1f1c","link":"#f0b089","band":"#f1c9a5","onBand":"#2a1509","grad":["#0f4a44","#1c5a3c","#6a3a1c"],"onGrad":"#f5fff9","select":"#2a5f58"},{"id":"basalt-citrus","name":"Basalt Citrus","mood":"Volcanic stone with a squeeze of lime","dark":true,"bg":"#22252a","surface":"#2b2f35","surface2":"#363b42","line":"#555c66","text":"#f2f4ee","muted":"#b4bac0","accent":"#e4ee5a","accent2":"#ff8a73","accent3":"#6fd6ea","onAccent":"#1a1d10","link":"#dfe96a","band":"#e4ee5a","onBand":"#1c2008","grad":["#2f3a1a","#1e3f47","#4a2a2a"],"onGrad":"#fbffe8","select":"#4a5320"},{"id":"aurora-harbor","name":"Aurora Harbor","mood":"Northern lights over a still slate harbor","dark":true,"bg":"#18222f","surface":"#212d3c","surface2":"#2b394a","line":"#48596c","text":"#eaf3f7","muted":"#a9bac8","accent":"#7cf0b0","accent2":"#d7a2ff","accent3":"#7cc8ff","onAccent":"#0c1a18","link":"#8fe6c0","band":"#d8f5e6","onBand":"#12241f","grad":["#12443c","#1f3a6b","#4a2a70"],"onGrad":"#f4fffa","select":"#2f5a55"},{"id":"museum-paper","name":"Museum Paper","mood":"Quiet gallery walls and careful ink labels","dark":false,"bg":"#f4f2ec","surface":"#eae7de","surface2":"#dfdace","line":"#bfb8a8","text":"#23211c","muted":"#5f5a50","accent":"#1f4e79","accent2":"#9c3d2a","accent3":"#666515","onAccent":"#fffdf6","link":"#1c4a73","band":"#23201b","onBand":"#f4f2ec","grad":["#e9e2d0","#dcd6c6","#d3d9d6"],"onGrad":"#22201a","select":"#c9dcea"},{"id":"dawn-porch","name":"Dawn Porch","mood":"First light, warm tea, the house still asleep","dark":false,"bg":"#fff4ee","surface":"#ffe8dd","surface2":"#fad9cb","line":"#e0b5a3","text":"#3a1f2b","muted":"#74505b","accent":"#c23f3a","accent2":"#8a4fa8","accent3":"#ab560d","onAccent":"#ffffff","link":"#b0352f","band":"#3a1f4a","onBand":"#ffeedd","grad":["#ffd9b8","#ffc2c0","#e6c6f2"],"onGrad":"#3a1730","select":"#ffd0a8"},{"id":"citrus-grove","name":"Citrus Grove","mood":"Lemon rind, blood orange and green leaves","dark":false,"bg":"#fbfbe6","surface":"#f3f5d0","surface2":"#e8edb8","line":"#c0c986","text":"#1f2a12","muted":"#525f38","accent":"#3b7818","accent2":"#bf4409","accent3":"#a8166a","onAccent":"#ffffff","link":"#9a3a00","band":"#24400f","onBand":"#f6fbd0","grad":["#fff2a0","#ffd98a","#d6ef9a"],"onGrad":"#2a2a08","select":"#ffe27a"},{"id":"glasshouse","name":"Glasshouse","mood":"Ferns and orchids behind misted glass","dark":false,"bg":"#eef5ee","surface":"#e1eee3","surface2":"#d2e5d7","line":"#a6c4af","text":"#14291f","muted":"#476153","accent":"#1f6f52","accent2":"#a23b6a","accent3":"#85560f","onAccent":"#ffffff","link":"#17634a","band":"#123326","onBand":"#e8f7ec","grad":["#cfeedd","#bfe3e6","#e6ecc0"],"onGrad":"#10291f","select":"#b6e3c3"},{"id":"mesa-noon","name":"Mesa Noon","mood":"Red rock, turquoise and sun-baked sand","dark":false,"bg":"#f3dfc6","surface":"#ebd2b5","surface2":"#e2c4a2","line":"#c49d74","text":"#3b2416","muted":"#644532","accent":"#a53f23","accent2":"#1b6770","accent3":"#5b6619","onAccent":"#fff8ee","link":"#8f351c","band":"#1f5560","onBand":"#fdf1e0","grad":["#f5c99a","#eeaa88","#e3b7b0"],"onGrad":"#3a1a10","select":"#f3c88e"},{"id":"kite-weather","name":"Kite Weather","mood":"Big blue sky with bright paper kites","dark":false,"bg":"#eef5fc","surface":"#e0ecf9","surface2":"#d0e1f4","line":"#a3bddb","text":"#10233b","muted":"#465e7a","accent":"#1d5fd1","accent2":"#c2371f","accent3":"#856000","onAccent":"#ffffff","link":"#1a4fb5","band":"#12305e","onBand":"#eaf3ff","grad":["#cfe4ff","#dcd6ff","#ffe0d0"],"onGrad":"#142544","select":"#bcd8ff"},{"id":"lilac-letter","name":"Lilac Letter","mood":"A handwritten note pressed with flowers","dark":false,"bg":"#f6f1fb","surface":"#ebe3f6","surface2":"#dfd4ef","line":"#bfaedb","text":"#261a3d","muted":"#594b76","accent":"#6a3fc0","accent2":"#b5326e","accent3":"#1c6e7d","onAccent":"#ffffff","link":"#5a32ad","band":"#2a1b4d","onBand":"#f1e9ff","grad":["#e3d4ff","#ffd6ea","#d0e6ff"],"onGrad":"#24163f","select":"#dcc8ff"},{"id":"river-stone","name":"River Stone","mood":"Smooth gray pebbles and one bright koi","dark":false,"bg":"#e9ebe6","surface":"#dee1da","surface2":"#d0d5cc","line":"#a9b1a6","text":"#1d2422","muted":"#48524e","accent":"#b8451d","accent2":"#0f5f66","accent3":"#5a4a9a","onAccent":"#ffffff","link":"#0d565c","band":"#1d2a2a","onBand":"#eef3f0","grad":["#dfe5e0","#cfe0de","#e6dccf"],"onGrad":"#1a2422","select":"#bfe0dc"},{"id":"lighthouse","name":"Lighthouse","mood":"Maximum contrast with bold beacons on black","dark":true,"bg":"#000000","surface":"#121212","surface2":"#1d1d1d","line":"#4d4d4d","text":"#ffffff","muted":"#e0dfd0","accent":"#ffd60a","accent2":"#5ce1ff","accent3":"#ff9ecb","onAccent":"#000000","link":"#8fd6ff","band":"#ffffff","onBand":"#000000","grad":["#000000","#1a1040","#3a0a3a"],"onGrad":"#ffffff","select":"#0b4bb3"},{"id":"candle-hour","name":"Candle Hour","mood":"Low blue light, soft amber glow for late nights","dark":true,"bg":"#1a0f06","surface":"#251609","surface2":"#311d0c","line":"#5a391b","text":"#ffd9a0","muted":"#c9995c","accent":"#e8734a","accent2":"#ffc857","accent3":"#ff9a3c","onAccent":"#1a0d02","link":"#ffb866","band":"#f2c078","onBand":"#241203","grad":["#3a1c08","#5c2a0a","#6b1f10"],"onGrad":"#ffe2b0","select":"#5a3410"}]/*END*/;
-  var COPY = /*COPY*/{"introTitle":"Your HMR family experience dashboard","introBody":"This dashboard lets you shape how this site looks and feels for you. You can also tell us what you think, play a little, and find your way to other HMR family places.","dontShowLabel":"Don't show this again","dontShowExplain":"Tap this and next time the dashboard opens straight to its buttons; your choice is saved only in this browser on this site, and you can bring this intro back under \"Your settings\".","tiles":{"share":{"label":"Share","hint":"Send this page to someone you care about"},"top":{"label":"Back to top","hint":"Jump up, then hop back where you were"},"bigger":{"label":"Bigger text","hint":"Make the words easier to read"},"night":{"label":"Night colors","hint":"Switch to soft night colors and back"},"studio":{"label":"UI/UX studio","hint":"Pick colors, type, comfort and layout"},"improve":{"label":"Help us improve","hint":"Tell us what works and what does not"},"funsies":{"label":"Funsies","hint":"Little toys to play with"},"places":{"label":"Places","hint":"Parts of this page and other HMR sites"},"settings":{"label":"Your settings","hint":"See or reset the choices you saved"}},"studioIntro":"Every change you make here shows up right away and is saved in this browser."}/*END*/;
+  var COPY = /*COPY*/{"introTitle":"Your elevating family experience dashboard","introBody":"The elevat.ing family is a group of free, ad-free websites that share this bottom bar. This dashboard lets you shape how this site looks for you (only you see your changes), tell us what you think, play a little, and find the other sites in the family.","dontShowLabel":"Don't show this again","dontShowExplain":"Tap this and next time the dashboard opens straight to its buttons; your choice is saved only in this browser on this site, and you can bring this intro back under \"Your settings\".","tiles":{"share":{"label":"Share","hint":"Send this page to someone you care about"},"top":{"label":"Back to top","hint":"Jump up, then hop back where you were"},"bigger":{"label":"Bigger text","hint":"Make the words easier to read"},"night":{"label":"Night colors","hint":"Switch to soft night colors and back"},"studio":{"label":"UI/UX studio","hint":"Pick colors, type, comfort and layout"},"improve":{"label":"Help us improve","hint":"Tell us what works and what does not"},"funsies":{"label":"Funsies","hint":"Little toys to play with"},"places":{"label":"Places","hint":"Parts of this page and our other sites"},"settings":{"label":"Your settings","hint":"See or reset the choices you saved"}},"studioIntro":"Every change you make here shows up right away and is saved in this browser."}/*END*/;
   function C(k, d) { return COPY[k] || d; }
   function T(k, f) { var t = (COPY.tiles || {})[k] || {}; return t[f] || ''; }
   var HEX = /^#[0-9a-f]{6}$/;
@@ -214,7 +224,8 @@
     { id: 'modern', name: 'Modern', fam: '"Space Grotesk",system-ui,sans-serif', g: 'Space+Grotesk:wght@400;600;700' },
     { id: 'code', name: 'Typewriter', fam: '"JetBrains Mono",ui-monospace,monospace', g: 'JetBrains+Mono:wght@400;700' }
   ];
-  var SIZES = [90, 100, 112, 125, 140];
+  var SIZES = [90, 100, 112, 125, 140, 160];
+  var BIGSTEPS = [100, 125, 140, 160];   // v1.9: the Bigger text button steps 100, 125, 140, 160, then back to 100
   var TOGGLES = [
     { id: 'comfort', c: 'cf', name: 'Roomy lines', hint: 'More space between lines and words' },
     { id: 'calm', c: 'ca', name: 'Calm motion', hint: 'Stops page animations' },
@@ -247,6 +258,7 @@
     var s = styles[name]; if (!s) { s = styles[name] = el('style'); s.id = 'hmr-dash-' + name; s.setAttribute('data-hmr-ui', ''); }
     s.textContent = text || ''; if (!s.parentNode && doc.head) doc.head.appendChild(s);
   }
+  var ZOOMOK = (function () { try { return !!(window.CSS && CSS.supports && CSS.supports('zoom', '1.25')); } catch (e) { return false; } })();
   var NOTUI = ':not([data-hmr-ui]):not([data-hmr-ui] *):not(.hmr-dock):not(.hmr-dock *):not([class^="hmr-"]):not([class^="hmr-"] *)';
   var fontLinks = {};
   function loadFont(f) {
@@ -258,7 +270,7 @@
     var f = null; FONTS.concat(SKIN.fonts || []).forEach(function (x) { if (x.id === st.font) f = x; }); if (f) loadFont(f);
     var z = st.size / 100, B = 'body>*' + NOTUI;
     cssVar('type', (f && f.fam ? 'body :is(p,li,h1,h2,h3,h4,h5,h6,a,span,button,label,td,th,blockquote,input,textarea,select,summary,dt,dd,figcaption,small,strong,em,b,i,div,section,article,header,footer,nav,main,aside)' + NOTUI + ':not([class*="icon"]):not([class*="fa-"]):not([class*="material"]):not([class*="symbol"]):not([class*="glyph"]):not(i:empty):not(code):not(pre):not(kbd){font-family:' + f.fam + '!important}' : '') +
-      (z !== 1 ? B + '{zoom:' + z + '}' : ''));
+      (z !== 1 ? (ZOOMOK ? B + '{zoom:' + z + '!important}' : 'html{font-size:' + (z * 100) + '%!important}body :is(p,li,dd,dt,blockquote,td,th,figcaption,label,a,span,small,h1,h2,h3,h4,h5,h6,button,summary)' + NOTUI + '{font-size:' + z + 'em!important}') : ''));
     cssVar('comfort',
       (st.comfort ? 'body :is(p,li,dd,blockquote,td,figcaption)' + NOTUI + '{line-height:1.75!important;letter-spacing:.012em!important;word-spacing:.05em!important}' : '') +
       (st.calm ? 'body *' + NOTUI + ',body *' + NOTUI + '::before,body *' + NOTUI + '::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto!important}' : '') +
@@ -307,6 +319,8 @@
     write: '<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>',
     react: '<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5s1.3 2 3.5 2 3.5-2 3.5-2M9 9.5h.01M15 9.5h.01"/>',
     mark: '<path d="M4 20h4L20 8l-4-4L4 16z" opacity=".5"/><path d="M3 21h18"/>',
+    plus: '<circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/>',
+    help: '<circle cx="12" cy="12" r="9"/><path d="M12 16v.01M12 13a2 2 0 1 0-2-2"/>',
     lost: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1V14M12 17h.01"/>',
     dice: '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h.01M15 15h.01M15 9h.01M9 15h.01M12 12h.01"/>',
     box: '<path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',
@@ -322,7 +336,7 @@
     '[data-hmr-ui] svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;display:block;flex:none}',
     '[data-hmr-ui] button{font:inherit;color:inherit;margin:0;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}',
     '[data-hmr-ui] button:focus-visible,[data-hmr-ui] a:focus-visible,[data-hmr-ui] input:focus-visible{outline:3px solid var(--d-acc);outline-offset:2px}',
-    '.hmrd-veil{position:fixed;inset:0;z-index:99993;background:rgba(5,6,14,.35);opacity:0;transition:opacity .2s}.hmrd-veil.on{opacity:1}',
+    '.hmrd-veil{display:none!important}',
     '.hmrd{position:fixed;z-index:99994;left:0;right:0;bottom:0;max-height:min(86vh,720px);max-height:min(86dvh,calc(100dvh - 96px),720px);display:flex;flex-direction:column;background:var(--d-bg);color:var(--d-fg);border:1px solid var(--d-line);border-bottom:0;border-radius:24px 24px 0 0;box-shadow:0 -18px 60px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);padding:6px 14px calc(14px + env(safe-area-inset-bottom));transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);font-size:15px;text-align:left}',
     '.hmrd.on{transform:none}',
     '.hmrd-drag{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}.hmrd.hmrd-moved{border-radius:24px;border-bottom:1px solid var(--d-line);transform:none!important;opacity:1!important}.hmrd.hmrd-moved .hmrd-grab{display:block}',
@@ -337,7 +351,11 @@
     '.hmrd-confirm{padding:12px;border-radius:16px;border:1px solid rgba(239,68,68,.55);background:rgba(239,68,68,.12)}.hmrd-confirm p{margin:0 0 10px;font-size:14px;line-height:1.45;color:var(--d-fg)}.hmrd-confirm .row{display:flex;gap:8px;flex-wrap:wrap}',
     '.hmrd-pill.danger{background:#ef4444;border-color:#ef4444;color:#fff}',
     '.hmrd-ib{flex:none;width:44px;height:44px;border-radius:14px;border:1px solid var(--d-line);background:var(--d-tile);display:flex;align-items:center;justify-content:center;padding:0}.hmrd-ib:hover{background:var(--d-tile2)}',
-    '.hmrd-logo{flex:none;width:34px;height:34px;border-radius:50%;background:var(--d-grad);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10.5px;color:#fff;letter-spacing:.04em;box-shadow:0 0 0 2px rgba(255,255,255,.18)}',
+    '.hmrd-logo{flex:none;width:38px;height:38px;border-radius:50%;background:conic-gradient(from 210deg,#e0307a,#f59e0b,#06b6d4,#8b5cf6,#e0307a);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:10px;color:#fff!important;letter-spacing:0;text-decoration:none!important;text-shadow:0 1px 2px rgba(0,0,0,.6);box-shadow:0 0 0 2px rgba(255,255,255,.18);cursor:pointer}.hmrd-logo:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}',
+    '.hmrd-trouble{display:block;margin:0 0 6px auto;min-height:36px!important;font-size:13px}',
+    '.hmrd-help{margin-top:14px}.hmrd-faq{border:1px solid var(--d-line);border-radius:12px;padding:0 12px;margin:0 0 6px}.hmrd-faq summary{min-height:44px;display:flex;align-items:center;font-weight:700;cursor:pointer;color:var(--d-fg)}.hmrd-faq p{margin:0 0 10px;font-size:13.5px;line-height:1.45;color:var(--d-fg)}',
+    '.hmrd-sure{font-size:16px!important;font-weight:900;color:#ef4444!important}',
+    '.hmrd-foot{flex-wrap:wrap}.hmrd-foot>span:last-child{display:inline-flex;gap:6px}.hmrd-lk{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}.hmrd-our{min-height:36px!important;padding:0 12px!important;font-size:12.5px!important;font-weight:800}',
     '.hmrd-body{overflow:auto;overscroll-behavior:contain;padding:2px 2px 4px;margin:0 -2px}',
     '.hmrd-intro{position:relative;margin:4px 0 12px;padding:14px;border-radius:18px;background:linear-gradient(135deg,rgba(224,48,122,.22),rgba(245,158,11,.14) 50%,rgba(6,182,212,.18));border:1px solid var(--d-line)}',
     '.hmrd-intro h3{margin:0 0 6px;font-size:17px;font-weight:800;color:#fff}.hmrd-intro p{margin:0 0 10px;color:#e7e8f2;font-size:14.5px;line-height:1.45}',
@@ -432,14 +450,15 @@
     if (dash) return;
     cssVar('ui', CSS);
     veil = ui(el('div', 'hmrd-veil')); veil.hidden = true; veil.addEventListener('click', function () { close(true); });
-    dash = ui(el('section', 'hmrd')); dash.id = 'hmr-dash'; dash.setAttribute('role', 'dialog'); dash.setAttribute('aria-modal', 'true'); dash.setAttribute('aria-labelledby', 'hmrd-title'); dash.hidden = true;
+    dash = ui(el('section', 'hmrd')); dash.id = 'hmr-dash'; dash.setAttribute('role', 'dialog'); dash.setAttribute('aria-modal', 'false');   // v1.9: the page behind stays usable; only the ELV8 button, X, Escape or a swipe down close it
+    dash.setAttribute('aria-labelledby', 'hmrd-title'); dash.hidden = true;
     dash.appendChild(el('div', 'hmrd-grab'));
     var hd = el('div', 'hmrd-hd');
     var bk = btn('hmrd-ib hmrd-bk', '', 'Back to the dashboard'); bk.innerHTML = svg('back');
-    var logo = el('span', 'hmrd-logo', 'HMR'); logo.setAttribute('aria-hidden', 'true');
+    var logo = el('a', 'hmrd-logo', 'ELV8'); logo.href = 'https://elevat.ing/'; logo.target = '_blank'; logo.rel = 'noopener'; logo.setAttribute('aria-label', 'ELV8: open elevat.ing, the home of the elevat.ing family of websites'); logo.title = 'elevat.ing family of websites';
     var h = el('h2'); h.id = 'hmrd-title';
     var x = btn('hmrd-ib', '', 'Close the dashboard'); x.innerHTML = svg('x'); x.addEventListener('click', function () { close(true); });
-    var li = btn('hmrd-login', 'Log in', 'Log in or create your HMR family account'); li.addEventListener('click', function () { show('login'); });
+    var li = btn('hmrd-login', 'Log in', 'Log in or create your ' + ACCT); li.addEventListener('click', function () { show('login'); });
     bk.addEventListener('click', function () { show('home'); });
     hd.appendChild(bk); hd.appendChild(logo); hd.appendChild(h); hd.appendChild(li); hd.appendChild(x); dash.appendChild(hd);
     var body = el('div', 'hmrd-body'); dash.appendChild(body);
@@ -479,7 +498,7 @@
     var i = f.indexOf(doc.activeElement);
     if (e.shiftKey && i <= 0) { f[f.length - 1].focus(); e.preventDefault(); } else if (!e.shiftKey && i === f.length - 1) { f[0].focus(); e.preventDefault(); }
   }
-  var TITLES = { home: 'Your HMR family experience dashboard', improve: 'Improve this site', funsies: 'Funsies', places: 'Places', settings: 'Your settings', showcase: 'New from our studio', login: 'Log in' };
+  var TITLES = { home: 'Your elevating family experience dashboard', improve: 'Improve this site', funsies: 'Funsies', places: 'Places', settings: 'Your settings', showcase: 'New from our studio', login: 'Log in' };
   function show(v) {
     var VIEWS = { home: home, improve: improve, funsies: funsies, places: places, settings: settings, showcase: showcase, login: login };
     if (!VIEWS[v] || (v === 'showcase' && !SKIN.media.length)) v = 'home';
@@ -510,21 +529,23 @@
   function refocus(k) { var b = dash && dash.querySelector(k ? '[data-k="' + k + '"]' : '.hmrd-act'); try { if (b) b.focus({ preventScroll: true }); } catch (e) { } }
 
   function home(b) {
+    // v1.9 (Leo, Nov 25): "I'm having trouble" at the top jumps to a short help list at the bottom
+    var tr = btn('hmrd-link hmrd-trouble', 'I\'m having trouble'); tr.addEventListener('click', function () { var h = b.querySelector('.hmrd-help'); if (h) { try { h.scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'start' }); } catch (e) { h.scrollIntoView(); } var f = h.querySelector('button,a'); try { if (f) f.focus({ preventScroll: true }); } catch (e) { } } });
+    b.appendChild(tr);
     if (lsGet(INTRO_KEY) !== '1' && !introHidden) {
-      var it = el('div', 'hmrd-intro'); it.appendChild(el('h3', '', C('introTitle', 'Your HMR family experience dashboard')));
-      it.appendChild(el('p', '', C('introBody', 'This is your control panel for this site. Make it look and feel the way you like, tell us what you think, play a little, and find your way to the rest of the HMR family.')));
-      var r = el('div', 'row'), ok = btn('hmrd-pill pri', 'Got it'), no = btn('hmrd-pill', C('dontShowLabel', 'Don\'t show this again'));
-      ok.addEventListener('click', function () { introHidden = true; it.remove(); refocus(); });
+      var it = el('div', 'hmrd-intro'); it.appendChild(el('h3', '', C('introTitle', 'Your elevating family experience dashboard')));
+      it.appendChild(el('p', '', C('introBody', 'The elevat.ing family is a group of free, ad-free websites that share this bottom bar. This dashboard lets you shape how this site looks for you, tell us what you think, play a little, and find the other sites in the family.')));
+      // v1.9 (Leo, Nov 26): only "Don't show this again" (no "Got it")
+      var r = el('div', 'row'), no = btn('hmrd-pill pri', C('dontShowLabel', 'Don\'t show this again'));
       no.addEventListener('click', function () { lsSet(INTRO_KEY, '1'); it.remove(); refocus(); toast('Done. You can bring the intro back in Your settings.'); });
-      r.appendChild(ok); r.appendChild(no); it.appendChild(r);
+      r.appendChild(no); it.appendChild(r);
       it.appendChild(el('p', 'why', C('dontShowExplain', 'Don\'t show this again means the dashboard opens straight to its buttons next time. It is saved only in this browser, on this site, and you can bring the intro back in Your settings.')));
       b.appendChild(it);
     }
-    sec(b, 'Right now');
     var r1 = el('div', 'hmrd-row');
     r1.appendChild(act('share', T('share', 'label') || 'Share', sharePage));
     r1.appendChild(act('top', T('top', 'label') || 'Top', then(goTop, true)));
-    r1.appendChild(act('bigger', (st.size > 100 ? 'Text ' + st.size + '%' : (T('bigger', 'label') || 'Bigger text')), function () { var i = SIZES.indexOf(st.size); st.size = SIZES[(i + 1) % SIZES.length]; if (st.size < 100) st.size = 100; save(); show('home'); refocus('bigger'); toast('Text size ' + st.size + '%. Tap again for bigger, or set it in the studio.'); }, st.size > 100));
+    r1.appendChild(act('bigger', (st.size > 100 ? 'Text ' + st.size + '%' : (T('bigger', 'label') || 'Bigger text')), function () { var i = BIGSTEPS.indexOf(st.size); st.size = BIGSTEPS[(i + 1) % BIGSTEPS.length]; save(); show('home'); refocus('bigger'); toast('Text size ' + st.size + '%. Tap again for bigger, or set it in the studio.'); }, st.size > 100));
     var np = nightPal(), on = !!(st.pal && palById(st.pal) && palById(st.pal).dark);
     r1.appendChild(act('night', on ? 'Day' : (T('night', 'label') || 'Night'), function () { if (on) { st.pal = st.prevPal && palById(st.prevPal) && !palById(st.prevPal).dark ? st.prevPal : ''; } else { st.prevPal = st.pal; st.pal = np ? np.id : ''; } save(); show('home'); refocus('night'); }, on));
     b.appendChild(r1);
@@ -533,12 +554,26 @@
     r2.appendChild(tile('studio', 'hmrd-g1', T('studio', 'label') || 'UI/UX studio', T('studio', 'hint') || 'Colors, type, comfort and layouts', function () { openStudio('colors'); }));
     r2.appendChild(tile('improve', 'hmrd-g2', T('improve', 'label') || 'Improve this site', T('improve', 'hint') || 'Tell us what works and what does not', function () { show('improve'); }));
     r2.appendChild(tile('funsies', 'hmrd-g3', T('funsies', 'label') || 'Funsies', T('funsies', 'hint') || 'Toys and things to play with', function () { show('funsies'); }));
-    r2.appendChild(tile('places', 'hmrd-g4', T('places', 'label') || 'Places', T('places', 'hint') || 'This page and the HMR family sites', function () { show('places'); }));
+    r2.appendChild(tile('places', 'hmrd-g4', T('places', 'label') || 'Places', T('places', 'hint') || 'This page and our other sites', function () { show('places'); }));
     if (SKIN.media.length) r2.appendChild(tile('show', 'hmrd-g5', 'New from our studio', SKIN.media.length + (SKIN.media.length === 1 ? ' new piece' : ' new pieces') + ' to watch', function () { show('showcase'); }));
     b.appendChild(r2);
-    var ft = el('div', 'hmrd-foot'); var sb = btn('hmrd-link', T('settings', 'label') || 'Your settings'); sb.addEventListener('click', function () { show('settings'); });
-    var rb = btn('hmrd-link', 'Reset'); rb.setAttribute('aria-label', 'Reset everything saved on this site'); rb.addEventListener('click', function () { show('settings'); askReset(); });
-    ft.appendChild(el('span', '', isDefault() ? 'Showing the site as built' : 'Your look is on')); var fr = el('span'); fr.appendChild(rb); fr.appendChild(sb); ft.appendChild(fr); b.appendChild(ft);
+    // v1.9: "Your settings" is a clear button (not underlined text), and Reset is a red button that asks "Are you sure?" first
+    var ft = el('div', 'hmrd-foot'); var sb = btn('hmrd-pill hmrd-our', T('settings', 'label') || 'Your settings'); sb.addEventListener('click', function () { show('settings'); });
+    var rb = btn('hmrd-pill danger hmrd-our', 'Reset'); rb.setAttribute('aria-label', 'Reset everything saved on this site'); rb.addEventListener('click', function () { show('settings'); askReset(); });
+    // v1.9 (Leo, Nov 26): a visitor's look changes only their own view. "Your look is on" sits next to a "Switch to our look" button (the site as built).
+    var fl = el('span', 'hmrd-lk');
+    if (isDefault()) fl.appendChild(doc.createTextNode('You are seeing our look'));
+    else { fl.appendChild(doc.createTextNode('Your look is on ')); var ol = btn('hmrd-pill hmrd-our', 'Switch to our look'); ol.addEventListener('click', function () { resetLook(); show('home'); toast('Switched to our look. Your changes only ever showed for you.'); refocus(); }); fl.appendChild(ol); }
+    ft.appendChild(fl); var fr = el('span'); fr.appendChild(rb); fr.appendChild(sb); ft.appendChild(fr); b.appendChild(ft);
+    var hp = el('div', 'hmrd-help'); hp.appendChild(el('div', 'hmrd-sec', 'If something is not working'));
+    var D = dock(), hl = el('div', 'hmrd-list');
+    [['The microphone does nothing', 'When the mic is on, the box says Recording and your words appear as you talk. No words means it did not start: allow the microphone for this site in your browser settings, then press the mic again. Your keyboard\'s mic button works too.'],
+     ['My note did not send', 'If sending fails, we open your own email app with your note in it, so nothing is lost. Your words also stay in the box on this device.'],
+     ['The site looks strange after I changed it', 'Press Switch to our look at the bottom of this dashboard. Your changes only ever showed for you.'],
+     ['The text is too small', 'Press Bigger text above. Each press makes the page text bigger, up to 160%, then back to normal.']
+    ].forEach(function (q) { var d = el('details', 'hmrd-faq'); d.appendChild(el('summary', '', q[0])); d.appendChild(el('p', '', q[1])); hl.appendChild(d); });
+    if (D.openFeedback) hl.appendChild(item('help', 'Something else is broken', 'Tell us what happened. Talk or type.', then(function () { D.openFeedback({ prefill: 'Something is not working: ' }); })));
+    hp.appendChild(hl); b.appendChild(hp);
   }
   var introHidden = false;
   function nightPal() { var a = allPalettes(), n = palById('candle-hour'); if (n) return n; a.forEach(function (p) { if (!n && p.dark && /night|ember|hearth|candle|low/.test(p.id + ' ' + (p.mood || '').toLowerCase())) n = p; }); if (!n) a.forEach(function (p) { if (!n && p.dark) n = p; }); return n; }
@@ -550,16 +585,17 @@
   function goTop() {
     var y = scrollY; if (y < 40) { toast('You are already at the top.'); return; }
     try { scrollTo({ top: 0, behavior: rm() ? 'auto' : 'smooth' }); } catch (e) { scrollTo(0, 0); }
-    toast('Jumped to the top.', 'Go back', function () { try { scrollTo({ top: y, behavior: rm() ? 'auto' : 'smooth' }); } catch (e) { scrollTo(0, y); } }, 7000);
+    toast('Jumped to the top.', 'Go back', function () { try { scrollTo({ top: y, behavior: rm() ? 'auto' : 'smooth' }); } catch (e) { scrollTo(0, y); } setTimeout(function () { open('home'); }, rm() ? 0 : 350); }, 7000);   // v1.9: Go back also reopens the dashboard, where you were
   }
   function improve(b) {
-    b.appendChild(el('p', 'hmrd-p', 'Every note reaches the people who build this site. Send it with your email or anonymously, your choice.'));
+    b.appendChild(el('p', 'hmrd-p', 'Every note reaches the people who build this site. Send it with your email or anonymously, your choice. We especially want people to help us progress, whether that\'s telling us we\'re wrong or anything else. We\'re open to whatever that means.'));
     var l = el('div', 'hmrd-list'), D = dock();
     if (D.openSpeak) l.appendChild(item('speak', 'Speak to us', 'Say anything out loud. We turn it into text.', then(function () { D.openSpeak(true); })));
     if (D.openFeedback) l.appendChild(item('write', 'Write feedback', 'Type a note about this page', then(function () { D.openFeedback(); })));
     if (D.openReact) l.appendChild(item('react', 'React to a spot', 'Point at any part of the page and react', then(function () { D.openReact(); })));
     l.appendChild(item('studio', 'Rate a design', 'Shuffle new designs for this page and rate them', function () { openStudio('layouts'); }));
-    l.appendChild(item('mark', 'Highlight text', 'Select any words on the page to share, email or send them to us', then(function () { toast('Select any words on the page. A small menu appears.', null, null, 5000); }, true)));
+    l.appendChild(item('mark', 'Highlight text', 'Select any words on the page to share, email or send them to us', then(function () { toast(TOUCHY ? 'Try it now by highlighting some text on the page and then tapping the highlighted text.' : 'Try it now by highlighting this text and then hovering over the highlighted text.', null, null, 7000); }, true)));
+    if (D.openFeedback) l.appendChild(item('plus', 'Request a button', 'Want a button or option that is not here? Tell us, by talking or typing', then(function () { D.openFeedback({ prefill: 'Button request: ' }); })));
     if (D.openLost) l.appendChild(item('lost', 'I\'m lost', 'Tell us where you got stuck', then(function () { D.openLost(); })));
     b.appendChild(l);
   }
@@ -573,14 +609,24 @@
       names.forEach(function (n) { var c = btn('hmrd-chip', n); c.addEventListener('click', then(function () { D.funsies(n); })); ch.appendChild(c); });
       b.appendChild(ch);
     }
-    sec(b, 'More places to play'); var l2 = el('div', 'hmrd-list'); l2.appendChild(item('places', 'Places', 'Jump around this page or visit the other HMR family sites', function () { show('places'); })); b.appendChild(l2);
+    sec(b, 'More places to play'); var l2 = el('div', 'hmrd-list'); l2.appendChild(item('places', 'Places', 'Jump around this page or visit the other ' + FAM + ' sites', function () { show('places'); })); b.appendChild(l2);
   }
+  // v1.9 (Leo, Nov 26): the list is the elevat.ing family of websites. HMR sites and universemodel.ai are left out of it for now; on the HMR sites
+  //   themselves the HMR sites are listed after the others.
   var SITES = [
+    { h: 'elevat.ing', n: 'elevat.ing', d: 'The home of the elevat.ing family of websites' },
     { h: 'claudebomb.com', n: 'claudebomb.com', d: 'Set up your free personal AI dashboard' },
-    { h: 'hmrfamily.life', n: 'HMR family', d: 'The home of the HMR family' },
     { h: 'endgame.life', n: 'endgame.life', d: 'A look at life in 2036' },
-    { h: 'reactionapp.life', n: 'Reaction', d: 'React to anything, together' }
+    { h: 'reactionapp.life', n: 'reactionapp.life', d: 'Watch anything, keep your best reactions' },
+    { h: 'funsies.fun', n: 'funsies.fun', d: 'Games, toys, and a page you can wreck' },
+    { h: 'ilovedogs.dog', n: 'ilovedogs.dog', d: 'Collars that say whether a dog is friendly' }
   ];
+  if (HMRHOST) SITES = SITES.concat([
+    { h: 'universemodel.ai', n: 'universemodel.ai', d: 'The Holistic Model of Reality' },
+    { h: 'hmrfamily.life', n: 'hmrfamily.life', d: 'The HMR family' },
+    { h: 'hmrfascia.life', n: 'hmrfascia.life', d: 'Connective tissue (often called fascia)' },
+    { h: 'chronomath.ai', n: 'chronomath.ai', d: 'The math and mechanics of universal intelligence' }
+  ]);
   function places(b) {
     var hs = [].filter.call(doc.querySelectorAll('main h2, article h2, body h2, body h1'), function (h) { return !(h.closest && h.closest('[data-hmr-ui],.hmr-dock,[class^="hmr-"]')) && h.offsetParent !== null && (h.textContent || '').trim().length > 1; });
     if (hs.length < 3) hs = [].filter.call(doc.querySelectorAll('h1,h2,h3'), function (h) { return !(h.closest && h.closest('[data-hmr-ui],.hmr-dock,[class^="hmr-"]')) && h.offsetParent !== null && (h.textContent || '').trim().length > 1; });
@@ -590,7 +636,7 @@
       hs.forEach(function (h) { l.appendChild(item('page', h.textContent.replace(/\s+/g, ' ').trim().slice(0, 70), '', then(function () { try { h.scrollIntoView({ behavior: rm() ? 'auto' : 'smooth', block: 'start' }); } catch (e) { h.scrollIntoView(); } }))); });
       b.appendChild(l);
     }
-    sec(b, 'HMR family sites'); var l2 = el('div', 'hmrd-list');
+    sec(b, 'elevat.ing family of websites'); var l2 = el('div', 'hmrd-list');
     SITES.forEach(function (s) { var a = item('globe', s.n, s.d, null, 'https://' + s.h + '/'); if (host() === s.h) { var hr = el('span', 'here', 'You\'re here'); a.appendChild(hr); a.setAttribute('aria-current', 'page'); } l2.appendChild(a); });
     b.appendChild(l2);
   }
@@ -601,7 +647,7 @@
     sw.appendChild(tx); sw.appendChild(cb); cb.addEventListener('change', function () { if (cb.checked) { lsDel(INTRO_KEY); introHidden = false; } else lsSet(INTRO_KEY, '1'); });
     l.appendChild(sw);
     l.appendChild(item('studio', 'Open the studio', 'Colors, type, comfort, layouts', function () { openStudio('colors'); }));
-    l.appendChild(item('x', 'Reset my look', isDefault() ? 'You are seeing the site as built' : 'Go back to the site as built', function () { resetLook(); show('settings'); try { dash._bk.focus({ preventScroll: true }); } catch (e) { } }));
+    l.appendChild(item('x', 'Switch to our look', isDefault() ? 'You are seeing our look, the site as built' : 'Go back to the site as built (only you saw your look)', function () { resetLook(); show('settings'); try { dash._bk.focus({ preventScroll: true }); } catch (e) { } }));
     var ra = item('x', 'Reset everything on this site', 'Clear every choice saved here and start fresh', function () { askReset(); }); ra.setAttribute('data-k', 'reset-all'); l.appendChild(ra);
     var cf = el('div', 'hmrd-confirm'); cf.hidden = true; cf.id = 'hmrd-reset-confirm'; l.appendChild(cf);
     b.appendChild(l);
@@ -622,8 +668,9 @@
   function askReset() {
     var cf = dash && dash.querySelector('#hmrd-reset-confirm'); if (!cf) return;
     cf.textContent = ''; cf.hidden = false;
-    cf.appendChild(el('p', '', 'This clears everything saved on this site in this browser: your look, the intro choice, toys, highlights and drafts. Reset now?'));
-    var r = el('div', 'row'), yes = btn('hmrd-pill danger', 'Reset'), no = btn('hmrd-pill', 'Cancel');
+    cf.appendChild(el('p', 'hmrd-sure', 'Are you sure?'));
+    cf.appendChild(el('p', '', 'This resets everything on this site in this browser: your look, the intro choice, toys, highlights and drafts. Everyone else always sees our look.'));
+    var r = el('div', 'row'), yes = btn('hmrd-pill danger', 'Yes, reset everything'), no = btn('hmrd-pill', 'Cancel');
     yes.addEventListener('click', resetAll); no.addEventListener('click', function () { cf.hidden = true; var a = dash.querySelector('[data-k="reset-all"]'); try { if (a) a.focus({ preventScroll: true }); } catch (e) { } });
     r.appendChild(yes); r.appendChild(no); cf.appendChild(r);
     try { cf.scrollIntoView({ block: 'nearest' }); no.focus({ preventScroll: true }); } catch (e) { }
@@ -686,7 +733,7 @@
         }
         if (A.user) {
           box.appendChild(el('p', 'hmrd-p', 'You are logged in as ' + A.user.email + '.'));
-          box.appendChild(el('p', 'hmrd-p', 'This one free account works on every HMR family site. On another HMR site, log in there with the same email and password.'));
+          box.appendChild(el('p', 'hmrd-p', 'This one free account works on every ' + ACSITES + '. On another of our sites, log in there with the same email and password.'));
           var out = btn('hmrd-save', 'Log out'); out.addEventListener('click', function () { out.disabled = true; A.signOut().then(function () { toast('Logged out on this site.'); }); });
           box.appendChild(out); return;
         }
@@ -699,7 +746,7 @@
           seg.appendChild(sb);
         });
         box.appendChild(seg);
-        box.appendChild(el('p', 'hmrd-p', up ? 'Create one free account for every HMR family site. No ads, ever.' : 'Log in with your HMR family account. The same email and password work on every HMR family site.'));
+        box.appendChild(el('p', 'hmrd-p', up ? 'Create one free account for every ' + ACSITES + '. No ads, ever.' : 'Log in with your ' + ACCT + '. The same email and password work on every ' + ACSITES + '.'));
         var em = field(f, 'email', 'Email', 'email', 'email');
         var pw = field(f, 'password', up ? 'Password (at least 8 characters)' : 'Password', 'password', up ? 'new-password' : 'current-password');
         f.appendChild(msg);
